@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "got",
+	"version": "${version}",
+	"name": "GOT Mod",
+	"description": "",
+	"authors": [
+		"Isaac"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/"
+	},
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.isaac.got.GOT"
+		],
+		"client": [
+			"net.isaac.got.client.GOTClient"
+		]
+	},
+	"mixins": [
+		"got.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
