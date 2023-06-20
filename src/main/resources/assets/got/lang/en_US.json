@@ -48,6 +48,8 @@
   "item.got.bronze_ingot": "Bronze Ingot",
   "item.got.valyrian_ingot": "Valyrian Ingot",
 
+  "item.got.alloy_steel_pickaxe": "Alloy Steel Pickaxe",
+
   "itemgroup.gotcombat": "GOT Combat",
   "itemgroup.gotingredients": "GOT Ingredients"
 }

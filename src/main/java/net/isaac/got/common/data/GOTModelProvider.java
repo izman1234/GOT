@@ -3,6 +3,7 @@ package net.isaac.got.common.data;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.isaac.got.common.item.other.GOTOther;
+import net.isaac.got.common.item.tool.GOTTools;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
@@ -71,5 +72,8 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
         itemModelGenerator.register(GOTOther.Alloy_Steel_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Bronze_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Valyrian_Ingot, Models.GENERATED);
+
+        /* TOOLS */
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Pickaxe, Models.HANDHELD);
     }
 }

@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.isaac.got.GOT;
 import net.isaac.got.common.item.other.GOTOther;
+import net.isaac.got.common.item.tool.GOTTools;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
@@ -75,12 +76,11 @@ public class GOTGroups {
                         entries.add(GOTOther.Valyrian_Ingot);
                     }).build());
 
-    public static ItemGroup GOTTools = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
+    public static ItemGroup GOTTools_ = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Tools"))
-                    .icon(() -> new ItemStack(GOTOther.Alloy_Steel_Ingot)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(GOTTools.Alloy_Steel_Pickaxe)).entries((displayContext, entries) -> {
                         /* PICKAXES */
-
-
+                        entries.add(GOTTools.Alloy_Steel_Pickaxe);
                     }).build());
 
     public static void registerModGroups() {
