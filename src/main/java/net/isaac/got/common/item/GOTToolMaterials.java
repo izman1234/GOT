@@ -9,9 +9,9 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum GOTToolMaterials implements ToolMaterial {
-    VALYRIANSTEEL(MiningLevels.DIAMOND, 1561, 8.0f, 3.0f, 10, () -> Ingredient.ofItems(GOTOther.Valyrian_Ingot)),
     ALLOYSTEEL(MiningLevels.IRON, 500, 6.0f, 2.0f, 10, () -> Ingredient.ofItems(GOTOther.Alloy_Steel_Ingot)),
-    BRONZE(MiningLevels.IRON, 500, 6.0f, 2.0f, 10, () -> Ingredient.ofItems(GOTOther.Bronze_Ingot));
+    BRONZE(MiningLevels.IRON, 500, 6.0f, 2.0f, 10, () -> Ingredient.ofItems(GOTOther.Bronze_Ingot)),
+    VALYRIANSTEEL(MiningLevels.DIAMOND, 1561, 8.0f, 3.0f, 10, () -> Ingredient.ofItems(GOTOther.Valyrian_Ingot));
 
     private final int miningLevel;
     private final int itemDurability;

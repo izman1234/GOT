@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "got:alloy_steel_ingot"
+    }
+  },
+  "pattern": [
+    "X",
+    "/"
+  ],
+  "result": {
+    "item": "got:alloy_steel_dagger"
+  },
+  "show_notification": true
+}

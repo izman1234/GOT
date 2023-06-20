@@ -3,15 +3,9 @@ package net.isaac.got.common.item.weapon;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.StackReference;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.ClickType;
-import net.minecraft.world.World;
 
 public class GOTItemSword extends SwordItem {
     public GOTItemSword(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, HitEffect e, Settings settings) {

@@ -16,4 +16,5 @@ public class GOTDimensions {
     public static void register() {
         GOT.LOGGER.debug("Registering ModDimensions for " + GOT.MOD_ID);
     }
+
 }

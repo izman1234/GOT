@@ -2,12 +2,10 @@ package net.isaac.got.common.item.weapon;
 
 import net.isaac.got.common.item.weapon.GOTEntities.GOTEntitySpear;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MovementType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
-import net.minecraft.entity.projectile.TridentEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.TridentItem;
 import net.minecraft.sound.SoundCategory;
@@ -22,6 +20,7 @@ public class GOTItemSpear extends TridentItem {
     public GOTItemSpear(Settings settings) {
         super(settings);
     }
+
     @Override
     public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
         if (!(user instanceof PlayerEntity)) {
@@ -39,13 +38,13 @@ public class GOTItemSpear extends TridentItem {
         if (!world.isClient) {
             stack.damage(1, playerEntity, p -> p.sendToolBreakStatus(user.getActiveHand()));
             if (j == 0) {
-                GOTEntitySpear spearEntity = new GOTEntitySpear(world, (LivingEntity)playerEntity, stack);
-                spearEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, 2.5f + (float)j * 0.5f, 1.0f);
+                GOTEntitySpear tridentEntity = new GOTEntitySpear(world, (LivingEntity)playerEntity, stack);
+                tridentEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, 2.5f + (float)j * 0.5f, 1.0f);
                 if (playerEntity.getAbilities().creativeMode) {
-                    spearEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
+                    tridentEntity.pickupType = PersistentProjectileEntity.PickupPermission.CREATIVE_ONLY;
                 }
-                world.spawnEntity(spearEntity);
-                world.playSoundFromEntity(null, spearEntity, SoundEvents.ITEM_TRIDENT_THROW, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                world.spawnEntity(tridentEntity);
+                world.playSoundFromEntity(null, tridentEntity, SoundEvents.ITEM_TRIDENT_THROW, SoundCategory.PLAYERS, 1.0f, 1.0f);
                 if (!playerEntity.getAbilities().creativeMode) {
                     playerEntity.getInventory().removeOne(stack);
                 }

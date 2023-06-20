@@ -3,12 +3,13 @@
 	"id": "got",
 	"version": "${version}",
 	"name": "GOT Mod",
-	"description": "",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Isaac"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/"
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
 	"environment": "*",
@@ -18,6 +19,9 @@
 		],
 		"client": [
 			"net.isaac.got.client.GOTClient"
+		],
+		"fabric-datagen": [
+			"net.isaac.got.common.data.GOTDataGenerator"
 		]
 	},
 	"mixins": [
