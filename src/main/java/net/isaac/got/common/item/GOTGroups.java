@@ -75,6 +75,14 @@ public class GOTGroups {
                         entries.add(GOTOther.Valyrian_Ingot);
                     }).build());
 
+    public static ItemGroup GOTTools = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Tools"))
+                    .icon(() -> new ItemStack(GOTOther.Alloy_Steel_Ingot)).entries((displayContext, entries) -> {
+                        /* PICKAXES */
+
+
+                    }).build());
+
     public static void registerModGroups() {
         GOT.LOGGER.debug("Registering Mod Groups for " + GOT.MOD_ID);
     }
