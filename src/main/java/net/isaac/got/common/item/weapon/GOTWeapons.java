@@ -38,6 +38,8 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 3, -2.0f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Forrester_Sword = registerItem("forrester_sword",
             new GOTItemSword(ToolMaterials.IRON, 5, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
+    public static final Item Gendry_Hammer = registerItem("gendry_hammer",
+            new GOTItemSword(ToolMaterials.IRON, 5, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Tormund_Sword = registerItem("tormund_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
 

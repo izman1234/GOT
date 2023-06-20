@@ -35,6 +35,7 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
         itemModelGenerator.register(GOTWeapons.Eddard_Sword, Models.HANDHELD);
         itemModelGenerator.register(GOTWeapons.Euron_Dagger, Models.HANDHELD);
         itemModelGenerator.register(GOTWeapons.Forrester_Sword, Models.HANDHELD);
+        itemModelGenerator.register(GOTWeapons.Gendry_Hammer, Models.HANDHELD);
         itemModelGenerator.register(GOTWeapons.Tormund_Sword, Models.HANDHELD);
 
         /* WEAPONS */

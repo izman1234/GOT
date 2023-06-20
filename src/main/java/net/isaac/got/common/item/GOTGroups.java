@@ -33,6 +33,7 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Eddard_Sword);
                         entries.add(GOTWeapons.Euron_Dagger);
                         entries.add(GOTWeapons.Forrester_Sword);
+                        entries.add(GOTWeapons.Gendry_Hammer);
                         entries.add(GOTWeapons.Tormund_Sword);
 
                         /* WEAPONS */
