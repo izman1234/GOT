@@ -2,6 +2,7 @@ package net.isaac.got.common.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -15,7 +16,7 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        //blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.CITRINE_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
     }
 
     @Override

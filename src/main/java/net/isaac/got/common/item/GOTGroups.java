@@ -3,6 +3,7 @@ package net.isaac.got.common.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.isaac.got.GOT;
+import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.item.ItemGroup;
@@ -14,7 +15,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class GOTGroups {
-    public static ItemGroup GOTCombat = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_combat"),
+    public static ItemGroup GOTCombatGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_combat"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Combat"))
                     .icon(() -> new ItemStack(GOTWeapons.Tormund_Sword)).entries((displayContext, entries) -> {
 
@@ -66,13 +67,20 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Essos_Sword);
                     }).build());
 
-    public static ItemGroup GOTIngredients = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_ingredients"),
+    public static ItemGroup GOTIngredientsGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_ingredients"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Ingredients"))
                     .icon(() -> new ItemStack(GOTOther.Alloy_Steel_Ingot)).entries((displayContext, entries) -> {
                         /* INGOTS */
                         entries.add(GOTOther.Alloy_Steel_Ingot);
                         entries.add(GOTOther.Bronze_Ingot);
                         entries.add(GOTOther.Valyrian_Ingot);
+                    }).build());
+
+    public static ItemGroup GOTBlocksGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_blocks"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Blocks"))
+                    .icon(() -> new ItemStack(GOTBlocks.Ore_Cobalt)).entries((displayContext, entries) -> {
+                        /* INGOTS */
+                        entries.add(GOTBlocks.Ore_Cobalt);
                     }).build());
 
     public static void registerModGroups() {

@@ -48,6 +48,8 @@
   "item.got.bronze_ingot": "Bronze Ingot",
   "item.got.valyrian_ingot": "Valyrian Ingot",
 
+  "block.got.ore_cobalt": "Cobalt Ore",
+
   "itemgroup.gotcombat": "GOT Combat",
   "itemgroup.gotingredients": "GOT Ingredients"
 }
