@@ -5,9 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.data.client.*;
 
 public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET */
     public GOTModelProvider(FabricDataOutput output) {
@@ -16,8 +14,10 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerCooker(GOTBlocks.Alloy_Forge, TexturedModel.ORIENTABLE);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
     }
+
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
@@ -72,5 +72,8 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
         itemModelGenerator.register(GOTOther.Alloy_Steel_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Bronze_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Valyrian_Ingot, Models.GENERATED);
+
+        /* FOOD */
+        //itemModelGenerator.register(GOTOther.Apple_Crumble, Models.GENERATED);
     }
 }

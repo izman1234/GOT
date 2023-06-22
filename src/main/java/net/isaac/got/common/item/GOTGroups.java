@@ -79,8 +79,16 @@ public class GOTGroups {
     public static ItemGroup GOTBlocksGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_blocks"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Blocks"))
                     .icon(() -> new ItemStack(GOTBlocks.Ore_Cobalt)).entries((displayContext, entries) -> {
-                        /* INGOTS */
+                        /* BLOCKS */
+                        entries.add(GOTBlocks.Alloy_Forge);
                         entries.add(GOTBlocks.Ore_Cobalt);
+                    }).build());
+
+    public static ItemGroup GOTFoodGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_food"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Food"))
+                    .icon(() -> new ItemStack(GOTBlocks.Apple_Crumble)).entries((displayContext, entries) -> {
+                        /* FOOD */
+                        entries.add(GOTBlocks.Apple_Crumble);
                     }).build());
 
     public static void registerModGroups() {
