@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "got:alloy_steel_ingot"
+    }
+  },
+  "pattern": [
+    "XXX",
+    " / ",
+    " / "
+  ],
+  "result": {
+    "item": "got:alloy_steel_pickaxe"
+  },
+  "show_notification": true
+}

@@ -14,6 +14,10 @@ public class GOTTools {
     /* PICKAXES */
     public static final Item Alloy_Steel_Pickaxe = registerItem("alloy_steel_pickaxe",
             new GOTItemPickaxe(GOTToolMaterials.ALLOYSTEEL, 4, -3.2f, new FabricItemSettings()));
+    public static final Item Bronze_Pickaxe = registerItem("bronze_pickaxe",
+            new GOTItemPickaxe(GOTToolMaterials.BRONZE, 4, -3.2f, new FabricItemSettings()));
+    public static final Item Valyrian_Pickaxe = registerItem("valyrian_pickaxe",
+            new GOTItemPickaxe(GOTToolMaterials.VALYRIANSTEEL, 4, -3.2f, new FabricItemSettings()));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(GOT.MOD_ID, name), item);
     }

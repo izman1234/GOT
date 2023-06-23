@@ -15,7 +15,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class GOTGroups {
-    public static ItemGroup GOTCombat = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_combat"),
+    public static ItemGroup GOTCombatGroups = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_combat"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Combat"))
                     .icon(() -> new ItemStack(GOTWeapons.Tormund_Sword)).entries((displayContext, entries) -> {
 
@@ -67,20 +67,25 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Essos_Sword);
                     }).build());
 
-    public static ItemGroup GOTIngredients = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_ingredients"),
+    public static ItemGroup GOTIngredientsGroups = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_ingredients"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Ingredients"))
                     .icon(() -> new ItemStack(GOTOther.Alloy_Steel_Ingot)).entries((displayContext, entries) -> {
                         /* INGOTS */
                         entries.add(GOTOther.Alloy_Steel_Ingot);
                         entries.add(GOTOther.Bronze_Ingot);
+                        entries.add(GOTOther.Silver_Ingot);
+                        entries.add(GOTOther.Tin_Ingot);
                         entries.add(GOTOther.Valyrian_Ingot);
+                        entries.add(GOTOther.Yiti_Steel_Ingot);
                     }).build());
 
-    public static ItemGroup GOTTools_ = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
+    public static ItemGroup GOTToolsGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Tools"))
                     .icon(() -> new ItemStack(GOTTools.Alloy_Steel_Pickaxe)).entries((displayContext, entries) -> {
                         /* PICKAXES */
                         entries.add(GOTTools.Alloy_Steel_Pickaxe);
+                        entries.add(GOTTools.Bronze_Pickaxe);
+                        entries.add(GOTTools.Valyrian_Pickaxe);
                     }).build());
 
     public static void registerModGroups() {
