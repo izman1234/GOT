@@ -76,12 +76,11 @@ public class GOTGroups {
                         entries.add(GOTOther.Valyrian_Ingot);
                     }).build());
 
-    public static ItemGroup GOTBlocksGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_blocks"),
-            FabricItemGroup.builder().displayName(Text.literal("GOT Blocks"))
-                    .icon(() -> new ItemStack(GOTBlocks.Ore_Cobalt)).entries((displayContext, entries) -> {
-                        /* BLOCKS */
+    public static ItemGroup GOTFunctionalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_functional"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Functional Blocks"))
+                    .icon(() -> new ItemStack(GOTBlocks.Alloy_Forge)).entries((displayContext, entries) -> {
+                        /* FURNACES */
                         entries.add(GOTBlocks.Alloy_Forge);
-                        entries.add(GOTBlocks.Ore_Cobalt);
                     }).build());
 
     public static ItemGroup GOTFoodGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_food"),
@@ -89,6 +88,25 @@ public class GOTGroups {
                     .icon(() -> new ItemStack(GOTBlocks.Apple_Crumble)).entries((displayContext, entries) -> {
                         /* FOOD */
                         entries.add(GOTBlocks.Apple_Crumble);
+                        entries.add(GOTBlocks.Banana_Cake);
+                    }).build());
+
+    public static ItemGroup GOTNaturalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_natural"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Natural Blocks"))
+                    .icon(() -> new ItemStack(GOTBlocks.Arid_Grass)).entries((displayContext, entries) -> {
+                        /* PLANTS */
+                        entries.add(GOTBlocks.Arid_Grass);
+
+                        /* BLOCKS */
+                        entries.add(GOTBlocks.Asshai_Dirt);
+                        entries.add(GOTBlocks.Ore_Cobalt);
+                    }).build());
+
+    public static ItemGroup GOTBuildingGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_building"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Building Blocks"))
+                    .icon(() -> new ItemStack(GOTBlocks.Asshai_Bars)).entries((displayContext, entries) -> {
+                        entries.add(GOTBlocks.Asshai_Bars);
+
                     }).build());
 
     public static void registerModGroups() {

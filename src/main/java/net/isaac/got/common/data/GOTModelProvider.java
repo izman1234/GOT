@@ -7,15 +7,28 @@ import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.data.client.*;
 
-public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET */
+public class GOTModelProvider extends FabricModelProvider {
     public GOTModelProvider(FabricDataOutput output) {
         super(output);
     }
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        /* FUNCTIONAL */
         blockStateModelGenerator.registerCooker(GOTBlocks.Alloy_Forge, TexturedModel.ORIENTABLE);
+
+        /* FOOD */
+        CakeBlockGenerator.generateBlockJson("apple_crumble");
+        CakeBlockGenerator.generateBlockJson("banana_cake");
+
+        /* NATURAL */
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Arid_Grass, BlockStateModelGenerator.TintType.TINTED); //ISSUE: Black/White Background
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Asshai_Dirt);
+
+        /* BULDING */
+        PaneBlockGenerator.generateBlockJson("asshai_bars"); //ISSUE: Black/White Background
+
     }
 
 

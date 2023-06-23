@@ -49,8 +49,12 @@
   "item.got.valyrian_ingot": "Valyrian Ingot",
 
   "block.got.alloy_forge": "Alloy Forge",
-  "block.got.ore_cobalt": "Cobalt Ore",
   "block.got.apple_crumble": "Apple Crumble",
+  "block.got.arid_grass": "Arid Grass",
+  "block.got.asshai_bars": "Asshai Bars",
+  "block.got.asshai_dirt": "Asshai Dirt",
+  "block.got.banana_cake": "Banana Cake",
+  "block.got.ore_cobalt": "Cobalt Ore",
 
   "itemgroup.gotcombat": "GOT Combat",
   "itemgroup.gotingredients": "GOT Ingredients"
