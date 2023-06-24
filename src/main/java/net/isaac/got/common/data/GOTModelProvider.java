@@ -32,9 +32,26 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerWallPlant(GOTBlocks.Asshai_Moss); //NOT WORKING
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Thorn, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Gravel);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Blackroot, BlockStateModelGenerator.TintType.TINTED);
 
         /* BULDING */
         PaneBlockGenerator.generateBlockJson("asshai_bars");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Amber_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Coral_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Opal_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pearl_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ruby_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sapphire_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Topaz_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bronze_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Saltpeter_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Silver_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sulfur_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Tin_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Valyrian_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Alloy_Steel_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Gilded_Iron_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Salt_Metal_Block);
 
         /*DECORATION */
         blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?

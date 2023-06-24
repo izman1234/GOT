@@ -45,6 +45,7 @@ public class GOTBlocks {
             new GOTBank(FabricBlockSettings.copyOf(Blocks.DISPENSER).strength(4.0f).requiresTool())); //ADD CUSTOM UI + INCORPORATE THE BANK_ACTIVE.PNG
     public static final Block Basalt_Gravel = registerBlock("basalt_gravel",
             new GravelBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
+
     //ADD BERRY BUSHES
     public static final Block Berry_Pie = registerBlock("berry_pie",
             new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
@@ -58,6 +59,40 @@ public class GOTBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block Bird_Cage_Wood = registerBlock("bird_cage_wood_wood",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Blackroot = registerBlock("blackroot",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
+    public static final Block Amber_Gem_Block = registerBlock("block_gem_amber",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
+    public static final Block Coral_Gem_Block = registerBlock("block_gem_coral",
+            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
+    public static final Block Opal_Gem_Block = registerBlock("block_gem_opal",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
+    public static final Block Pearl_Gem_Block = registerBlock("block_gem_pearl",
+            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
+    public static final Block Ruby_Gem_Block = registerBlock("block_gem_ruby",
+            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
+    public static final Block Sapphire_Gem_Block = registerBlock("block_gem_sapphire",
+            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
+    public static final Block Topaz_Gem_Block = registerBlock("block_gem_topaz",
+            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
+    public static final Block Bronze_Metal_Block = registerBlock("block_metal1_bronze",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
+    public static final Block Saltpeter_Metal_Block = registerBlock("block_metal1_saltpeter",
+            new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
+    public static final Block Silver_Metal_Block = registerBlock("block_metal1_silver",
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+    public static final Block Sulfur_Metal_Block = registerBlock("block_metal1_sulfur",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block Tin_Metal_Block = registerBlock("block_metal1_tin",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block Valyrian_Metal_Block = registerBlock("block_metal1_valyrian",
+            new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
+    public static final Block Alloy_Steel_Block = registerBlock("block_metal2_alloy_steel",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block Gilded_Iron_Block = registerBlock("block_metal2_gilded_iron",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block Salt_Metal_Block = registerBlock("block_metal2_salt",
+            new Block(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)));
     public static final Block Ore_Cobalt = registerBlock("ore_cobalt",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).strength(4.0f).requiresTool()));
 

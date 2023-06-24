@@ -25,5 +25,6 @@ public class GOTClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Bird_Cage_Silver, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Bird_Cage_Wood, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Bird_Cage_Wood, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Blackroot, RenderLayer.getCutout());
     }
 }

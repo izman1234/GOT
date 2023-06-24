@@ -106,11 +106,13 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Asshai_Grass);
                         entries.add(GOTBlocks.Asshai_Moss);
                         entries.add(GOTBlocks.Asshai_Thorn);
+                        entries.add(GOTBlocks.Blackroot);
 
                         /* BLOCKS */
                         entries.add(GOTBlocks.Asshai_Dirt);
                         entries.add(GOTBlocks.Basalt_Gravel);
                         entries.add(GOTBlocks.Ore_Cobalt);
+
                     }).build());
 
     public static ItemGroup GOTBuildingGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_building"),
@@ -122,13 +124,29 @@ public class GOTGroups {
 
     public static ItemGroup GOTDecorationGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_decoration"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Decoration Blocks"))
-                    .icon(() -> new ItemStack(GOTBlocks.Bird_Cage_Bronze)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(GOTBlocks.Opal_Gem_Block)).entries((displayContext, entries) -> {
                         entries.add(GOTBlocks.Asshai_Torch);
                         entries.add(GOTBlocks.Bird_Cage_Bronze);
                         entries.add(GOTBlocks.Bird_Cage_Gold);
                         entries.add(GOTBlocks.Bird_Cage_Iron);
                         entries.add(GOTBlocks.Bird_Cage_Silver);
                         entries.add(GOTBlocks.Bird_Cage_Wood);
+                        entries.add(GOTBlocks.Amber_Gem_Block);
+                        entries.add(GOTBlocks.Coral_Gem_Block);
+                        entries.add(GOTBlocks.Opal_Gem_Block);
+                        entries.add(GOTBlocks.Pearl_Gem_Block);
+                        entries.add(GOTBlocks.Ruby_Gem_Block);
+                        entries.add(GOTBlocks.Sapphire_Gem_Block);
+                        entries.add(GOTBlocks.Topaz_Gem_Block);
+                        entries.add(GOTBlocks.Bronze_Metal_Block);
+                        entries.add(GOTBlocks.Saltpeter_Metal_Block);
+                        entries.add(GOTBlocks.Silver_Metal_Block);
+                        entries.add(GOTBlocks.Sulfur_Metal_Block);
+                        entries.add(GOTBlocks.Tin_Metal_Block);
+                        entries.add(GOTBlocks.Valyrian_Metal_Block);
+                        entries.add(GOTBlocks.Alloy_Steel_Block);
+                        entries.add(GOTBlocks.Gilded_Iron_Block);
+                        entries.add(GOTBlocks.Salt_Metal_Block);
 
                     }).build());
 
