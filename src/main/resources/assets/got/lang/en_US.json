@@ -52,8 +52,18 @@
   "item.got.yiti_steel_ingot": "Yiti Steel Ingot",
 
   "item.got.alloy_steel_pickaxe": "Alloy Steel Pickaxe",
+  "item.got.alloy_steel_axe": "Alloy Steel Axe",
+  "item.got.alloy_steel_hoe": "Alloy Steel Hoe",
+  "item.got.alloy_steel_shovel": "Alloy Steel Shovel",
   "item.got.bronze_pickaxe": "Bronze Pickaxe",
+  "item.got.bronze_axe": "Bronze Axe",
+  "item.got.bronze_hoe": "Bronze Hoe",
+  "item.got.bronze_shovel": "Bronze Shovel",
   "item.got.valyrian_pickaxe": "Valyrian Pickaxe",
+  "item.got.valyrian_axe": "Valyrian Axe",
+  "item.got.valyrian_hoe": "Valyrian Hoe",
+  "item.got.valyrian_shovel": "Valyrian Shovel",
+
 
   "itemgroup.gotcombat": "GOT Combat",
   "itemgroup.gotingredients": "GOT Ingredients"

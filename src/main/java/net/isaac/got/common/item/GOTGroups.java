@@ -82,10 +82,21 @@ public class GOTGroups {
     public static ItemGroup GOTToolsGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Tools"))
                     .icon(() -> new ItemStack(GOTTools.Alloy_Steel_Pickaxe)).entries((displayContext, entries) -> {
-                        /* PICKAXES */
+                        /* Alloy Steel */
                         entries.add(GOTTools.Alloy_Steel_Pickaxe);
+                        entries.add(GOTTools.Alloy_Steel_Axe);
+                        entries.add(GOTTools.Alloy_Steel_Hoe);
+                        entries.add(GOTTools.Alloy_Steel_Shovel);
+                        /* Bronze */
                         entries.add(GOTTools.Bronze_Pickaxe);
+                        entries.add(GOTTools.Bronze_Axe);
+                        entries.add(GOTTools.Bronze_Hoe);
+                        entries.add(GOTTools.Bronze_Shovel);
+                        /* Valyrian */
                         entries.add(GOTTools.Valyrian_Pickaxe);
+                        entries.add(GOTTools.Valyrian_Axe);
+                        entries.add(GOTTools.Valyrian_Hoe);
+                        entries.add(GOTTools.Valyrian_Shovel);
                     }).build());
 
     public static void registerModGroups() {

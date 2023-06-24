@@ -79,6 +79,42 @@ public class GOTRecipeGenerator extends FabricRecipeProvider { /*DOESN'T WORK YE
                         FabricRecipeProvider.conditionsFromItem(Items.STICK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Alloy_Steel_Pickaxe)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Alloy_Steel_Axe)
+                .pattern("XX")
+                .pattern("X/")
+                .pattern(" /")
+                .input('X', GOTOther.Alloy_Steel_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Alloy_Steel_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Alloy_Steel_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Alloy_Steel_Axe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Alloy_Steel_Hoe)
+                .pattern("XX")
+                .pattern(" /")
+                .pattern(" /")
+                .input('X', GOTOther.Alloy_Steel_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Alloy_Steel_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Alloy_Steel_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Alloy_Steel_Hoe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Alloy_Steel_Shovel)
+                .pattern("X")
+                .pattern("/")
+                .pattern("/")
+                .input('X', GOTOther.Alloy_Steel_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Alloy_Steel_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Alloy_Steel_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Alloy_Steel_Shovel)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Bronze_Pickaxe)
                 .pattern("XXX")
                 .pattern(" / ")
@@ -91,6 +127,42 @@ public class GOTRecipeGenerator extends FabricRecipeProvider { /*DOESN'T WORK YE
                         FabricRecipeProvider.conditionsFromItem(Items.STICK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Bronze_Pickaxe)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Bronze_Axe)
+                .pattern("XX")
+                .pattern("X/")
+                .pattern(" /")
+                .input('X', GOTOther.Bronze_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Bronze_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Bronze_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Bronze_Axe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Bronze_Hoe)
+                .pattern("XX")
+                .pattern(" /")
+                .pattern(" /")
+                .input('X', GOTOther.Bronze_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Bronze_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Bronze_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Bronze_Hoe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Bronze_Shovel)
+                .pattern("X")
+                .pattern("/")
+                .pattern("/")
+                .input('X', GOTOther.Bronze_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Bronze_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Bronze_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Bronze_Shovel)));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Valyrian_Pickaxe)
                 .pattern("XXX")
                 .pattern(" / ")
@@ -102,6 +174,42 @@ public class GOTRecipeGenerator extends FabricRecipeProvider { /*DOESN'T WORK YE
                 .criterion(FabricRecipeProvider.hasItem(Items.STICK),
                         FabricRecipeProvider.conditionsFromItem(Items.STICK))
                 .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Valyrian_Pickaxe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Valyrian_Axe)
+                .pattern("XX")
+                .pattern("X/")
+                .pattern(" /")
+                .input('X', GOTOther.Valyrian_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Valyrian_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Valyrian_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Valyrian_Axe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Valyrian_Hoe)
+                .pattern("XX")
+                .pattern(" /")
+                .pattern(" /")
+                .input('X', GOTOther.Valyrian_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Valyrian_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Valyrian_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Valyrian_Hoe)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, GOTTools.Valyrian_Shovel)
+                .pattern("X")
+                .pattern("/")
+                .pattern("/")
+                .input('X', GOTOther.Valyrian_Ingot)
+                .input('/', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(GOTOther.Valyrian_Ingot),
+                        FabricRecipeProvider.conditionsFromItem((GOTOther.Valyrian_Ingot)))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(FabricRecipeProvider.getRecipeName(GOTTools.Valyrian_Shovel)));
 
     }
 }

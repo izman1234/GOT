@@ -75,9 +75,19 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
         itemModelGenerator.register(GOTOther.Tin_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Valyrian_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Yiti_Steel_Ingot, Models.GENERATED);
+
         /* TOOLS */
         itemModelGenerator.register(GOTTools.Alloy_Steel_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Shovel, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Bronze_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Shovel, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Valyrian_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Shovel, Models.HANDHELD);
     }
 }
