@@ -39,7 +39,7 @@ public class GOTTools {
     public static final Item Valyrian_Hoe = registerItem("valyrian_hoe",
             new GOTItemHoe(GOTToolMaterials.VALYRIANSTEEL, 4, -3.2f, new FabricItemSettings()));
     public static final Item Valyrian_Shovel = registerItem("valyrian_shovel",
-            new GOTItemShovel(GOTToolMaterials.VALYRIANSTEEL, 69, -3.2f, new FabricItemSettings()));
+            new GOTItemShovel(GOTToolMaterials.VALYRIANSTEEL, 4, -3.2f, new FabricItemSettings()));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(GOT.MOD_ID, name), item);
     }
