@@ -13,7 +13,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class CustomCakeBlock extends CakeBlock {
+public class GOTCakeBlock extends CakeBlock {
     private static final VoxelShape[] SHAPES = {
             // Define the voxel shapes for each state (0 to 6 bites)
             createCuboidShape(1, 0, 1, 15, 8, 15),
@@ -25,7 +25,7 @@ public class CustomCakeBlock extends CakeBlock {
             createCuboidShape(13, 0, 1, 15, 8, 15),
     };
 
-    public CustomCakeBlock(Settings settings) {
+    public GOTCakeBlock(Settings settings) {
         super(settings);
     }
 

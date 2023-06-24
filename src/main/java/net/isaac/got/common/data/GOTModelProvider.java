@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 
 public class GOTModelProvider extends FabricModelProvider {
@@ -20,14 +21,28 @@ public class GOTModelProvider extends FabricModelProvider {
         /* FOOD */
         CakeBlockGenerator.generateBlockJson("apple_crumble");
         CakeBlockGenerator.generateBlockJson("banana_cake");
+        CakeBlockGenerator.generateBlockJson("berry_pie");
 
         /* NATURAL */
-        blockStateModelGenerator.registerTintableCross(GOTBlocks.Arid_Grass, BlockStateModelGenerator.TintType.TINTED); //ISSUE: Black/White Background
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Arid_Grass, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Asshai_Dirt);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Flower, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Grass, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
+        blockStateModelGenerator.registerWallPlant(GOTBlocks.Asshai_Moss); //NOT WORKING
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Thorn, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Gravel);
 
         /* BULDING */
-        PaneBlockGenerator.generateBlockJson("asshai_bars"); //ISSUE: Black/White Background
+        PaneBlockGenerator.generateBlockJson("asshai_bars");
+
+        /*DECORATION */
+        blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?
+        BirdCageGenerator.generateBlockJson("bird_cage_bronze");
+        BirdCageGenerator.generateBlockJson("bird_cage_gold");
+        BirdCageGenerator.generateBlockJson("bird_cage_iron");
+        BirdCageGenerator.generateBlockJson("bird_cage_silver");
+        BirdCageGenerator.generateBlockJson("bird_cage_wood_wood");
 
     }
 
@@ -87,6 +102,6 @@ public class GOTModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GOTOther.Valyrian_Ingot, Models.GENERATED);
 
         /* FOOD */
-        //itemModelGenerator.register(GOTOther.Apple_Crumble, Models.GENERATED);
+
     }
 }

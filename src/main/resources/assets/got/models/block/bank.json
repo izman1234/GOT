@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "got:block/bank_front",
+    "side": "got:block/bank_side",
+    "top": "got:block/bank_top"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "got:block/asshai_walltorch"
+    },
+    "facing=north": {
+      "model": "got:block/asshai_walltorch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "got:block/asshai_walltorch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "got:block/asshai_walltorch",
+      "y": 180
+    }
+  }
+}

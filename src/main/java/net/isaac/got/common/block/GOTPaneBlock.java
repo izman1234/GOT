@@ -3,8 +3,8 @@ package net.isaac.got.common.block;
 import net.minecraft.block.*;
 import net.minecraft.util.math.Direction;
 
-public class CustomPaneBlock extends PaneBlock {
-    public CustomPaneBlock(AbstractBlock.Settings settings) {
+public class GOTPaneBlock extends PaneBlock {
+    public GOTPaneBlock(AbstractBlock.Settings settings) {
         super(settings);
     }
 

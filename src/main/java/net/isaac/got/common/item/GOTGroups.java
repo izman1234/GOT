@@ -3,6 +3,7 @@ package net.isaac.got.common.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.isaac.got.GOT;
+import net.isaac.got.common.block.GOTBananaBlock;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
@@ -81,6 +82,9 @@ public class GOTGroups {
                     .icon(() -> new ItemStack(GOTBlocks.Alloy_Forge)).entries((displayContext, entries) -> {
                         /* FURNACES */
                         entries.add(GOTBlocks.Alloy_Forge);
+
+                        /* OTHER */
+                        entries.add(GOTBlocks.Bank);
                     }).build());
 
     public static ItemGroup GOTFoodGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_food"),
@@ -89,16 +93,23 @@ public class GOTGroups {
                         /* FOOD */
                         entries.add(GOTBlocks.Apple_Crumble);
                         entries.add(GOTBlocks.Banana_Cake);
+                        entries.add(GOTBlocks.Banana);
+                        entries.add(GOTBlocks.Berry_Pie);
                     }).build());
 
     public static ItemGroup GOTNaturalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_natural"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Natural Blocks"))
-                    .icon(() -> new ItemStack(GOTBlocks.Arid_Grass)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(GOTBlocks.Basalt_Gravel)).entries((displayContext, entries) -> {
                         /* PLANTS */
                         entries.add(GOTBlocks.Arid_Grass);
+                        entries.add(GOTBlocks.Asshai_Flower);
+                        entries.add(GOTBlocks.Asshai_Grass);
+                        entries.add(GOTBlocks.Asshai_Moss);
+                        entries.add(GOTBlocks.Asshai_Thorn);
 
                         /* BLOCKS */
                         entries.add(GOTBlocks.Asshai_Dirt);
+                        entries.add(GOTBlocks.Basalt_Gravel);
                         entries.add(GOTBlocks.Ore_Cobalt);
                     }).build());
 
@@ -106,6 +117,18 @@ public class GOTGroups {
             FabricItemGroup.builder().displayName(Text.literal("GOT Building Blocks"))
                     .icon(() -> new ItemStack(GOTBlocks.Asshai_Bars)).entries((displayContext, entries) -> {
                         entries.add(GOTBlocks.Asshai_Bars);
+
+                    }).build());
+
+    public static ItemGroup GOTDecorationGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_decoration"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Decoration Blocks"))
+                    .icon(() -> new ItemStack(GOTBlocks.Bird_Cage_Bronze)).entries((displayContext, entries) -> {
+                        entries.add(GOTBlocks.Asshai_Torch);
+                        entries.add(GOTBlocks.Bird_Cage_Bronze);
+                        entries.add(GOTBlocks.Bird_Cage_Gold);
+                        entries.add(GOTBlocks.Bird_Cage_Iron);
+                        entries.add(GOTBlocks.Bird_Cage_Silver);
+                        entries.add(GOTBlocks.Bird_Cage_Wood);
 
                     }).build());
 
