@@ -43,6 +43,23 @@
     "got:brick6_yiti_gold_wall",
     "got:brick6_yiti_granite_wall",
     "got:brick6_yiti_granite_carved_wall",
-    "got:brick6_yiti_granite_carved_wall"
+    "got:brick6_yiti_granite_carved_wall",
+    "got:clay_tile_wall",
+    "got:clay_tile_dyed_black_wall",
+    "got:clay_tile_dyed_blue_wall",
+    "got:clay_tile_dyed_brown_wall",
+    "got:clay_tile_dyed_cyan_wall",
+    "got:clay_tile_dyed_gray_wall",
+    "got:clay_tile_dyed_green_wall",
+    "got:clay_tile_dyed_light_blue_wall",
+    "got:clay_tile_dyed_lime_wall",
+    "got:clay_tile_dyed_magenta_wall",
+    "got:clay_tile_dyed_orange_wall",
+    "got:clay_tile_dyed_pink_wall",
+    "got:clay_tile_dyed_purple_wall",
+    "got:clay_tile_dyed_red_wall",
+    "got:clay_tile_dyed_silver_wall",
+    "got:clay_tile_dyed_white_wall",
+    "got:clay_tile_dyed_yellow_wall"
   ]
 }

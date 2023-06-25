@@ -282,13 +282,13 @@ public class PaneBlockGenerator {
 
         JsonObject part1 = new JsonObject();
         JsonObject apply1 = new JsonObject();
-        apply1.addProperty("model", "got:block/asshai_bars_post_ends");
+        apply1.addProperty("model", "got:block/" + blockName + "_post_ends");
         part1.add("apply", apply1);
         multipartArray.add(part1);
 
         JsonObject part2 = new JsonObject();
         JsonObject apply2 = new JsonObject();
-        apply2.addProperty("model", "got:block/asshai_bars_post");
+        apply2.addProperty("model", "got:block/" + blockName + "_post");
         JsonObject when2 = new JsonObject();
         when2.addProperty("east", "false");
         when2.addProperty("north", "false");
@@ -300,7 +300,7 @@ public class PaneBlockGenerator {
 
         JsonObject part3 = new JsonObject();
         JsonObject apply3 = new JsonObject();
-        apply3.addProperty("model", "got:block/asshai_bars_cap");
+        apply3.addProperty("model", "got:block/" + blockName + "_cap");
         JsonObject when3 = new JsonObject();
         when3.addProperty("east", "false");
         when3.addProperty("north", "true");
@@ -312,7 +312,7 @@ public class PaneBlockGenerator {
 
         JsonObject part4 = new JsonObject();
         JsonObject apply4 = new JsonObject();
-        apply4.addProperty("model", "got:block/asshai_bars_cap");
+        apply4.addProperty("model", "got:block/" + blockName + "_cap");
         apply4.addProperty("y", 90);
         JsonObject when4 = new JsonObject();
         when4.addProperty("east", "true");
@@ -325,7 +325,7 @@ public class PaneBlockGenerator {
 
         JsonObject part5 = new JsonObject();
         JsonObject apply5 = new JsonObject();
-        apply5.addProperty("model", "got:block/asshai_bars_cap_alt");
+        apply5.addProperty("model", "got:block/" + blockName + "_cap_alt");
         JsonObject when5 = new JsonObject();
         when5.addProperty("east", "false");
         when5.addProperty("north", "false");
@@ -337,7 +337,7 @@ public class PaneBlockGenerator {
 
         JsonObject part6 = new JsonObject();
         JsonObject apply6 = new JsonObject();
-        apply6.addProperty("model", "got:block/asshai_bars_cap_alt");
+        apply6.addProperty("model", "got:block/" + blockName + "_cap_alt");
         apply6.addProperty("y", 90);
         JsonObject when6 = new JsonObject();
         when6.addProperty("east", "false");
@@ -350,7 +350,7 @@ public class PaneBlockGenerator {
 
         JsonObject part7 = new JsonObject();
         JsonObject apply7 = new JsonObject();
-        apply7.addProperty("model", "got:block/asshai_bars_side");
+        apply7.addProperty("model", "got:block/" + blockName + "_side");
         JsonObject when7 = new JsonObject();
         when7.addProperty("north", "true");
         part7.add("apply", apply7);
@@ -359,7 +359,7 @@ public class PaneBlockGenerator {
 
         JsonObject part8 = new JsonObject();
         JsonObject apply8 = new JsonObject();
-        apply8.addProperty("model", "got:block/asshai_bars_side");
+        apply8.addProperty("model", "got:block/" + blockName + "_side");
         apply8.addProperty("y", 90);
         JsonObject when8 = new JsonObject();
         when8.addProperty("east", "true");
@@ -369,7 +369,7 @@ public class PaneBlockGenerator {
 
         JsonObject part9 = new JsonObject();
         JsonObject apply9 = new JsonObject();
-        apply9.addProperty("model", "got:block/asshai_bars_side_alt");
+        apply9.addProperty("model", "got:block/" + blockName + "_side_alt");
         JsonObject when9 = new JsonObject();
         when9.addProperty("south", "true");
         part9.add("apply", apply9);
@@ -378,7 +378,7 @@ public class PaneBlockGenerator {
 
         JsonObject part10 = new JsonObject();
         JsonObject apply10 = new JsonObject();
-        apply10.addProperty("model", "got:block/asshai_bars_side_alt");
+        apply10.addProperty("model", "got:block/" + blockName + "_side_alt");
         apply10.addProperty("y", 90);
         JsonObject when10 = new JsonObject();
         when10.addProperty("west", "true");
@@ -395,7 +395,7 @@ public class PaneBlockGenerator {
         JsonObject itemJson = new JsonObject();
         itemJson.addProperty("parent", "minecraft:item/generated");
         JsonObject textures = new JsonObject();
-        textures.addProperty("layer0", "got:block/asshai_bars");
+        textures.addProperty("layer0", "got:block/" + blockName + "");
         itemJson.add("textures", textures);
 
         File itemFile = new File("C:/MinecraftModding/FirstMod/src/main/resources/assets/got/models/item/" + blockName + ".json");

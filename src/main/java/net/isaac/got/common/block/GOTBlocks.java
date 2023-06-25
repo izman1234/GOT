@@ -30,7 +30,7 @@ public class GOTBlocks {
     public static final Block Asshai_Grass = registerBlock("asshai_grass",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
     public static final Block Asshai_Moss = registerBlock("asshai_moss",
-            new CarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.GRASS)));
+            new GOTMossBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.GRASS).nonOpaque()));
     public static final Block Asshai_Thorn = registerBlock("asshai_thorn",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
     public static final Block Asshai_Torch = registerBlock("asshai_torch",
@@ -50,15 +50,15 @@ public class GOTBlocks {
     public static final Block Berry_Pie = registerBlock("berry_pie",
             new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
     public static final Block Bird_Cage_Bronze = registerBlock("bird_cage_bronze",
-            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque()));
     public static final Block Bird_Cage_Gold = registerBlock("bird_cage_gold",
-            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK).nonOpaque()));
     public static final Block Bird_Cage_Iron = registerBlock("bird_cage_iron",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block Bird_Cage_Silver = registerBlock("bird_cage_silver",
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).nonOpaque()));
     public static final Block Bird_Cage_Wood = registerBlock("bird_cage_wood_wood",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).nonOpaque()));
     public static final Block Blackroot = registerBlock("blackroot",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
     public static final Block Amber_Gem_Block = registerBlock("block_gem_amber",
@@ -438,8 +438,186 @@ public class GOTBlocks {
             new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
     public static final Block Ice_Brick = registerBlock("brick_ice",
             new Block(FabricBlockSettings.copyOf(Blocks.ICE)));
+    public static final Block Bronze_Bars = registerBlock("bronze_bars",
+            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
 
+    //ADD BUTTERFLY JAR
 
+    public static final Block Ceramic_Plate = registerBlock("ceramic_plate",
+            new GOTPlateBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT)));
+    public static final Block Chandelier_Asshai = registerBlock("chandelier_asshai",
+            new GOTChandelierBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).noCollision().breakInstantly().luminance((state) -> {
+                return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.EFFECT)); //FIX COLORS
+    public static final Block Chandelier_Bronze = registerBlock("chandelier_bronze",
+            new GOTChandelierBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).noCollision().breakInstantly().luminance((state) -> {
+                return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.FLAME));
+    public static final Block Chandelier_Gold = registerBlock("chandelier_gold",
+            new GOTChandelierBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).noCollision().breakInstantly().luminance((state) -> {
+                return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.FLAME));
+    public static final Block Chandelier_Iron = registerBlock("chandelier_iron",
+            new GOTChandelierBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).noCollision().breakInstantly().luminance((state) -> {
+                return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.FLAME));
+    public static final Block Chandelier_Silver = registerBlock("chandelier_silver",
+            new GOTChandelierBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).noCollision().breakInstantly().luminance((state) -> {
+                return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.FLAME));
+    public static final Block Chandelier_Valyrian = registerBlock("chandelier_valyrian",
+            new GOTChandelierBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).noCollision().breakInstantly().luminance((state) -> {
+                return 14;}).sounds(BlockSoundGroup.WOOD).pistonBehavior(PistonBehavior.DESTROY), ParticleTypes.FLAME));
+    public static final Block Cherry_Pie = registerBlock("cherry_pie",
+            new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
+    public static final Block Clay_Tile = registerBlock("clay_tile",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab = registerBlock("clay_tile_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs = registerBlock("clay_tile_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall = registerBlock("clay_tile_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Black = registerBlock("clay_tile_dyed_black",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Black = registerBlock("clay_tile_dyed_black_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Black = registerBlock("clay_tile_dyed_black_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Black.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Black = registerBlock("clay_tile_dyed_black_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Blue = registerBlock("clay_tile_dyed_blue",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Blue = registerBlock("clay_tile_dyed_blue_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Blue = registerBlock("clay_tile_dyed_blue_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Blue.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Blue = registerBlock("clay_tile_dyed_blue_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Brown = registerBlock("clay_tile_dyed_brown",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Brown = registerBlock("clay_tile_dyed_brown_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Brown = registerBlock("clay_tile_dyed_brown_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Brown.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Brown = registerBlock("clay_tile_dyed_brown_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Cyan = registerBlock("clay_tile_dyed_cyan",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Cyan = registerBlock("clay_tile_dyed_cyan_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Cyan = registerBlock("clay_tile_dyed_cyan_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Cyan.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Cyan = registerBlock("clay_tile_dyed_cyan_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Gray = registerBlock("clay_tile_dyed_gray",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Gray = registerBlock("clay_tile_dyed_gray_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Gray = registerBlock("clay_tile_dyed_gray_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Gray.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Gray = registerBlock("clay_tile_dyed_gray_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Green = registerBlock("clay_tile_dyed_green",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Green = registerBlock("clay_tile_dyed_green_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Green = registerBlock("clay_tile_dyed_green_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Green.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Green = registerBlock("clay_tile_dyed_green_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Light_Blue = registerBlock("clay_tile_dyed_light_blue",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Light_Blue = registerBlock("clay_tile_dyed_light_blue_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Light_Blue = registerBlock("clay_tile_dyed_light_blue_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Light_Blue.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Light_Blue = registerBlock("clay_tile_dyed_light_blue_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Lime = registerBlock("clay_tile_dyed_lime",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Lime = registerBlock("clay_tile_dyed_lime_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Lime = registerBlock("clay_tile_dyed_lime_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Lime.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Lime = registerBlock("clay_tile_dyed_lime_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Magenta = registerBlock("clay_tile_dyed_magenta",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Magenta = registerBlock("clay_tile_dyed_magenta_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Magenta = registerBlock("clay_tile_dyed_magenta_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Magenta.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Magenta = registerBlock("clay_tile_dyed_magenta_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Orange = registerBlock("clay_tile_dyed_orange",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Orange = registerBlock("clay_tile_dyed_orange_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Orange = registerBlock("clay_tile_dyed_orange_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Orange.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Orange = registerBlock("clay_tile_dyed_orange_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Pink = registerBlock("clay_tile_dyed_pink",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Pink = registerBlock("clay_tile_dyed_pink_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Pink = registerBlock("clay_tile_dyed_pink_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Pink.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Pink = registerBlock("clay_tile_dyed_pink_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Purple = registerBlock("clay_tile_dyed_purple",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Purple = registerBlock("clay_tile_dyed_purple_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Purple = registerBlock("clay_tile_dyed_purple_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Purple.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Purple = registerBlock("clay_tile_dyed_purple_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Red = registerBlock("clay_tile_dyed_red",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Red = registerBlock("clay_tile_dyed_red_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Red = registerBlock("clay_tile_dyed_red_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Red.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Red = registerBlock("clay_tile_dyed_red_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Silver = registerBlock("clay_tile_dyed_silver",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Silver = registerBlock("clay_tile_dyed_silver_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Silver = registerBlock("clay_tile_dyed_silver_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Silver.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Silver = registerBlock("clay_tile_dyed_silver_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_White = registerBlock("clay_tile_dyed_white",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_White = registerBlock("clay_tile_dyed_white_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_White = registerBlock("clay_tile_dyed_white_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_White.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_White = registerBlock("clay_tile_dyed_white_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+    public static final Block Clay_Tile_Dyed_Yellow = registerBlock("clay_tile_dyed_yellow",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD_BRICKS)));
+    public static final Block Clay_Tile_Slab_Dyed_Yellow = registerBlock("clay_tile_dyed_yellow_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_SLAB)));
+    public static final Block Clay_Tile_Stairs_Dyed_Yellow = registerBlock("clay_tile_dyed_yellow_stairs",
+            new StairsBlock(GOTBlocks.Clay_Tile_Dyed_Yellow.getDefaultState(), FabricBlockSettings.copyOf(Blocks.MUD_BRICK_STAIRS)));
+    public static final Block Clay_Tile_Wall_Dyed_Yellow = registerBlock("clay_tile_dyed_yellow_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
+
+    //ADD CLOVER
+
+    //ADD COBBLEBRICK (COOL TEXTURE MERGING)
+
+    //ADD COMMAND TABLE
+
+    public static final Block Corn_Stalk = registerBlock("corn_stalk",
+            new GOTCornBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Corn_Stalk_Corn = registerBlock("corn_stalk_corn",   //FIX THESE TWO. NOT WORKING AS INTENDED
+            new GOTCornBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Cucumber = registerBlock("cucumber",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Date = registerBlock("date",
+            new GOTDateBlock(FabricBlockSettings.copyOf(Blocks.COCOA)));
+
+    //ADD DAUB (COOL TEXTURE MERGING)
 
     public static final Block Ore_Cobalt = registerBlock("ore_cobalt",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)));

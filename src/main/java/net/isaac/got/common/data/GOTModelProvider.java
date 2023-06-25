@@ -8,6 +8,7 @@ import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 public class GOTModelProvider extends FabricModelProvider {
@@ -24,37 +25,27 @@ public class GOTModelProvider extends FabricModelProvider {
         CakeBlockGenerator.generateBlockJson("apple_crumble");
         CakeBlockGenerator.generateBlockJson("banana_cake");
         CakeBlockGenerator.generateBlockJson("berry_pie");
+        CakeBlockGenerator.generateBlockJson("cherry_pie");
+        blockStateModelGenerator.registerCrop(GOTBlocks.Cucumber, Properties.AGE_3, 0, 1, 2, 3);
+
 
         /* NATURAL */
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Arid_Grass, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Asshai_Dirt);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Flower, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Grass, BlockStateModelGenerator.TintType.TINTED);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
-        blockStateModelGenerator.registerWoolAndCarpet(Blocks.WHITE_WOOL, GOTBlocks.Asshai_Moss); //NOT WORKING
+        MossGenerator.generateBlockJson("asshai_moss");
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Thorn, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Gravel);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Blackroot, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Bluebell, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Corn_Stalk, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Corn_Stalk_Corn, BlockStateModelGenerator.TintType.TINTED);
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
 
         /* BULDING */
         PaneBlockGenerator.generateBlockJson("asshai_bars");
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Amber_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Coral_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Opal_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pearl_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ruby_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sapphire_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Topaz_Gem_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bronze_Metal_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Saltpeter_Metal_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Silver_Metal_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sulfur_Metal_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Tin_Metal_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Valyrian_Metal_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Alloy_Steel_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Gilded_Iron_Block);
-        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Salt_Metal_Block);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bone_Block);
         SlabGenerator.generateBlockJson("bone_block");
         StairGenerator.generateBlockJson("bone_block");
@@ -225,6 +216,75 @@ public class GOTModelProvider extends FabricModelProvider {
         StairGenerator.generateBlockJson("brick6_yiti_granite_carved");
         WallGenerator.generateBlockJson("brick6_yiti_granite_carved");
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ice_Brick);
+        PaneBlockGenerator.generateBlockJson("bronze_bars");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile);
+        SlabGenerator.generateBlockJson("clay_tile");
+        StairGenerator.generateBlockJson("clay_tile");
+        WallGenerator.generateBlockJson("clay_tile");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Black);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_black");
+        StairGenerator.generateBlockJson("clay_tile_dyed_black");
+        WallGenerator.generateBlockJson("clay_tile_dyed_black");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Blue);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_blue");
+        StairGenerator.generateBlockJson("clay_tile_dyed_blue");
+        WallGenerator.generateBlockJson("clay_tile_dyed_blue");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Brown);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_brown");
+        StairGenerator.generateBlockJson("clay_tile_dyed_brown");
+        WallGenerator.generateBlockJson("clay_tile_dyed_brown");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Cyan);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_cyan");
+        StairGenerator.generateBlockJson("clay_tile_dyed_cyan");
+        WallGenerator.generateBlockJson("clay_tile_dyed_cyan");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Gray);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_gray");
+        StairGenerator.generateBlockJson("clay_tile_dyed_gray");
+        WallGenerator.generateBlockJson("clay_tile_dyed_gray");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Green);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_green");
+        StairGenerator.generateBlockJson("clay_tile_dyed_green");
+        WallGenerator.generateBlockJson("clay_tile_dyed_green");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Light_Blue);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_light_blue");
+        StairGenerator.generateBlockJson("clay_tile_dyed_light_blue");
+        WallGenerator.generateBlockJson("clay_tile_dyed_light_blue");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Lime);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_lime");
+        StairGenerator.generateBlockJson("clay_tile_dyed_lime");
+        WallGenerator.generateBlockJson("clay_tile_dyed_lime");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Magenta);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_magenta");
+        StairGenerator.generateBlockJson("clay_tile_dyed_magenta");
+        WallGenerator.generateBlockJson("clay_tile_dyed_magenta");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Orange);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_orange");
+        StairGenerator.generateBlockJson("clay_tile_dyed_orange");
+        WallGenerator.generateBlockJson("clay_tile_dyed_orange");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Pink);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_pink");
+        StairGenerator.generateBlockJson("clay_tile_dyed_pink");
+        WallGenerator.generateBlockJson("clay_tile_dyed_pink");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Purple);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_purple");
+        StairGenerator.generateBlockJson("clay_tile_dyed_purple");
+        WallGenerator.generateBlockJson("clay_tile_dyed_purple");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Red);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_red");
+        StairGenerator.generateBlockJson("clay_tile_dyed_red");
+        WallGenerator.generateBlockJson("clay_tile_dyed_red");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Silver);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_silver");
+        StairGenerator.generateBlockJson("clay_tile_dyed_silver");
+        WallGenerator.generateBlockJson("clay_tile_dyed_silver");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_White);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_white");
+        StairGenerator.generateBlockJson("clay_tile_dyed_white");
+        WallGenerator.generateBlockJson("clay_tile_dyed_white");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Clay_Tile_Dyed_Yellow);
+        SlabGenerator.generateBlockJson("clay_tile_dyed_yellow");
+        StairGenerator.generateBlockJson("clay_tile_dyed_yellow");
+        WallGenerator.generateBlockJson("clay_tile_dyed_yellow");
 
 
         /*DECORATION */
@@ -234,6 +294,29 @@ public class GOTModelProvider extends FabricModelProvider {
         BirdCageGenerator.generateBlockJson("bird_cage_iron");
         BirdCageGenerator.generateBlockJson("bird_cage_silver");
         BirdCageGenerator.generateBlockJson("bird_cage_wood_wood");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Amber_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Coral_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Opal_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pearl_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ruby_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sapphire_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Topaz_Gem_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bronze_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Saltpeter_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Silver_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sulfur_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Tin_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Valyrian_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Alloy_Steel_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Gilded_Iron_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Salt_Metal_Block);
+        PlateBlockGenerator.generateBlockJson("ceramic_plate");
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Asshai, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Bronze, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Gold, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Iron, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Silver, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Valyrian, BlockStateModelGenerator.TintType.TINTED);
 
     }
 

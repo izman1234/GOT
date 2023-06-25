@@ -95,23 +95,25 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Banana_Cake);
                         entries.add(GOTBlocks.Banana);
                         entries.add(GOTBlocks.Berry_Pie);
+                        entries.add(GOTBlocks.Cherry_Pie);
+                        entries.add(GOTBlocks.Date);
+                        entries.add(GOTBlocks.Cucumber);
                     }).build());
 
     public static ItemGroup GOTNaturalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_natural"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Natural Blocks"))
                     .icon(() -> new ItemStack(GOTBlocks.Basalt_Gravel)).entries((displayContext, entries) -> {
-                        /* PLANTS */
+                        entries.add(GOTBlocks.Asshai_Dirt);
                         entries.add(GOTBlocks.Arid_Grass);
                         entries.add(GOTBlocks.Asshai_Flower);
                         entries.add(GOTBlocks.Asshai_Grass);
                         entries.add(GOTBlocks.Asshai_Moss);
                         entries.add(GOTBlocks.Asshai_Thorn);
+                        entries.add(GOTBlocks.Basalt_Gravel);
                         entries.add(GOTBlocks.Blackroot);
                         entries.add(GOTBlocks.Bluebell);
-
-                        /* BLOCKS */
-                        entries.add(GOTBlocks.Asshai_Dirt);
-                        entries.add(GOTBlocks.Basalt_Gravel);
+                        entries.add(GOTBlocks.Corn_Stalk);
+                        entries.add(GOTBlocks.Corn_Stalk_Corn);
                         entries.add(GOTBlocks.Ore_Cobalt);
 
                     }).build());
@@ -290,6 +292,75 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Yiti_Granite_Carved_Brick_Stairs);
                         entries.add(GOTBlocks.Yiti_Granite_Carved_Brick_Wall);
                         entries.add(GOTBlocks.Ice_Brick);
+                        entries.add(GOTBlocks.Bronze_Bars);
+                        entries.add(GOTBlocks.Clay_Tile);
+                        entries.add(GOTBlocks.Clay_Tile_Slab);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs);
+                        entries.add(GOTBlocks.Clay_Tile_Wall);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Black);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Black);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Black);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Black);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Brown);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Brown);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Brown);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Brown);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Cyan);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Cyan);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Cyan);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Cyan);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Gray);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Gray);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Gray);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Gray);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Green);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Green);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Green);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Green);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Light_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Light_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Light_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Light_Blue);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Lime);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Lime);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Lime);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Lime);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Magenta);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Magenta);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Magenta);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Magenta);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Orange);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Orange);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Orange);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Orange);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Pink);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Pink);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Pink);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Pink);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Purple);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Purple);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Purple);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Purple);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Red);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Red);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Red);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Red);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Silver);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Silver);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Silver);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Silver);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_White);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_White);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_White);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_White);
+                        entries.add(GOTBlocks.Clay_Tile_Dyed_Yellow);
+                        entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Yellow);
+                        entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Yellow);
+                        entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Yellow);
 
                     }).build());
 
@@ -318,6 +389,13 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Alloy_Steel_Block);
                         entries.add(GOTBlocks.Gilded_Iron_Block);
                         entries.add(GOTBlocks.Salt_Metal_Block);
+                        entries.add(GOTBlocks.Ceramic_Plate);
+                        entries.add(GOTBlocks.Chandelier_Asshai);
+                        entries.add(GOTBlocks.Chandelier_Bronze);
+                        entries.add(GOTBlocks.Chandelier_Gold);
+                        entries.add(GOTBlocks.Chandelier_Iron);
+                        entries.add(GOTBlocks.Chandelier_Silver);
+                        entries.add(GOTBlocks.Chandelier_Valyrian);
 
                     }).build());
 

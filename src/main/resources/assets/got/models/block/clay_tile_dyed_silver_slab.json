@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/clay_tile_dyed_silver",
+    "bottom": "got:block/clay_tile_dyed_silver",
+    "side": "got:block/clay_tile_dyed_silver",
+    "top": "got:block/clay_tile_dyed_silver"
+  }
+}
