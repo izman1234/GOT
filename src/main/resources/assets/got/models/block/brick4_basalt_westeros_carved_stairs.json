@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "got:block/brick4_basalt_westeros_carved",
+    "side": "got:block/brick4_basalt_westeros_carved",
+    "top": "got:block/brick4_basalt_westeros_carved"
+  }
+}

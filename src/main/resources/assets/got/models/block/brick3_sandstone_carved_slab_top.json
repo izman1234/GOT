@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/brick3_sandstone_carved",
+    "bottom": "got:block/brick3_sandstone_carved",
+    "side": "got:block/brick3_sandstone_carved",
+    "top": "got:block/brick3_sandstone_carved"
+  }
+}

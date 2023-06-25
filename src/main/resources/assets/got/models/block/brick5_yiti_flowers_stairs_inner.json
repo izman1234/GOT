@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/brick5_yiti_flowers",
+    "side": "got:block/brick5_yiti_flowers",
+    "top": "got:block/brick5_yiti_flowers"
+  }
+}

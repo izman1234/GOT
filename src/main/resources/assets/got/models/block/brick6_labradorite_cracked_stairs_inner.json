@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/brick6_labradorite_cracked",
+    "side": "got:block/brick6_labradorite_cracked",
+    "top": "got:block/brick6_labradorite_cracked"
+  }
+}

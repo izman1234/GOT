@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick6_labradorite_cracked_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick6_labradorite_cracked"
+    },
+    "type=top": {
+      "model": "got:block/brick6_labradorite_cracked_slab_top"
+    }
+  }
+}

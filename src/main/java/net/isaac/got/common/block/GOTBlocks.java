@@ -22,11 +22,11 @@ public class GOTBlocks {
     public static final Block Arid_Grass = registerBlock("arid_grass",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
     public static final Block Asshai_Bars = registerBlock("asshai_bars",
-            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS).strength(4.0f).requiresTool()));
+            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
     public static final Block Asshai_Dirt = registerBlock("asshai_dirt",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block Asshai_Flower = registerBlock("asshai_flower",
-            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY).requiresTool()));
+            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
     public static final Block Asshai_Grass = registerBlock("asshai_grass",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
     public static final Block Asshai_Moss = registerBlock("asshai_moss",
@@ -143,7 +143,7 @@ public class GOTBlocks {
     public static final Block Basalt_Brick_Slab = registerBlock("brick1_basalt_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
     public static final Block Basalt_Brick_Stairs = registerBlock("brick1_basalt_stairs",
-            new StairsBlock(Blocks.BASALT.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Basalt_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
     public static final Block Basalt_Brick_Wall = registerBlock("brick1_basalt_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
     public static final Block Basalt_Brick_Cracked = registerBlock("brick1_basalt_cracked",
@@ -151,7 +151,7 @@ public class GOTBlocks {
     public static final Block Basalt_Brick_Cracked_Slab = registerBlock("brick1_basalt_cracked_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
     public static final Block Basalt_Brick_Cracked_Stairs = registerBlock("brick1_basalt_cracked_stairs",
-            new StairsBlock(Blocks.BASALT.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Basalt_Brick_Cracked.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
     public static final Block Basalt_Brick_Cracked_Wall = registerBlock("brick1_basalt_cracked_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
     public static final Block Diorite_Brick = registerBlock("brick1_diorite",
@@ -159,7 +159,7 @@ public class GOTBlocks {
     public static final Block Diorite_Brick_Slab = registerBlock("brick1_diorite_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
     public static final Block Diorite_Brick_Stairs = registerBlock("brick1_diorite_stairs",
-            new StairsBlock(Blocks.DIORITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Diorite_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
     public static final Block Diorite_Brick_Wall = registerBlock("brick1_diorite_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
     public static final Block Rhyolite_Brick = registerBlock("brick1_rhyolite",
@@ -167,23 +167,23 @@ public class GOTBlocks {
     public static final Block Rhyolite_Brick_Slab = registerBlock("brick1_rhyolite_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
     public static final Block Rhyolite_Brick_Stairs = registerBlock("brick1_rhyolite_stairs",
-            new StairsBlock(Blocks.DIORITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Rhyolite_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
     public static final Block Rhyolite_Brick_Wall = registerBlock("brick1_rhyolite_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
     public static final Block Sandstone_Brick = registerBlock("brick1_sandstone",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
     public static final Block Sandstone_Brick_Slab = registerBlock("brick1_sandstone_slab",
-            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
     public static final Block Sandstone_Brick_Stairs = registerBlock("brick1_sandstone_stairs",
-            new StairsBlock(Blocks.DIORITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Sandstone_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
     public static final Block Sandstone_Brick_Wall = registerBlock("brick1_sandstone_wall",
-            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
     public static final Block Basalt_Carved_Brick = registerBlock("brick2_basalt_carved",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
     public static final Block Basalt_Carved_Brick_Slab = registerBlock("brick2_basalt_carved_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
     public static final Block Basalt_Carved_Brick_Stairs = registerBlock("brick2_basalt_carved_stairs",
-            new StairsBlock(Blocks.DIORITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Basalt_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
     public static final Block Basalt_Carved_Brick_Wall = registerBlock("brick2_basalt_carved_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
     public static final Block Basalt_Westeros_Brick = registerBlock("brick2_basalt_westeros",
@@ -191,11 +191,258 @@ public class GOTBlocks {
     public static final Block Basalt_Westeros_Brick_Slab = registerBlock("brick2_basalt_westeros_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
     public static final Block Basalt_Westeros_Brick_Stairs = registerBlock("brick2_basalt_westeros_stairs",
-            new StairsBlock(Blocks.DIORITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+            new StairsBlock(GOTBlocks.Basalt_Westeros_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
     public static final Block Basalt_Westeros_Brick_Wall = registerBlock("brick2_basalt_westeros_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Granite_Brick = registerBlock("brick2_granite",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Granite_Brick_Slab = registerBlock("brick2_granite_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Granite_Brick_Stairs = registerBlock("brick2_granite_stairs",
+            new StairsBlock(Blocks.GRANITE.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Granite_Brick_Wall = registerBlock("brick2_granite_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Diorite_Carved_Brick = registerBlock("brick3_diorite_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Diorite_Carved_Brick_Slab = registerBlock("brick3_diorite_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Diorite_Carved_Brick_Stairs = registerBlock("brick3_diorite_carved_stairs",
+            new StairsBlock(GOTBlocks.Diorite_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Diorite_Carved_Brick_Wall = registerBlock("brick3_diorite_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Granite_Carved_Brick = registerBlock("brick3_granite_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Granite_Carved_Brick_Slab = registerBlock("brick3_granite_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Granite_Carved_Brick_Stairs = registerBlock("brick3_granite_carved_stairs",
+            new StairsBlock(GOTBlocks.Granite_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Granite_Carved_Brick_Wall = registerBlock("brick3_granite_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Lhazar_Brick = registerBlock("brick3_lhazar",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Lhazar_Brick_Slab = registerBlock("brick3_lhazar_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Lhazar_Brick_Stairs = registerBlock("brick3_lhazar_stairs",
+            new StairsBlock(GOTBlocks.Lhazar_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Lhazar_Brick_Wall = registerBlock("brick3_lhazar_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Sandstone_Carved_Brick = registerBlock("brick3_sandstone_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Sandstone_Carved_Brick_Slab = registerBlock("brick3_sandstone_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Sandstone_Carved_Brick_Stairs = registerBlock("brick3_sandstone_carved_stairs",
+            new StairsBlock(GOTBlocks.Sandstone_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Sandstone_Carved_Brick_Wall = registerBlock("brick3_sandstone_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Sandstone_Cracked_Brick = registerBlock("brick3_sandstone_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Sandstone_Cracked_Brick_Slab = registerBlock("brick3_sandstone_cracked_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Sandstone_Cracked_Brick_Stairs = registerBlock("brick3_sandstone_cracked_stairs",
+            new StairsBlock(GOTBlocks.Sandstone_Cracked_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Sandstone_Cracked_Brick_Wall = registerBlock("brick3_sandstone_cracked_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Sandstone_Red_Brick = registerBlock("brick3_sandstone_red",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Sandstone_Red_Brick_Slab = registerBlock("brick3_sandstone_red_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Sandstone_Red_Brick_Stairs = registerBlock("brick3_sandstone_red_stairs",
+            new StairsBlock(GOTBlocks.Sandstone_Red_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Sandstone_Red_Brick_Wall = registerBlock("brick3_sandstone_red_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Sandstone_Red_Carved_Brick = registerBlock("brick3_sandstone_red_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Sandstone_Red_Carved_Brick_Slab = registerBlock("brick3_sandstone_red_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Sandstone_Red_Carved_Brick_Stairs = registerBlock("brick3_sandstone_red_carved_stairs",
+            new StairsBlock(GOTBlocks.Sandstone_Red_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Sandstone_Red_Carved_Brick_Wall = registerBlock("brick3_sandstone_red_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Sandstone_Red_Cracked_Brick = registerBlock("brick3_sandstone_red_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Sandstone_Red_Cracked_Brick_Slab = registerBlock("brick3_sandstone_red_cracked_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Sandstone_Red_Cracked_Brick_Stairs = registerBlock("brick3_sandstone_red_cracked_stairs",
+            new StairsBlock(GOTBlocks.Sandstone_Red_Cracked_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Sandstone_Red_Cracked_Brick_Wall = registerBlock("brick3_sandstone_red_cracked_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Basalt_Westeros_Carved_Brick = registerBlock("brick4_basalt_westeros_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Basalt_Westeros_Carved_Brick_Slab = registerBlock("brick4_basalt_westeros_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Basalt_Westeros_Carved_Brick_Stairs = registerBlock("brick4_basalt_westeros_carved_stairs",
+            new StairsBlock(GOTBlocks.Basalt_Westeros_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Basalt_Westeros_Carved_Brick_Wall = registerBlock("brick4_basalt_westeros_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Chalk_Brick = registerBlock("brick4_chalk",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Chalk_Brick_Slab = registerBlock("brick4_chalk_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Chalk_Brick_Stairs = registerBlock("brick4_chalk_stairs",
+            new StairsBlock(GOTBlocks.Chalk_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Chalk_Brick_Wall = registerBlock("brick4_chalk_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Sandstone_Lapis_Brick = registerBlock("brick4_sandstone_lapis",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Sandstone_Lapis_Brick_Slab = registerBlock("brick4_sandstone_lapis_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Sandstone_Lapis_Brick_Stairs = registerBlock("brick4_sandstone_lapis_stairs",
+            new StairsBlock(GOTBlocks.Sandstone_Lapis_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Sandstone_Lapis_Brick_Wall = registerBlock("brick4_sandstone_lapis_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Sothoryos_Brick = registerBlock("brick4_sothoryos",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Sothoryos_Brick_Slab = registerBlock("brick4_sothoryos_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Sothoryos_Brick_Stairs = registerBlock("brick4_sothoryos_stairs",
+            new StairsBlock(GOTBlocks.Sothoryos_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Sothoryos_Brick_Wall = registerBlock("brick4_sothoryos_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Sothoryos_Cracked_Brick = registerBlock("brick4_sothoryos_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Sothoryos_Cracked_Brick_Slab = registerBlock("brick4_sothoryos_cracked_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Sothoryos_Cracked_Brick_Stairs = registerBlock("brick4_sothoryos_cracked_stairs",
+            new StairsBlock(GOTBlocks.Sothoryos_Cracked_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Sothoryos_Cracked_Brick_Wall = registerBlock("brick4_sothoryos_cracked_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Sothoryos_Gold_Brick = registerBlock("brick4_sothoryos_gold",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Sothoryos_Gold_Brick_Slab = registerBlock("brick4_sothoryos_gold_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Sothoryos_Gold_Brick_Stairs = registerBlock("brick4_sothoryos_gold_stairs",
+            new StairsBlock(GOTBlocks.Sothoryos_Gold_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Sothoryos_Gold_Brick_Wall = registerBlock("brick4_sothoryos_gold_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Sothoryos_Mossy_Brick = registerBlock("brick4_sothoryos_mossy",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Sothoryos_Mossy_Brick_Slab = registerBlock("brick4_sothoryos_mossy_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Sothoryos_Mossy_Brick_Stairs = registerBlock("brick4_sothoryos_mossy_stairs",
+            new StairsBlock(GOTBlocks.Sothoryos_Mossy_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Sothoryos_Mossy_Brick_Wall = registerBlock("brick4_sothoryos_mossy_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Sothoryos_Obsidian_Brick = registerBlock("brick4_sothoryos_obsidian",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Sothoryos_Obsidian_Brick_Slab = registerBlock("brick4_sothoryos_obsidian_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Sothoryos_Obsidian_Brick_Stairs = registerBlock("brick4_sothoryos_obsidian_stairs",
+            new StairsBlock(GOTBlocks.Sothoryos_Obsidian_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Sothoryos_Obsidian_Brick_Wall = registerBlock("brick4_sothoryos_obsidian_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Rhyolite_Carved_Brick = registerBlock("brick5_rhyolite_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Rhyolite_Carved_Brick_Slab = registerBlock("brick5_rhyolite_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Rhyolite_Carved_Brick_Stairs = registerBlock("brick5_rhyolite_carved_stairs",
+            new StairsBlock(GOTBlocks.Rhyolite_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Rhyolite_Carved_Brick_Wall = registerBlock("brick5_rhyolite_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Yiti_Brick = registerBlock("brick5_yiti",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Brick_Slab = registerBlock("brick5_yiti_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Brick_Stairs = registerBlock("brick5_yiti_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Brick_Wall = registerBlock("brick5_yiti_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Yiti_Carved_Brick = registerBlock("brick5_yiti_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Carved_Brick_Slab = registerBlock("brick5_yiti_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Carved_Brick_Stairs = registerBlock("brick5_yiti_carved_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Carved_Brick_Wall = registerBlock("brick5_yiti_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Yiti_Cracked_Brick = registerBlock("brick5_yiti_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Cracked_Brick_Slab = registerBlock("brick5_yiti_cracked_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Cracked_Brick_Stairs = registerBlock("brick5_yiti_cracked_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Cracked_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Cracked_Brick_Wall = registerBlock("brick5_yiti_cracked_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Yiti_Flowers_Brick = registerBlock("brick5_yiti_flowers",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Flowers_Brick_Slab = registerBlock("brick5_yiti_flowers_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Flowers_Brick_Stairs = registerBlock("brick5_yiti_flowers_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Flowers_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Flowers_Brick_Wall = registerBlock("brick5_yiti_flowers_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Yiti_Mossy_Brick = registerBlock("brick5_yiti_mossy",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Mossy_Brick_Slab = registerBlock("brick5_yiti_mossy_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Mossy_Brick_Stairs = registerBlock("brick5_yiti_mossy_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Mossy_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Mossy_Brick_Wall = registerBlock("brick5_yiti_mossy_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Labradorite_Brick = registerBlock("brick6_labradorite",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Labradorite_Brick_Slab = registerBlock("brick6_labradorite_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Labradorite_Brick_Stairs = registerBlock("brick6_labradorite_stairs",
+            new StairsBlock(GOTBlocks.Labradorite_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Labradorite_Brick_Wall = registerBlock("brick6_labradorite_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Labradorite_Carved_Brick = registerBlock("brick6_labradorite_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Labradorite_Carved_Brick_Slab = registerBlock("brick6_labradorite_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Labradorite_Carved_Brick_Stairs = registerBlock("brick6_labradorite_carved_stairs",
+            new StairsBlock(GOTBlocks.Labradorite_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Labradorite_Carved_Brick_Wall = registerBlock("brick6_labradorite_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Labradorite_Cracked_Brick = registerBlock("brick6_labradorite_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Labradorite_Cracked_Brick_Slab = registerBlock("brick6_labradorite_cracked_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Labradorite_Cracked_Brick_Stairs = registerBlock("brick6_labradorite_cracked_stairs",
+            new StairsBlock(GOTBlocks.Labradorite_Cracked_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Labradorite_Cracked_Brick_Wall = registerBlock("brick6_labradorite_cracked_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Labradorite_Mossy_Brick = registerBlock("brick6_labradorite_mossy",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Labradorite_Mossy_Brick_Slab = registerBlock("brick6_labradorite_mossy_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_SLAB)));
+    public static final Block Labradorite_Mossy_Brick_Stairs = registerBlock("brick6_labradorite_mossy_stairs",
+            new StairsBlock(GOTBlocks.Labradorite_Mossy_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE_BRICK_STAIRS)));
+    public static final Block Labradorite_Mossy_Brick_Wall = registerBlock("brick6_labradorite_mossy_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE_BRICK_WALL)));
+    public static final Block Swords_Brick = registerBlock("brick6_swords",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE_BRICKS)));
+    public static final Block Yiti_Gold_Brick = registerBlock("brick6_yiti_gold",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Gold_Brick_Slab = registerBlock("brick6_yiti_gold_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Gold_Brick_Stairs = registerBlock("brick6_yiti_gold_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Gold_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Gold_Brick_Wall = registerBlock("brick6_yiti_gold_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Yiti_Granite_Brick = registerBlock("brick6_yiti_granite",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Granite_Brick_Slab = registerBlock("brick6_yiti_granite_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Granite_Brick_Stairs = registerBlock("brick6_yiti_granite_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Granite_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Granite_Brick_Wall = registerBlock("brick6_yiti_granite_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Yiti_Granite_Carved_Brick = registerBlock("brick6_yiti_granite_carved",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block Yiti_Granite_Carved_Brick_Slab = registerBlock("brick6_yiti_granite_carved_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_SLAB)));
+    public static final Block Yiti_Granite_Carved_Brick_Stairs = registerBlock("brick6_yiti_granite_carved_stairs",
+            new StairsBlock(GOTBlocks.Yiti_Granite_Carved_Brick.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE_STAIRS)));
+    public static final Block Yiti_Granite_Carved_Brick_Wall = registerBlock("brick6_yiti_granite_carved_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE_WALL)));
+    public static final Block Ice_Brick = registerBlock("brick_ice",
+            new Block(FabricBlockSettings.copyOf(Blocks.ICE)));
+
+
+
     public static final Block Ore_Cobalt = registerBlock("ore_cobalt",
-            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE).strength(1.25F, 4.2F)));
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

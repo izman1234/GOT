@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick4_chalk_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick4_chalk"
+    },
+    "type=top": {
+      "model": "got:block/brick4_chalk_slab_top"
+    }
+  }
+}
