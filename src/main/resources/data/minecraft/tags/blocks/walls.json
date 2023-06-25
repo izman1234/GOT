@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "got:bone_block_wall",
+    "got:brick1_andesite_wall",
+    "got:brick1_andesite_carved_wall",
+    "got:brick1_andesite_cracked_wall",
+    "got:brick1_andesite_mossy_wall",
+    "got:brick1_basalt_wall",
+    "got:brick1_basalt_cracked_wall",
+    "got:brick1_diorite_wall",
+    "got:brick1_rhyolite_wall",
+    "got:brick1_sandstone_wall",
+    "got:brick2_basalt_carved_wall",
+    "got:brick2_basalt_westeros_wall"
+  ]
+}

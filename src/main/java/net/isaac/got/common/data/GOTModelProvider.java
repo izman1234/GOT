@@ -2,11 +2,13 @@ package net.isaac.got.common.data;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
+import net.minecraft.util.Identifier;
 
 public class GOTModelProvider extends FabricModelProvider {
     public GOTModelProvider(FabricDataOutput output) {
@@ -29,10 +31,11 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Flower, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Grass, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
-        blockStateModelGenerator.registerWallPlant(GOTBlocks.Asshai_Moss); //NOT WORKING
+        blockStateModelGenerator.registerWoolAndCarpet(Blocks.WHITE_WOOL, GOTBlocks.Asshai_Moss); //NOT WORKING
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Asshai_Thorn, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Gravel);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Blackroot, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Bluebell, BlockStateModelGenerator.TintType.TINTED);
 
         /* BULDING */
         PaneBlockGenerator.generateBlockJson("asshai_bars");
@@ -52,6 +55,54 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Alloy_Steel_Block);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Gilded_Iron_Block);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Salt_Metal_Block);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bone_Block);
+        SlabGenerator.generateBlockJson("bone_block");
+        StairGenerator.generateBlockJson("bone_block");
+        WallGenerator.generateBlockJson("bone_block");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Andesite_Brick);
+        SlabGenerator.generateBlockJson("brick1_andesite");
+        StairGenerator.generateBlockJson("brick1_andesite");
+        WallGenerator.generateBlockJson("brick1_andesite");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Andesite_Brick_Carved);
+        SlabGenerator.generateBlockJson("brick1_andesite_carved");
+        StairGenerator.generateBlockJson("brick1_andesite_carved");
+        WallGenerator.generateBlockJson("brick1_andesite_carved");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Andesite_Brick_Cracked);
+        SlabGenerator.generateBlockJson("brick1_andesite_cracked");
+        StairGenerator.generateBlockJson("brick1_andesite_cracked");
+        WallGenerator.generateBlockJson("brick1_andesite_cracked");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Andesite_Brick_Mossy);
+        SlabGenerator.generateBlockJson("brick1_andesite_mossy");
+        StairGenerator.generateBlockJson("brick1_andesite_mossy");
+        WallGenerator.generateBlockJson("brick1_andesite_mossy");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Brick);
+        SlabGenerator.generateBlockJson("brick1_basalt");
+        StairGenerator.generateBlockJson("brick1_basalt");
+        WallGenerator.generateBlockJson("brick1_basalt");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Brick_Cracked);
+        SlabGenerator.generateBlockJson("brick1_basalt_cracked");
+        StairGenerator.generateBlockJson("brick1_basalt_cracked");
+        WallGenerator.generateBlockJson("brick1_basalt_cracked");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Diorite_Brick);
+        SlabGenerator.generateBlockJson("brick1_diorite");
+        StairGenerator.generateBlockJson("brick1_diorite");
+        WallGenerator.generateBlockJson("brick1_diorite");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Rhyolite_Brick);
+        SlabGenerator.generateBlockJson("brick1_rhyolite");
+        StairGenerator.generateBlockJson("brick1_rhyolite");
+        WallGenerator.generateBlockJson("brick1_rhyolite");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Sandstone_Brick);
+        SlabGenerator.generateBlockJson("brick1_sandstone");
+        StairGenerator.generateBlockJson("brick1_sandstone");
+        WallGenerator.generateBlockJson("brick1_sandstone");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Carved_Brick);
+        SlabGenerator.generateBlockJson("brick2_basalt_carved");
+        StairGenerator.generateBlockJson("brick2_basalt_carved");
+        WallGenerator.generateBlockJson("brick2_basalt_carved");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Basalt_Westeros_Brick);
+        SlabGenerator.generateBlockJson("brick2_basalt_westeros");
+        StairGenerator.generateBlockJson("brick2_basalt_westeros");
+        WallGenerator.generateBlockJson("brick2_basalt_westeros");
 
         /*DECORATION */
         blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?

@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick1_rhyolite",
+    "bottom": "got:block/brick1_rhyolite",
+    "side": "got:block/brick1_rhyolite",
+    "top": "got:block/brick1_rhyolite"
+  }
+}

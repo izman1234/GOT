@@ -1,3 +1,7 @@
 {
-  "multipart": []
+  "variants": {
+    "": {
+      "model": "got:block/asshai_moss"
+    }
+  }
 }

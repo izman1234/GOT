@@ -107,6 +107,7 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Asshai_Moss);
                         entries.add(GOTBlocks.Asshai_Thorn);
                         entries.add(GOTBlocks.Blackroot);
+                        entries.add(GOTBlocks.Bluebell);
 
                         /* BLOCKS */
                         entries.add(GOTBlocks.Asshai_Dirt);
@@ -117,8 +118,56 @@ public class GOTGroups {
 
     public static ItemGroup GOTBuildingGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_building"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Building Blocks"))
-                    .icon(() -> new ItemStack(GOTBlocks.Asshai_Bars)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(GOTBlocks.Andesite_Brick)).entries((displayContext, entries) -> {
                         entries.add(GOTBlocks.Asshai_Bars);
+                        entries.add(GOTBlocks.Bone_Block);
+                        entries.add(GOTBlocks.Bone_Block_Slab);
+                        entries.add(GOTBlocks.Bone_Block_Stairs);
+                        entries.add(GOTBlocks.Bone_Block_Wall);
+                        entries.add(GOTBlocks.Andesite_Brick);
+                        entries.add(GOTBlocks.Andesite_Brick_Slab);
+                        entries.add(GOTBlocks.Andesite_Brick_Stairs);
+                        entries.add(GOTBlocks.Andesite_Brick_Wall);
+                        entries.add(GOTBlocks.Andesite_Brick_Carved);
+                        entries.add(GOTBlocks.Andesite_Brick_Carved_Slab);
+                        entries.add(GOTBlocks.Andesite_Brick_Carved_Stairs);
+                        entries.add(GOTBlocks.Andesite_Brick_Carved_Wall);
+                        entries.add(GOTBlocks.Andesite_Brick_Cracked);
+                        entries.add(GOTBlocks.Andesite_Brick_Cracked_Slab);
+                        entries.add(GOTBlocks.Andesite_Brick_Cracked_Stairs);
+                        entries.add(GOTBlocks.Andesite_Brick_Cracked_Wall);
+                        entries.add(GOTBlocks.Andesite_Brick_Mossy);
+                        entries.add(GOTBlocks.Andesite_Brick_Mossy_Slab);
+                        entries.add(GOTBlocks.Andesite_Brick_Mossy_Stairs);
+                        entries.add(GOTBlocks.Andesite_Brick_Mossy_Wall);
+                        entries.add(GOTBlocks.Basalt_Brick);
+                        entries.add(GOTBlocks.Basalt_Brick_Slab);
+                        entries.add(GOTBlocks.Basalt_Brick_Stairs);
+                        entries.add(GOTBlocks.Basalt_Brick_Wall);
+                        entries.add(GOTBlocks.Basalt_Brick_Cracked);
+                        entries.add(GOTBlocks.Basalt_Brick_Cracked_Slab);
+                        entries.add(GOTBlocks.Basalt_Brick_Cracked_Stairs);
+                        entries.add(GOTBlocks.Basalt_Brick_Cracked_Wall);
+                        entries.add(GOTBlocks.Diorite_Brick);
+                        entries.add(GOTBlocks.Diorite_Brick_Slab);
+                        entries.add(GOTBlocks.Diorite_Brick_Stairs);
+                        entries.add(GOTBlocks.Diorite_Brick_Wall);
+                        entries.add(GOTBlocks.Rhyolite_Brick);
+                        entries.add(GOTBlocks.Rhyolite_Brick_Slab);
+                        entries.add(GOTBlocks.Rhyolite_Brick_Stairs);
+                        entries.add(GOTBlocks.Rhyolite_Brick_Wall);
+                        entries.add(GOTBlocks.Sandstone_Brick);
+                        entries.add(GOTBlocks.Sandstone_Brick_Slab);
+                        entries.add(GOTBlocks.Sandstone_Brick_Stairs);
+                        entries.add(GOTBlocks.Sandstone_Brick_Wall);
+                        entries.add(GOTBlocks.Basalt_Carved_Brick);
+                        entries.add(GOTBlocks.Basalt_Carved_Brick_Slab);
+                        entries.add(GOTBlocks.Basalt_Carved_Brick_Stairs);
+                        entries.add(GOTBlocks.Basalt_Carved_Brick_Wall);
+                        entries.add(GOTBlocks.Basalt_Westeros_Brick);
+                        entries.add(GOTBlocks.Basalt_Westeros_Brick_Slab);
+                        entries.add(GOTBlocks.Basalt_Westeros_Brick_Stairs);
+                        entries.add(GOTBlocks.Basalt_Westeros_Brick_Wall);
 
                     }).build());
 

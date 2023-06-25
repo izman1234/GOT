@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick1_andesite_mossy",
+    "bottom": "got:block/brick1_andesite_mossy",
+    "side": "got:block/brick1_andesite_mossy",
+    "top": "got:block/brick1_andesite_mossy"
+  }
+}
