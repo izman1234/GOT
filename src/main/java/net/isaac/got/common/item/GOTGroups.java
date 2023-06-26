@@ -80,17 +80,13 @@ public class GOTGroups {
     public static ItemGroup GOTFunctionalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_functional"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Functional Blocks"))
                     .icon(() -> new ItemStack(GOTBlocks.Alloy_Forge)).entries((displayContext, entries) -> {
-                        /* FURNACES */
                         entries.add(GOTBlocks.Alloy_Forge);
-
-                        /* OTHER */
                         entries.add(GOTBlocks.Bank);
                     }).build());
 
     public static ItemGroup GOTFoodGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_food"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Food"))
                     .icon(() -> new ItemStack(GOTBlocks.Apple_Crumble)).entries((displayContext, entries) -> {
-                        /* FOOD */
                         entries.add(GOTBlocks.Apple_Crumble);
                         entries.add(GOTBlocks.Banana_Cake);
                         entries.add(GOTBlocks.Banana);
@@ -114,6 +110,10 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Bluebell);
                         entries.add(GOTBlocks.Corn_Stalk);
                         entries.add(GOTBlocks.Corn_Stalk_Corn);
+                        entries.add(GOTBlocks.Dead_Marsh_Plant);
+                        entries.add(GOTBlocks.Bruschatka);
+                        entries.add(GOTBlocks.Dirt_Path);
+                        entries.add(GOTBlocks.Jungle_Mud_Path);
                         entries.add(GOTBlocks.Ore_Cobalt);
 
                     }).build());

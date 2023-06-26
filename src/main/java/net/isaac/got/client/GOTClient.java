@@ -37,5 +37,6 @@ public class GOTClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Corn_Stalk, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Corn_Stalk_Corn, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Cucumber, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Dead_Marsh_Plant, RenderLayer.getCutout());
     }
 }

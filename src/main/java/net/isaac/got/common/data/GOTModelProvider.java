@@ -41,6 +41,10 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Bluebell, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Corn_Stalk, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Corn_Stalk_Corn, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Dead_Marsh_Plant, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bruschatka);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Dirt_Path);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Jungle_Mud_Path);
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
 

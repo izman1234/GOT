@@ -619,6 +619,16 @@ public class GOTBlocks {
 
     //ADD DAUB (COOL TEXTURE MERGING)
 
+    public static final Block Dead_Marsh_Plant = registerBlock("dead_marsh_plant",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
+    public static final Block Bruschatka = registerBlock("dirt_path_brus",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
+    public static final Block Dirt_Path = registerBlock("dirt_path_dirt",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
+    public static final Block Jungle_Mud_Path = registerBlock("dirt_path_mud",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD)));
+
+    //ADD DOORS AFTER ADDING WOOD TYPE
     public static final Block Ore_Cobalt = registerBlock("ore_cobalt",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)));
 
