@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "got:block/double_flower_yellow_iris_bottom"
+    },
+    "half=upper": {
+      "model": "got:block/double_flower_yellow_iris_top"
+    }
+  }
+}

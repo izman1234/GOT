@@ -12,6 +12,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 public class GOTBlocks {
@@ -42,11 +43,11 @@ public class GOTBlocks {
     public static final Block Banana_Cake = registerBlock("banana_cake",
             new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
     public static final Block Bank = registerBlock("bank",
-            new GOTBank(FabricBlockSettings.copyOf(Blocks.DISPENSER).strength(4.0f).requiresTool())); //ADD CUSTOM UI + INCORPORATE THE BANK_ACTIVE.PNG
+            new GOTBank(FabricBlockSettings.copyOf(Blocks.DISPENSER).strength(4.0f).requiresTool())); //TODO ADD CUSTOM UI + INCORPORATE THE BANK_ACTIVE.PNG
     public static final Block Basalt_Gravel = registerBlock("basalt_gravel",
             new GravelBlock(FabricBlockSettings.copyOf(Blocks.GRAVEL)));
 
-    //ADD BERRY BUSHES
+    //TODO ADD BERRY BUSHES
     public static final Block Berry_Pie = registerBlock("berry_pie",
             new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
     public static final Block Bird_Cage_Bronze = registerBlock("bird_cage_bronze",
@@ -96,7 +97,7 @@ public class GOTBlocks {
     public static final Block Bluebell = registerBlock("bluebell",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
 
-    //ADD BOMBS
+    //TODO ADD BOMBS
 
     public static final Block Bone_Block = registerBlock("bone_block",
             new Block(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK)));
@@ -441,7 +442,7 @@ public class GOTBlocks {
     public static final Block Bronze_Bars = registerBlock("bronze_bars",
             new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
 
-    //ADD BUTTERFLY JAR
+    //TODO ADD BUTTERFLY JAR
 
     public static final Block Ceramic_Plate = registerBlock("ceramic_plate",
             new GOTPlateBlock(FabricBlockSettings.copyOf(Blocks.DECORATED_POT)));
@@ -602,11 +603,11 @@ public class GOTBlocks {
     public static final Block Clay_Tile_Wall_Dyed_Yellow = registerBlock("clay_tile_dyed_yellow_wall",
             new WallBlock(FabricBlockSettings.copyOf(Blocks.MUD_BRICK_WALL)));
 
-    //ADD CLOVER
+    //TODO ADD CLOVER
 
-    //ADD COBBLEBRICK (COOL TEXTURE MERGING)
+    //TODO ADD COBBLEBRICK (COOL TEXTURE MERGING)
 
-    //ADD COMMAND TABLE
+    //TODO ADD COMMAND TABLE
 
     public static final Block Corn_Stalk = registerBlock("corn_stalk",
             new GOTCornBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
@@ -617,7 +618,7 @@ public class GOTBlocks {
     public static final Block Date = registerBlock("date",
             new GOTDateBlock(FabricBlockSettings.copyOf(Blocks.COCOA)));
 
-    //ADD DAUB (COOL TEXTURE MERGING)
+    //TODO ADD DAUB (COOL TEXTURE MERGING)
 
     public static final Block Dead_Marsh_Plant = registerBlock("dead_marsh_plant",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
@@ -628,7 +629,158 @@ public class GOTBlocks {
     public static final Block Jungle_Mud_Path = registerBlock("dirt_path_mud",
             new Block(FabricBlockSettings.copyOf(Blocks.MUD)));
 
-    //ADD DOORS AFTER ADDING WOOD TYPE
+    //TODO ADD DOORS AFTER ADDING WOOD TYPE
+
+    public static final Block Double_Flower_Black_Iris = registerBlock("double_flower_black_iris",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
+    public static final Block Double_Flower_Pink = registerBlock("double_flower_pink",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
+    public static final Block Double_Flower_Red = registerBlock("double_flower_red",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
+    public static final Block Double_Flower_Yellow_Iris = registerBlock("double_flower_yellow_iris",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
+
+    //TODO ADD DRIED REEDS (3 BLOCK TALL PLANT)
+
+    public static final Block Essos_Flower_Daisy = registerBlock("essos_flower_daisy",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Essos_Flower_Pink = registerBlock("essos_flower_pink",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Essos_Flower_Red = registerBlock("essos_flower_red",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Essos_Flower_Red2 = registerBlock("essos_flower_red_a_l_t",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Essos_Flower_Yellow = registerBlock("essos_flower_yellow",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Flax = registerBlock("flax",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Fruit_Leaves_Apple = registerBlock("fruit_leaves_apple_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Fruit_Leaves_Cherry = registerBlock("fruit_leaves_cherry_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Fruit_Leaves_Mango = registerBlock("fruit_leaves_mango_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Fruit_Leaves_Pear = registerBlock("fruit_leaves_pear_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Fruit_Sapling_Apple = registerBlock("fruit_sapling_apple",
+            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block Fruit_Sapling_Cherry = registerBlock("fruit_sapling_cherry",
+            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block Fruit_Sapling_Mango = registerBlock("fruit_sapling_mango",
+            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block Fruit_Sapling_Pear = registerBlock("fruit_sapling_pear",
+            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block Fruit_Wood_Apple = registerBlock("fruit_wood_apple",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fruit_Wood_Cherry = registerBlock("fruit_wood_cherry",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fruit_Wood_Mango = registerBlock("fruit_wood_mango",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fruit_Wood_Pear = registerBlock("fruit_wood_pear",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fur_Bed = registerBlock("fur_bed",
+            new BedBlock(DyeColor.BROWN, (FabricBlockSettings.copyOf(Blocks.BROWN_BED)))); //TODO Fix bed model and textures
+    public static final Block Fuse = registerBlock("fuse",
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
+
+    //TODO ADD GATES
+
+    public static final Block Fine_Glass = registerBlock("glass",
+            new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
+    public static final Block Fine_Glass_Pane = registerBlock("glass_pane",
+            new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).nonOpaque()));
+    public static final Block Gold_Bars = registerBlock("gold_bars",
+            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
+
+    //TODO ADD GRAPEVINES
+
+    public static final Block Hearth = registerBlock("hearth",
+            new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Kebab_Block = registerBlock("kebab_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Catalpa_Leaves = registerBlock("leaves1_catalpa_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Ibbinia_Leaves = registerBlock("leaves1_ibbinia_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Ulthos_Leaves = registerBlock("leaves1_ulthos_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Ulthos_Red_Leaves = registerBlock("leaves1_ulthos_red_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Aramant_Leaves = registerBlock("leaves2_aramant_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Banana_Leaves = registerBlock("leaves2_banana_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Beech_Leaves = registerBlock("leaves2_beech_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Holly_Leaves = registerBlock("leaves2_holly_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Date_Palm_Leaves = registerBlock("leaves3_date_palm_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Larch_Leaves = registerBlock("leaves3_larch_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Mangrove_Leaves = registerBlock("leaves3_mangrove_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Maple_Leaves = registerBlock("leaves3_maple_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Baobab_Leaves = registerBlock("leaves4_baobab_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Cedar_Leaves = registerBlock("leaves4_cedar_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Chestnut_Leaves = registerBlock("leaves4_chestnut_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Fir_Leaves = registerBlock("leaves4_fir_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Lemon_Leaves = registerBlock("leaves5_lemon_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Lime_Leaves = registerBlock("leaves5_lime_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Orange_Leaves = registerBlock("leaves5_orange_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Pine_Leaves = registerBlock("leaves5_pine_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Cypress_Leaves = registerBlock("leaves6_cypress_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Mahogany_Leaves = registerBlock("leaves6_mahogany_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Olive_Leaves = registerBlock("leaves6_olive_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Willow_Leaves = registerBlock("leaves6_willow_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Almond_Leaves = registerBlock("leaves7_almond_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Aspen_Leaves = registerBlock("leaves7_aspen_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Fotinia_Leaves = registerBlock("leaves7_fotinia_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Green_Oak_Leaves = registerBlock("leaves7_green_oak_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Palm_Leaves = registerBlock("leaves8_palm_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Plum_Leaves = registerBlock("leaves8_plum_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Pomegranate_Leaves = registerBlock("leaves8_pomegranate_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Redwood_Leaves = registerBlock("leaves8_redwood_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Dragon_Leaves = registerBlock("leaves9_dragon_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Kanuka_Leaves = registerBlock("leaves9_kanuka_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    public static final Block Weirwood_Leaves = registerBlock("leaves9_weirwood_fancy",
+            new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+
+
+    //TODO WTF TO DO WITH leaves_snowy??
+
+    public static final Block Leek = registerBlock("leek",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Lemon_Cake = registerBlock("lemon_cake",
+            new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
+    public static final Block Lettuce = registerBlock("lettuce",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    //TODO ADD LION BED
+
     public static final Block Ore_Cobalt = registerBlock("ore_cobalt",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)));
 

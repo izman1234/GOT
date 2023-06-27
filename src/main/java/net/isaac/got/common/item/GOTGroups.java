@@ -94,6 +94,11 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Cherry_Pie);
                         entries.add(GOTBlocks.Date);
                         entries.add(GOTBlocks.Cucumber);
+                        entries.add(GOTBlocks.Flax);
+                        entries.add(GOTBlocks.Kebab_Block);
+                        entries.add(GOTBlocks.Leek);
+                        entries.add(GOTBlocks.Lemon_Cake);
+                        entries.add(GOTBlocks.Lettuce);
                     }).build());
 
     public static ItemGroup GOTNaturalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_natural"),
@@ -111,9 +116,61 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Corn_Stalk);
                         entries.add(GOTBlocks.Corn_Stalk_Corn);
                         entries.add(GOTBlocks.Dead_Marsh_Plant);
-                        entries.add(GOTBlocks.Bruschatka);
-                        entries.add(GOTBlocks.Dirt_Path);
-                        entries.add(GOTBlocks.Jungle_Mud_Path);
+                        entries.add(GOTBlocks.Double_Flower_Black_Iris);
+                        entries.add(GOTBlocks.Double_Flower_Pink);
+                        entries.add(GOTBlocks.Double_Flower_Red);
+                        entries.add(GOTBlocks.Double_Flower_Yellow_Iris);
+                        entries.add(GOTBlocks.Essos_Flower_Daisy);
+                        entries.add(GOTBlocks.Essos_Flower_Pink);
+                        entries.add(GOTBlocks.Essos_Flower_Red);
+                        entries.add(GOTBlocks.Essos_Flower_Red2);
+                        entries.add(GOTBlocks.Essos_Flower_Yellow);
+                        entries.add(GOTBlocks.Fruit_Leaves_Apple);
+                        entries.add(GOTBlocks.Fruit_Leaves_Cherry);
+                        entries.add(GOTBlocks.Fruit_Leaves_Mango);
+                        entries.add(GOTBlocks.Fruit_Leaves_Pear);
+                        entries.add(GOTBlocks.Fruit_Sapling_Apple);
+                        entries.add(GOTBlocks.Fruit_Sapling_Cherry);
+                        entries.add(GOTBlocks.Fruit_Sapling_Mango);
+                        entries.add(GOTBlocks.Fruit_Sapling_Pear);
+                        entries.add(GOTBlocks.Catalpa_Leaves);
+                        entries.add(GOTBlocks.Ibbinia_Leaves);
+                        entries.add(GOTBlocks.Ulthos_Leaves);
+                        entries.add(GOTBlocks.Ulthos_Red_Leaves);
+                        entries.add(GOTBlocks.Aramant_Leaves);
+                        entries.add(GOTBlocks.Banana_Leaves);
+                        entries.add(GOTBlocks.Beech_Leaves);
+                        entries.add(GOTBlocks.Holly_Leaves);
+                        entries.add(GOTBlocks.Date_Palm_Leaves);
+                        entries.add(GOTBlocks.Larch_Leaves);
+                        entries.add(GOTBlocks.Mangrove_Leaves);
+                        entries.add(GOTBlocks.Maple_Leaves);
+                        entries.add(GOTBlocks.Baobab_Leaves);
+                        entries.add(GOTBlocks.Cedar_Leaves);
+                        entries.add(GOTBlocks.Chestnut_Leaves);
+                        entries.add(GOTBlocks.Fir_Leaves);
+                        entries.add(GOTBlocks.Lemon_Leaves);
+                        entries.add(GOTBlocks.Lime_Leaves);
+                        entries.add(GOTBlocks.Orange_Leaves);
+                        entries.add(GOTBlocks.Pine_Leaves);
+                        entries.add(GOTBlocks.Cypress_Leaves);
+                        entries.add(GOTBlocks.Mahogany_Leaves);
+                        entries.add(GOTBlocks.Olive_Leaves);
+                        entries.add(GOTBlocks.Willow_Leaves);
+                        entries.add(GOTBlocks.Almond_Leaves);
+                        entries.add(GOTBlocks.Aspen_Leaves);
+                        entries.add(GOTBlocks.Fotinia_Leaves);
+                        entries.add(GOTBlocks.Green_Oak_Leaves);
+                        entries.add(GOTBlocks.Palm_Leaves);
+                        entries.add(GOTBlocks.Plum_Leaves);
+                        entries.add(GOTBlocks.Pomegranate_Leaves);
+                        entries.add(GOTBlocks.Redwood_Leaves);
+                        entries.add(GOTBlocks.Dragon_Leaves);
+                        entries.add(GOTBlocks.Kanuka_Leaves);
+                        entries.add(GOTBlocks.Weirwood_Leaves);
+                        
+
+
                         entries.add(GOTBlocks.Ore_Cobalt);
 
                     }).build());
@@ -361,6 +418,14 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Clay_Tile_Slab_Dyed_Yellow);
                         entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Yellow);
                         entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Yellow);
+                        entries.add(GOTBlocks.Bruschatka);
+                        entries.add(GOTBlocks.Dirt_Path);
+                        entries.add(GOTBlocks.Jungle_Mud_Path);
+                        entries.add(GOTBlocks.Fruit_Wood_Apple);
+                        entries.add(GOTBlocks.Fruit_Wood_Cherry);
+                        entries.add(GOTBlocks.Fruit_Wood_Mango);
+                        entries.add(GOTBlocks.Fruit_Wood_Pear);
+                        entries.add(GOTBlocks.Gold_Bars);
 
                     }).build());
 
@@ -396,6 +461,11 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Chandelier_Iron);
                         entries.add(GOTBlocks.Chandelier_Silver);
                         entries.add(GOTBlocks.Chandelier_Valyrian);
+                        entries.add(GOTBlocks.Fur_Bed);
+                        entries.add(GOTBlocks.Fuse);
+                        entries.add(GOTBlocks.Fine_Glass);
+                        entries.add(GOTBlocks.Fine_Glass_Pane);
+                        entries.add(GOTBlocks.Hearth);
 
                     }).build());
 

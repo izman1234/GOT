@@ -27,6 +27,12 @@ public class GOTModelProvider extends FabricModelProvider {
         CakeBlockGenerator.generateBlockJson("berry_pie");
         CakeBlockGenerator.generateBlockJson("cherry_pie");
         blockStateModelGenerator.registerCrop(GOTBlocks.Cucumber, Properties.AGE_3, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(GOTBlocks.Flax, Properties.AGE_3, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Kebab_Block);
+        blockStateModelGenerator.registerCrop(GOTBlocks.Leek, Properties.AGE_3, 0, 1, 2, 3);
+        CakeBlockGenerator.generateBlockJson("lemon_cake");
+        blockStateModelGenerator.registerCrop(GOTBlocks.Lettuce, Properties.AGE_3, 0, 1, 2, 3);
+
 
 
         /* NATURAL */
@@ -45,6 +51,59 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bruschatka);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Dirt_Path);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Jungle_Mud_Path);
+        blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Black_Iris, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Pink, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Red, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Yellow_Iris, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Essos_Flower_Daisy, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Essos_Flower_Pink, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Essos_Flower_Red, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Essos_Flower_Red2, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Essos_Flower_Yellow, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fruit_Leaves_Apple);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fruit_Leaves_Cherry);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fruit_Leaves_Mango);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fruit_Leaves_Pear);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Apple, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Cherry, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Mango, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Pear, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Catalpa_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ibbinia_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ulthos_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ulthos_Red_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Aramant_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Banana_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Beech_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Holly_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Date_Palm_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Larch_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Mangrove_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Maple_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Baobab_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Cedar_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Chestnut_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fir_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Lemon_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Lime_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Orange_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pine_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Cypress_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Mahogany_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Olive_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Willow_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Almond_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Aspen_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fotinia_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Green_Oak_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Palm_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Plum_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pomegranate_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Redwood_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Dragon_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Kanuka_Leaves);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Weirwood_Leaves);
+
 
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
 
@@ -289,6 +348,11 @@ public class GOTModelProvider extends FabricModelProvider {
         SlabGenerator.generateBlockJson("clay_tile_dyed_yellow");
         StairGenerator.generateBlockJson("clay_tile_dyed_yellow");
         WallGenerator.generateBlockJson("clay_tile_dyed_yellow");
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Apple).log(GOTBlocks.Fruit_Wood_Apple);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Cherry).log(GOTBlocks.Fruit_Wood_Cherry);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Mango).log(GOTBlocks.Fruit_Wood_Mango);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Pear).log(GOTBlocks.Fruit_Wood_Pear);
+        PaneBlockGenerator.generateBlockJson("gold_bars");
 
 
         /*DECORATION */
@@ -321,6 +385,11 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Iron, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Silver, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Chandelier_Valyrian, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerBed(GOTBlocks.Fur_Bed, Blocks.BROWN_WOOL);
+        blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Fuse, BlockStateModelGenerator.TintType.NOT_TINTED);
+        //blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fine_Glass);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Fine_Glass, GOTBlocks.Fine_Glass_Pane);
+
 
     }
 
