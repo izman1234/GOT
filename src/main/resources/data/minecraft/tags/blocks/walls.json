@@ -60,6 +60,10 @@
     "got:clay_tile_dyed_red_wall",
     "got:clay_tile_dyed_silver_wall",
     "got:clay_tile_dyed_white_wall",
-    "got:clay_tile_dyed_yellow_wall"
+    "got:clay_tile_dyed_yellow_wall",
+    "got:red_brick_cracked_wall",
+    "got:red_brick_mossy_wall",
+    "got:rock_chalk",
+    "got:rock_rhyolite"
   ]
 }

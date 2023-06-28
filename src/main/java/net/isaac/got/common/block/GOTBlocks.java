@@ -681,7 +681,7 @@ public class GOTBlocks {
     public static final Block Fur_Bed = registerBlock("fur_bed",
             new BedBlock(DyeColor.BROWN, (FabricBlockSettings.copyOf(Blocks.BROWN_BED)))); //TODO Fix bed model and textures
     public static final Block Fuse = registerBlock("fuse",
-            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
+            new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY).sounds(BlockSoundGroup.WOOD)));
 
     //TODO ADD GATES
 
@@ -1157,6 +1157,60 @@ public class GOTBlocks {
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
     public static final Block Rotten_Stairs = registerBlock("planks_rotten_rotten_stairs",
             new StairsBlock(GOTBlocks.Rotten_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+
+    //TODO ADD PLANTAIN
+
+    public static final Block Plate = registerBlock("plate",
+            new GOTPlateBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Quagmire = registerBlock("quagmire",
+            new CobwebBlock(FabricBlockSettings.copyOf(Blocks.COBWEB).sounds(BlockSoundGroup.SAND)));
+    public static final Block Quicksand = registerBlock("quicksand",
+            new CobwebBlock(FabricBlockSettings.copyOf(Blocks.COBWEB).sounds(BlockSoundGroup.SAND)));
+    public static final Block Red_Brick_Cracked = registerBlock("red_brick_cracked",
+            new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Cracked_Slab = registerBlock("red_brick_cracked_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Cracked_Stairs = registerBlock("red_brick_cracked_stairs",
+            new StairsBlock(Red_Brick_Cracked.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Cracked_Wall = registerBlock("red_brick_cracked_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Mossy = registerBlock("red_brick_mossy",
+            new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Mossy_Slab = registerBlock("red_brick_mossy_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Mossy_Stairs = registerBlock("red_brick_mossy_stairs",
+            new StairsBlock(Red_Brick_Mossy.getDefaultState(), FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block Red_Brick_Mossy_Wall = registerBlock("red_brick_mossy_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+
+    //TODO ADD RED SANDSTONE MAYBE
+    public static final Block Reed_Bars = registerBlock("reed_bars",
+            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
+    public static final Block Remains = registerBlock("remains",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
+    public static final Block Rice = registerBlock("rice",
+            new CropBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Chalk = registerBlock("rock_chalk",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Chalk_Slab = registerBlock("rock_chalk_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Chalk_Stairs = registerBlock("rock_chalk_stairs",
+            new StairsBlock(Chalk.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Chalk_Wall = registerBlock("rock_chalk_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Rhyolite = registerBlock("rock_rhyolite",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Rhyolite_Slab = registerBlock("rock_rhyolite_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Rhyolite_Stairs = registerBlock("rock_rhyolite_stairs",
+            new StairsBlock(Rhyolite.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Rhyolite_Wall = registerBlock("rock_rhyolite_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block Rope = registerBlock("rope",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Rotten_Log = registerBlock("rotten_log_rotten",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+
 
 
     private static Block registerBlock(String name, Block block) {

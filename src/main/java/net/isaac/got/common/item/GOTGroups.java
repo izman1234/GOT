@@ -103,6 +103,7 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Marzipan);
                         entries.add(GOTBlocks.Pastry);
                         entries.add(GOTBlocks.Pipeweed);
+                        entries.add(GOTBlocks.Rice);
                     }).build());
 
     public static ItemGroup GOTNaturalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_natural"),
@@ -191,6 +192,10 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Ore_Sulfur);
                         entries.add(GOTBlocks.Ore_Tin);
                         entries.add(GOTBlocks.Ore_Valyrian);
+                        entries.add(GOTBlocks.Quagmire);
+                        entries.add(GOTBlocks.Quicksand);
+                        entries.add(GOTBlocks.Remains);
+                        entries.add(GOTBlocks.Rotten_Log);
 
                     }).build());
 
@@ -605,6 +610,23 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Rotten_Fence);
                         entries.add(GOTBlocks.Rotten_Slab);
                         entries.add(GOTBlocks.Rotten_Stairs);
+                        entries.add(GOTBlocks.Red_Brick_Cracked);
+                        entries.add(GOTBlocks.Red_Brick_Cracked_Slab);
+                        entries.add(GOTBlocks.Red_Brick_Cracked_Stairs);
+                        entries.add(GOTBlocks.Red_Brick_Cracked_Wall);
+                        entries.add(GOTBlocks.Red_Brick_Mossy);
+                        entries.add(GOTBlocks.Red_Brick_Mossy_Slab);
+                        entries.add(GOTBlocks.Red_Brick_Mossy_Stairs);
+                        entries.add(GOTBlocks.Red_Brick_Mossy_Wall);
+                        entries.add(GOTBlocks.Reed_Bars);
+                        entries.add(GOTBlocks.Chalk);
+                        entries.add(GOTBlocks.Chalk_Slab);
+                        entries.add(GOTBlocks.Chalk_Stairs);
+                        entries.add(GOTBlocks.Chalk_Wall);
+                        entries.add(GOTBlocks.Rhyolite);
+                        entries.add(GOTBlocks.Rhyolite_Slab);
+                        entries.add(GOTBlocks.Rhyolite_Stairs);
+                        entries.add(GOTBlocks.Rhyolite_Wall);
                     }).build());
 
     public static ItemGroup GOTDecorationGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_decoration"),
@@ -644,6 +666,8 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Fine_Glass);
                         entries.add(GOTBlocks.Fine_Glass_Pane);
                         entries.add(GOTBlocks.Hearth);
+                        entries.add(GOTBlocks.Plate);
+                        entries.add(GOTBlocks.Rope);
 
                     }).build());
 

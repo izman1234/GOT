@@ -240,6 +240,9 @@ public class GOTFlammableBlockRegistry {
         registry.add(GOTBlocks.Rotten_Fence, 5, 20);
         registry.add(GOTBlocks.Rotten_Slab, 5, 20);
         registry.add(GOTBlocks.Rotten_Stairs, 5, 20);
+        registry.add(GOTBlocks.Rice, 30, 60);
+        registry.add(GOTBlocks.Rope, 5, 20);
+        registry.add(GOTBlocks.Rotten_Log, 5, 20);
 
     }
 }

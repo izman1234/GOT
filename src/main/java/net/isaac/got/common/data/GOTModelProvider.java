@@ -38,9 +38,7 @@ public class GOTModelProvider extends FabricModelProvider {
         CakeBlockGenerator.generateBlockJson("marzipan");
         CakeBlockGenerator.generateBlockJson("pastry");
         blockStateModelGenerator.registerCrop(GOTBlocks.Pipeweed, Properties.AGE_3, 0, 1, 2, 3);
-
-
-
+        blockStateModelGenerator.registerCrop(GOTBlocks.Rice, Properties.AGE_7, 0, 1, 2, 3, 4, 5, 6, 7);
 
         /* NATURAL */
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Arid_Grass, BlockStateModelGenerator.TintType.TINTED);
@@ -75,6 +73,10 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Cherry, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Mango, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Fruit_Sapling_Pear, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Apple).log(GOTBlocks.Fruit_Wood_Apple);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Cherry).log(GOTBlocks.Fruit_Wood_Cherry);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Mango).log(GOTBlocks.Fruit_Wood_Mango);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Pear).log(GOTBlocks.Fruit_Wood_Pear);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Catalpa_Leaves);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ibbinia_Leaves);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ulthos_Leaves);
@@ -129,6 +131,10 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Sulfur);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Tin);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Valyrian);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Quagmire);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Quicksand);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Remains);
+        blockStateModelGenerator.registerLog(GOTBlocks.Rotten_Log).log(GOTBlocks.Rotten_Log);
 
         /* BULDING */
         PaneBlockGenerator.generateBlockJson("asshai_bars");
@@ -371,10 +377,6 @@ public class GOTModelProvider extends FabricModelProvider {
         SlabGenerator.generateBlockJson("clay_tile_dyed_yellow");
         StairGenerator.generateBlockJson("clay_tile_dyed_yellow");
         WallGenerator.generateBlockJson("clay_tile_dyed_yellow");
-        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Apple).log(GOTBlocks.Fruit_Wood_Apple);
-        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Cherry).log(GOTBlocks.Fruit_Wood_Cherry);
-        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Mango).log(GOTBlocks.Fruit_Wood_Mango);
-        blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Pear).log(GOTBlocks.Fruit_Wood_Pear);
         PaneBlockGenerator.generateBlockJson("gold_bars");
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Apple_Planks);
         FenceGenerator.generateBlockJson("planks1_apple");
@@ -536,6 +538,23 @@ public class GOTModelProvider extends FabricModelProvider {
         FenceGenerator.generateBlockJson("planks_rotten_rotten");
         SlabGenerator.generateBlockJson("planks_rotten_rotten");
         StairGenerator.generateBlockJson("planks_rotten_rotten");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Red_Brick_Cracked);
+        SlabGenerator.generateBlockJson("red_brick_cracked");
+        StairGenerator.generateBlockJson("red_brick_cracked");
+        WallGenerator.generateBlockJson("red_brick_cracked");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Red_Brick_Mossy);
+        SlabGenerator.generateBlockJson("red_brick_mossy");
+        StairGenerator.generateBlockJson("red_brick_mossy");
+        WallGenerator.generateBlockJson("red_brick_mossy");
+        PaneBlockGenerator.generateBlockJson("reed_bars");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Chalk);
+        SlabGenerator.generateBlockJson("rock_chalk");
+        StairGenerator.generateBlockJson("rock_chalk");
+        WallGenerator.generateBlockJson("rock_chalk");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Rhyolite);
+        SlabGenerator.generateBlockJson("rock_rhyolite");
+        StairGenerator.generateBlockJson("rock_rhyolite");
+        WallGenerator.generateBlockJson("rock_rhyolite");
 
         /*DECORATION */
         blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?
@@ -571,6 +590,8 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Fuse, BlockStateModelGenerator.TintType.NOT_TINTED);
         //blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fine_Glass);
         blockStateModelGenerator.registerGlassPane(GOTBlocks.Fine_Glass, GOTBlocks.Fine_Glass_Pane);
+        PlateBlockGenerator.generateBlockJson("plate");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Rope);
 
 
     }

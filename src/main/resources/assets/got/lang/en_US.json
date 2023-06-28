@@ -589,7 +589,29 @@
   "block.got.planks_rotten_rotten": "Rotten Wood Planks",
   "block.got.planks_rotten_rotten_fence": "Rotten Fence",
   "block.got.planks_rotten_rotten_slab": "Rotten Slab",
-  "block.got.planks_rotten_rotten_stairs": "Rotten Stairs"
-
-
+  "block.got.planks_rotten_rotten_stairs": "Rotten Stairs",
+  "block.got.plate": "Plate",
+  "block.got.quagmire": "Quagmire",
+  "block.got.quicksand": "Quicksand",
+  "block.got.red_brick_cracked": "Cracked Red Brick",
+  "block.got.red_brick_cracked_slab": "Cracked Red Brick Slab",
+  "block.got.red_brick_cracked_stairs": "Cracked Red Brick Stairs",
+  "block.got.red_brick_cracked_wall": "Cracked Red Brick Wall",
+  "block.got.red_brick_mossy": "Mossy Red Brick",
+  "block.got.red_brick_mossy_slab": "Mossy Red Brick Slab",
+  "block.got.red_brick_mossy_stairs": "Mossy Red Brick Stairs",
+  "block.got.red_brick_mossy_wall": "Mossy Red Brick Wall",
+  "block.got.red_bars": "Reed Bars",
+  "block.got.remains": "Remains",
+  "block.got.rice": "Rice",
+  "block.got.rock_chalk": "Chalk",
+  "block.got.rock_chalk_slab": "Chalk Slab",
+  "block.got.rock_chalk_stairs": "Chalk Stairs",
+  "block.got.rock_chalk_wall": "Chalk Wall",
+  "block.got.rock_rhyolite": "Rhyolite",
+  "block.got.rock_rhyolite_slab": "Rhyolite Slab",
+  "block.got.rock_rhyolite_stairs": "Rhyolite Stairs",
+  "block.got.rock_rhyolite_wall": "Rhyolite Wall",
+  "block.got.rope": "Rope Block",
+  "block.got.rotten_log_rotten": "Rotten Log"
 }
