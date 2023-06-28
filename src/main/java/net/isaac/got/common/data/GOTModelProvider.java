@@ -71,6 +71,7 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
         /* INGREDENTS */
         itemModelGenerator.register(GOTOther.Alloy_Steel_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Bronze_Ingot, Models.GENERATED);
+        itemModelGenerator.register(GOTOther.Obsidian_Shard, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Silver_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Tin_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Valyrian_Ingot, Models.GENERATED);
@@ -85,9 +86,17 @@ public class GOTModelProvider extends FabricModelProvider { /*DOESN'T WORK YET *
         itemModelGenerator.register(GOTTools.Bronze_Axe, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Bronze_Hoe, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Bronze_Shovel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Shovel, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Valyrian_Pickaxe, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Valyrian_Axe, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Valyrian_Hoe, Models.HANDHELD);
         itemModelGenerator.register(GOTTools.Valyrian_Shovel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Chisel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Chisel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Mattock, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Wildling_Axe, Models.HANDHELD);
     }
 }

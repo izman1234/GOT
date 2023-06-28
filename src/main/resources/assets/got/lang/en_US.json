@@ -46,6 +46,7 @@
 
   "item.got.alloy_steel_ingot": "Alloy Steel Ingot",
   "item.got.bronze_ingot": "Bronze Ingot",
+  "item.got.obsidian_shard": "Obsidian Shard",
   "item.got.silver_ingot": "Silver Ingot",
   "item.got.tin_ingot": "Tin Ingot",
   "item.got.valyrian_ingot": "Valyrian Ingot",
@@ -59,10 +60,20 @@
   "item.got.bronze_axe": "Bronze Axe",
   "item.got.bronze_hoe": "Bronze Hoe",
   "item.got.bronze_shovel": "Bronze Shovel",
+  "item.got.sothoryos_pickaxe": "Sothoryos Pickaxe",
+  "item.got.sothoryos_axe": "Sothoryos Axe",
+  "item.got.sothoryos_hoe": "Sothoryos Hoe",
+  "item.got.sothoryos_shovel": "Sothoryos Shovel",
   "item.got.valyrian_pickaxe": "Valyrian Pickaxe",
   "item.got.valyrian_axe": "Valyrian Axe",
   "item.got.valyrian_hoe": "Valyrian Hoe",
   "item.got.valyrian_shovel": "Valyrian Shovel",
+
+  "item.got.chisel": "Chisel",
+  "item.got.valyrian_chisel": "Valyrian Chisel",
+  "item.got.valyrian_mattock": "Valyrian Mattock",
+  "item.got.wildling_axe": "Wildlings Axe",
+
 
 
   "itemgroup.gotcombat": "GOT Combat",

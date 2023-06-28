@@ -73,6 +73,7 @@ public class GOTGroups {
                         /* INGOTS */
                         entries.add(GOTOther.Alloy_Steel_Ingot);
                         entries.add(GOTOther.Bronze_Ingot);
+                        entries.add(GOTOther.Obsidian_Shard);
                         entries.add(GOTOther.Silver_Ingot);
                         entries.add(GOTOther.Tin_Ingot);
                         entries.add(GOTOther.Valyrian_Ingot);
@@ -92,11 +93,21 @@ public class GOTGroups {
                         entries.add(GOTTools.Bronze_Axe);
                         entries.add(GOTTools.Bronze_Hoe);
                         entries.add(GOTTools.Bronze_Shovel);
+                        /* Sothoryos Shard */
+                        entries.add(GOTTools.Sothoryos_Pickaxe);
+                        entries.add(GOTTools.Sothoryos_Axe);
+                        entries.add(GOTTools.Sothoryos_Hoe);
+                        entries.add(GOTTools.Sothoryos_Shovel);
                         /* Valyrian */
+                        entries.add(GOTTools.Valyrian_Mattock);
                         entries.add(GOTTools.Valyrian_Pickaxe);
                         entries.add(GOTTools.Valyrian_Axe);
                         entries.add(GOTTools.Valyrian_Hoe);
                         entries.add(GOTTools.Valyrian_Shovel);
+                        entries.add(GOTTools.Valyrian_Chisel);
+                        /* Misc */
+                        entries.add(GOTTools.Chisel);
+                        entries.add(GOTTools.Wildling_Axe);
                     }).build());
 
     public static void registerModGroups() {

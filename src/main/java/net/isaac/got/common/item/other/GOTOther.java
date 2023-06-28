@@ -19,6 +19,8 @@ public class GOTOther {
             new Item(new FabricItemSettings()));
     public static final Item Tin_Ingot = registerItem("tin_ingot",
             new Item(new FabricItemSettings()));
+    public static final Item Obsidian_Shard = registerItem("obsidian_shard",
+            new Item(new FabricItemSettings()));
     public static final Item Valyrian_Ingot = registerItem("valyrian_ingot",
             new Item(new FabricItemSettings()));
     public static final Item Yiti_Steel_Ingot = registerItem("yiti_steel_ingot",
