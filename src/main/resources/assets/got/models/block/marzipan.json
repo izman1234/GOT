@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cake",
+  "textures": {
+    "particle": "got:block/marzipan_side",
+    "bottom": "got:block/marzipan_bottom",
+    "inner": "got:block/marzipan_inner",
+    "side": "got:block/marzipan_side",
+    "top": "got:block/marzipan_top"
+  }
+}

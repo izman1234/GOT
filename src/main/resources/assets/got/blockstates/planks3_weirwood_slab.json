@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks3_weirwood_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks3_weirwood"
+    },
+    "type=top": {
+      "model": "got:block/planks3_weirwood_slab_top"
+    }
+  }
+}

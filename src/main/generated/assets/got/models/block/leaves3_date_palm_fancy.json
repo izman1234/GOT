@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "got:block/leaves3_date_palm_fancy"
+  }
+}

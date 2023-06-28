@@ -781,8 +781,383 @@ public class GOTBlocks {
 
     //TODO ADD LION BED
 
+    public static final Block Marigold = registerBlock("marigold",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+
+    public static final Block Marzipan = registerBlock("marzipan", //TODO FIX TEXTURES
+            new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE)));
+
+    //TODO ADD MILLSTONE
+
+    public static final Block Mirk_Vines = registerBlock("mirk_vines", //TODO TEXTURE ISN'T QUITE RIGHT
+            new VineBlock(FabricBlockSettings.copyOf(Blocks.VINE)));
+    public static final Block Mud = registerBlock("mud",
+            new Block(FabricBlockSettings.copyOf(Blocks.MUD)));
+    public static final Block Mud_Farmland = registerBlock("mud_farmland",  //TODO ALLOW PLANTS TO GROW ON IT
+            new FarmlandBlock(FabricBlockSettings.copyOf(Blocks.FARMLAND).sounds(BlockSoundGroup.MUD)));
+    public static final Block Mud_Grass = registerBlock("mud_grass",
+            new GrassBlock(FabricBlockSettings.copyOf(Blocks.GRASS_BLOCK).sounds(BlockSoundGroup.MUD)));
+    public static final Block Obsidian_Gravel = registerBlock("obsidian_gravel",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN)));
     public static final Block Ore_Cobalt = registerBlock("ore_cobalt",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_ORE)));
+    public static final Block Ore_Gem_Amber = registerBlock("ore_gem_amber",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Gem_Opal = registerBlock("ore_gem_opal",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Gem_Ruby = registerBlock("ore_gem_ruby",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Gem_Sapphire = registerBlock("ore_gem_sapphire",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Gem_Topaz = registerBlock("ore_gem_topaz",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Glowstone = registerBlock("ore_glowstone",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Salt = registerBlock("ore_salt",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Saltpeter = registerBlock("ore_saltpeter",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Silver = registerBlock("ore_silver",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Sulfur = registerBlock("ore_sulfur",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Tin = registerBlock("ore_tin",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Ore_Valyrian = registerBlock("ore_valyrian",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
+    public static final Block Oven = registerBlock("oven",
+            new FurnaceBlock(FabricBlockSettings.copyOf(Blocks.FURNACE)));
+    public static final Block Pastry = registerBlock("pastry",
+            new GOTCakeBlock(FabricBlockSettings.copyOf(Blocks.CAKE))); //TODO FIX TEXTURES
+
+    //TODO ADD PILLAR BLOCK (HAVE COOL TEXTURE MERGE THING)
+
+    public static final Block Pipeweed = registerBlock("pipeweed",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+
+    //TODO ADD FENCE_GATES FOR EACH WOOD TYPE
+
+    public static final Block Apple_Planks = registerBlock("planks1_apple",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Apple_Fence = registerBlock("planks1_apple_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Apple_Slab = registerBlock("planks1_apple_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Apple_Stairs = registerBlock("planks1_apple_stairs",
+            new StairsBlock(GOTBlocks.Apple_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aramant_Planks = registerBlock("planks1_aramant",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aramant_Fence = registerBlock("planks1_aramant_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aramant_Slab = registerBlock("planks1_aramant_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aramant_Stairs = registerBlock("planks1_aramant_stairs",
+            new StairsBlock(GOTBlocks.Aramant_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Banana_Planks = registerBlock("planks1_banana",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Banana_Fence = registerBlock("planks1_banana_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Banana_Slab = registerBlock("planks1_banana_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Banana_Stairs = registerBlock("planks1_banana_stairs",
+            new StairsBlock(GOTBlocks.Banana_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Beech_Planks = registerBlock("planks1_beech",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Beech_Fence = registerBlock("planks1_beech_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Beech_Slab = registerBlock("planks1_beech_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Beech_Stairs = registerBlock("planks1_beech_stairs",
+            new StairsBlock(GOTBlocks.Beech_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Catalpa_Planks = registerBlock("planks1_catalpa",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Catalpa_Fence = registerBlock("planks1_catalpa_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Catalpa_Slab = registerBlock("planks1_catalpa_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Catalpa_Stairs = registerBlock("planks1_catalpa_stairs",
+            new StairsBlock(GOTBlocks.Catalpa_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Charred_Planks = registerBlock("planks1_charred",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Charred_Fence = registerBlock("planks1_charred_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Charred_Slab = registerBlock("planks1_charred_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Charred_Stairs = registerBlock("planks1_charred_stairs",
+            new StairsBlock(GOTBlocks.Charred_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cherry_Planks = registerBlock("planks1_cherry",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cherry_Fence = registerBlock("planks1_cherry_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cherry_Slab = registerBlock("planks1_cherry_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cherry_Stairs = registerBlock("planks1_cherry_stairs",
+            new StairsBlock(GOTBlocks.Cherry_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Date_Palm_Planks = registerBlock("planks1_date_palm",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Date_Palm_Fence = registerBlock("planks1_date_palm_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Date_Palm_Slab = registerBlock("planks1_date_palm_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Date_Palm_Stairs = registerBlock("planks1_date_palm_stairs",
+            new StairsBlock(GOTBlocks.Date_Palm_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Holly_Planks = registerBlock("planks1_holly",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Holly_Fence = registerBlock("planks1_holly_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Holly_Slab = registerBlock("planks1_holly_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Holly_Stairs = registerBlock("planks1_holly_stairs",
+            new StairsBlock(GOTBlocks.Holly_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ibbinia_Planks = registerBlock("planks1_ibbinia",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ibbinia_Fence = registerBlock("planks1_ibbinia_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ibbinia_Slab = registerBlock("planks1_ibbinia_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ibbinia_Stairs = registerBlock("planks1_ibbinia_stairs",
+            new StairsBlock(GOTBlocks.Ibbinia_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Larch_Planks = registerBlock("planks1_larch",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Larch_Fence = registerBlock("planks1_larch_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Larch_Slab = registerBlock("planks1_larch_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Larch_Stairs = registerBlock("planks1_larch_stairs",
+            new StairsBlock(GOTBlocks.Larch_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mango_Planks = registerBlock("planks1_mango",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mango_Fence = registerBlock("planks1_mango_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mango_Slab = registerBlock("planks1_mango_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mango_Stairs = registerBlock("planks1_mango_stairs",
+            new StairsBlock(GOTBlocks.Mango_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mangrove_Planks = registerBlock("planks1_mangrove",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mangrove_Fence = registerBlock("planks1_mangrove_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mangrove_Slab = registerBlock("planks1_mangrove_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mangrove_Stairs = registerBlock("planks1_mangrove_stairs",
+            new StairsBlock(GOTBlocks.Mangrove_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Maple_Planks = registerBlock("planks1_maple",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Maple_Fence = registerBlock("planks1_maple_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Maple_Slab = registerBlock("planks1_maple_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Maple_Stairs = registerBlock("planks1_maple_stairs",
+            new StairsBlock(GOTBlocks.Maple_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pear_Planks = registerBlock("planks1_pear",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pear_Fence = registerBlock("planks1_pear_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pear_Slab = registerBlock("planks1_pear_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pear_Stairs = registerBlock("planks1_pear_stairs",
+            new StairsBlock(GOTBlocks.Pear_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ulthos_Planks = registerBlock("planks1_ulthos",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ulthos_Fence = registerBlock("planks1_ulthos_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ulthos_Slab = registerBlock("planks1_ulthos_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Ulthos_Stairs = registerBlock("planks1_ulthos_stairs",
+            new StairsBlock(GOTBlocks.Ulthos_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Almond_Planks = registerBlock("planks2_almond",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Almond_Fence = registerBlock("planks2_almond_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Almond_Slab = registerBlock("planks2_almond_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Almond_Stairs = registerBlock("planks2_almond_stairs",
+            new StairsBlock(GOTBlocks.Almond_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aspen_Planks = registerBlock("planks2_aspen",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aspen_Fence = registerBlock("planks2_aspen_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aspen_Slab = registerBlock("planks2_aspen_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Aspen_Stairs = registerBlock("planks2_aspen_stairs",
+            new StairsBlock(GOTBlocks.Aspen_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Baobab_Planks = registerBlock("planks2_baobab",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Baobab_Fence = registerBlock("planks2_baobab_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Baobab_Slab = registerBlock("planks2_baobab_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Baobab_Stairs = registerBlock("planks2_baobab_stairs",
+            new StairsBlock(GOTBlocks.Baobab_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cedar_Planks = registerBlock("planks2_cedar",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cedar_Fence = registerBlock("planks2_cedar_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cedar_Slab = registerBlock("planks2_cedar_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cedar_Stairs = registerBlock("planks2_cedar_stairs",
+            new StairsBlock(GOTBlocks.Cedar_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Chestnut_Planks = registerBlock("planks2_chestnut",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Chestnut_Fence = registerBlock("planks2_chestnut_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Chestnut_Slab = registerBlock("planks2_chestnut_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Chestnut_Stairs = registerBlock("planks2_chestnut_stairs",
+            new StairsBlock(GOTBlocks.Chestnut_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cypress_Planks = registerBlock("planks2_cypress",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cypress_Fence = registerBlock("planks2_cypress_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cypress_Slab = registerBlock("planks2_cypress_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Cypress_Stairs = registerBlock("planks2_cypress_stairs",
+            new StairsBlock(GOTBlocks.Cypress_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fir_Planks = registerBlock("planks2_fir",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fir_Fence = registerBlock("planks2_fir_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fir_Slab = registerBlock("planks2_fir_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fir_Stairs = registerBlock("planks2_fir_stairs",
+            new StairsBlock(GOTBlocks.Fir_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fotinia_Planks = registerBlock("planks2_fotinia",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fotinia_Fence = registerBlock("planks2_fotinia_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fotinia_Slab = registerBlock("planks2_fotinia_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Fotinia_Stairs = registerBlock("planks2_fotinia_stairs",
+            new StairsBlock(GOTBlocks.Fotinia_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Green_Oak_Planks = registerBlock("planks2_green_oak",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Green_Oak_Fence = registerBlock("planks2_green_oak_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Green_Oak_Slab = registerBlock("planks2_green_oak_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Green_Oak_Stairs = registerBlock("planks2_green_oak_stairs",
+            new StairsBlock(GOTBlocks.Green_Oak_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lemon_Planks = registerBlock("planks2_lemon",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lemon_Fence = registerBlock("planks2_lemon_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lemon_Slab = registerBlock("planks2_lemon_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lemon_Stairs = registerBlock("planks2_lemon_stairs",
+            new StairsBlock(GOTBlocks.Lemon_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lime_Planks = registerBlock("planks2_lime",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lime_Fence = registerBlock("planks2_lime_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lime_Slab = registerBlock("planks2_lime_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Lime_Stairs = registerBlock("planks2_lime_stairs",
+            new StairsBlock(GOTBlocks.Lime_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mahogany_Planks = registerBlock("planks2_mahogany",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mahogany_Fence = registerBlock("planks2_mahogany_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mahogany_Slab = registerBlock("planks2_mahogany_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Mahogany_Stairs = registerBlock("planks2_mahogany_stairs",
+            new StairsBlock(GOTBlocks.Mahogany_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Olive_Planks = registerBlock("planks2_olive",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Olive_Fence = registerBlock("planks2_olive_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Olive_Slab = registerBlock("planks2_olive_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Olive_Stairs = registerBlock("planks2_olive_stairs",
+            new StairsBlock(GOTBlocks.Olive_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Orange_Planks = registerBlock("planks2_orange",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Orange_Fence = registerBlock("planks2_orange_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Orange_Slab = registerBlock("planks2_orange_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Orange_Stairs = registerBlock("planks2_orange_stairs",
+            new StairsBlock(GOTBlocks.Orange_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pine_Planks = registerBlock("planks2_pine",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pine_Fence = registerBlock("planks2_pine_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pine_Slab = registerBlock("planks2_pine_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pine_Stairs = registerBlock("planks2_pine_stairs",
+            new StairsBlock(GOTBlocks.Pine_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Willow_Planks = registerBlock("planks2_willow",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Willow_Fence = registerBlock("planks2_willow_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Willow_Slab = registerBlock("planks2_willow_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Willow_Stairs = registerBlock("planks2_willow_stairs",
+            new StairsBlock(GOTBlocks.Willow_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Dragon_Planks = registerBlock("planks3_dragon",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Dragon_Fence = registerBlock("planks3_dragon_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Dragon_Slab = registerBlock("planks3_dragon_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Dragon_Stairs = registerBlock("planks3_dragon_stairs",
+            new StairsBlock(GOTBlocks.Dragon_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Kanuka_Planks = registerBlock("planks3_kanuka",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Kanuka_Fence = registerBlock("planks3_kanuka_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Kanuka_Slab = registerBlock("planks3_kanuka_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Kanuka_Stairs = registerBlock("planks3_kanuka_stairs",
+            new StairsBlock(GOTBlocks.Kanuka_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Palm_Planks = registerBlock("planks3_palm",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Palm_Fence = registerBlock("planks3_palm_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Palm_Slab = registerBlock("planks3_palm_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Palm_Stairs = registerBlock("planks3_palm_stairs",
+            new StairsBlock(GOTBlocks.Palm_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Plum_Planks = registerBlock("planks3_plum",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Plum_Fence = registerBlock("planks3_plum_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Plum_Slab = registerBlock("planks3_plum_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Plum_Stairs = registerBlock("planks3_plum_stairs",
+            new StairsBlock(GOTBlocks.Plum_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pomegranate_Planks = registerBlock("planks3_pomegranate",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pomegranate_Fence = registerBlock("planks3_pomegranate_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pomegranate_Slab = registerBlock("planks3_pomegranate_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Pomegranate_Stairs = registerBlock("planks3_pomegranate_stairs",
+            new StairsBlock(GOTBlocks.Pomegranate_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Redwood_Planks = registerBlock("planks3_redwood",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Redwood_Fence = registerBlock("planks3_redwood_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Redwood_Slab = registerBlock("planks3_redwood_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Redwood_Stairs = registerBlock("planks3_redwood_stairs",
+            new StairsBlock(GOTBlocks.Redwood_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Weirwood_Planks = registerBlock("planks3_weirwood",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Weirwood_Fence = registerBlock("planks3_weirwood_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Weirwood_Slab = registerBlock("planks3_weirwood_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Weirwood_Stairs = registerBlock("planks3_weirwood_stairs",
+            new StairsBlock(GOTBlocks.Weirwood_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Rotten_Planks = registerBlock("planks_rotten_rotten",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Rotten_Fence = registerBlock("planks_rotten_rotten_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Rotten_Slab = registerBlock("planks_rotten_rotten_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Rotten_Stairs = registerBlock("planks_rotten_rotten_stairs",
+            new StairsBlock(GOTBlocks.Rotten_Planks.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

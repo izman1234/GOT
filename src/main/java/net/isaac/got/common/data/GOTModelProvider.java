@@ -11,6 +11,8 @@ import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
+import java.util.Arrays;
+
 public class GOTModelProvider extends FabricModelProvider {
     public GOTModelProvider(FabricDataOutput output) {
         super(output);
@@ -20,6 +22,7 @@ public class GOTModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         /* FUNCTIONAL */
         blockStateModelGenerator.registerCooker(GOTBlocks.Alloy_Forge, TexturedModel.ORIENTABLE);
+        blockStateModelGenerator.registerCooker(GOTBlocks.Oven, TexturedModel.ORIENTABLE);
 
         /* FOOD */
         CakeBlockGenerator.generateBlockJson("apple_crumble");
@@ -32,6 +35,10 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCrop(GOTBlocks.Leek, Properties.AGE_3, 0, 1, 2, 3);
         CakeBlockGenerator.generateBlockJson("lemon_cake");
         blockStateModelGenerator.registerCrop(GOTBlocks.Lettuce, Properties.AGE_3, 0, 1, 2, 3);
+        CakeBlockGenerator.generateBlockJson("marzipan");
+        CakeBlockGenerator.generateBlockJson("pastry");
+        blockStateModelGenerator.registerCrop(GOTBlocks.Pipeweed, Properties.AGE_3, 0, 1, 2, 3);
+
 
 
 
@@ -103,9 +110,25 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Dragon_Leaves);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Kanuka_Leaves);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Weirwood_Leaves);
-
-
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Marigold, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerWallPlant(GOTBlocks.Mirk_Vines);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Mud);
+        FarmlandGenerator.generateBlockJson("mud_farmland", "mud");
+        GrassBlockGenerator.generateBlockJson("mud_grass", "mud");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Obsidian_Gravel);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Cobalt);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Gem_Amber);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Gem_Opal);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Gem_Ruby);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Gem_Sapphire);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Gem_Topaz);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Glowstone);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Salt);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Saltpeter);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Silver);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Sulfur);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Tin);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ore_Valyrian);
 
         /* BULDING */
         PaneBlockGenerator.generateBlockJson("asshai_bars");
@@ -353,7 +376,166 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Mango).log(GOTBlocks.Fruit_Wood_Mango);
         blockStateModelGenerator.registerLog(GOTBlocks.Fruit_Wood_Pear).log(GOTBlocks.Fruit_Wood_Pear);
         PaneBlockGenerator.generateBlockJson("gold_bars");
-
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Apple_Planks);
+        FenceGenerator.generateBlockJson("planks1_apple");
+        SlabGenerator.generateBlockJson("planks1_apple");
+        StairGenerator.generateBlockJson("planks1_apple");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Aramant_Planks);
+        FenceGenerator.generateBlockJson("planks1_aramant");
+        SlabGenerator.generateBlockJson("planks1_aramant");
+        StairGenerator.generateBlockJson("planks1_aramant");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Banana_Planks);
+        FenceGenerator.generateBlockJson("planks1_banana");
+        SlabGenerator.generateBlockJson("planks1_banana");
+        StairGenerator.generateBlockJson("planks1_banana");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Beech_Planks);
+        FenceGenerator.generateBlockJson("planks1_beech");
+        SlabGenerator.generateBlockJson("planks1_beech");
+        StairGenerator.generateBlockJson("planks1_beech");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Catalpa_Planks);
+        FenceGenerator.generateBlockJson("planks1_catalpa");
+        SlabGenerator.generateBlockJson("planks1_catalpa");
+        StairGenerator.generateBlockJson("planks1_catalpa");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Charred_Planks);
+        FenceGenerator.generateBlockJson("planks1_charred");
+        SlabGenerator.generateBlockJson("planks1_charred");
+        StairGenerator.generateBlockJson("planks1_charred");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Cherry_Planks);
+        FenceGenerator.generateBlockJson("planks1_cherry");
+        SlabGenerator.generateBlockJson("planks1_cherry");
+        StairGenerator.generateBlockJson("planks1_cherry");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Date_Palm_Planks);
+        FenceGenerator.generateBlockJson("planks1_date_palm");
+        SlabGenerator.generateBlockJson("planks1_date_palm");
+        StairGenerator.generateBlockJson("planks1_date_palm");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Holly_Planks);
+        FenceGenerator.generateBlockJson("planks1_holly");
+        SlabGenerator.generateBlockJson("planks1_holly");
+        StairGenerator.generateBlockJson("planks1_holly");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ibbinia_Planks);
+        FenceGenerator.generateBlockJson("planks1_ibbinia");
+        SlabGenerator.generateBlockJson("planks1_ibbinia");
+        StairGenerator.generateBlockJson("planks1_ibbinia");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Larch_Planks);
+        FenceGenerator.generateBlockJson("planks1_larch");
+        SlabGenerator.generateBlockJson("planks1_larch");
+        StairGenerator.generateBlockJson("planks1_larch");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Mango_Planks);
+        FenceGenerator.generateBlockJson("planks1_mango");
+        SlabGenerator.generateBlockJson("planks1_mango");
+        StairGenerator.generateBlockJson("planks1_mango");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Mangrove_Planks);
+        FenceGenerator.generateBlockJson("planks1_mangrove");
+        SlabGenerator.generateBlockJson("planks1_mangrove");
+        StairGenerator.generateBlockJson("planks1_mangrove");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Maple_Planks);
+        FenceGenerator.generateBlockJson("planks1_maple");
+        SlabGenerator.generateBlockJson("planks1_maple");
+        StairGenerator.generateBlockJson("planks1_maple");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pear_Planks);
+        FenceGenerator.generateBlockJson("planks1_pear");
+        SlabGenerator.generateBlockJson("planks1_pear");
+        StairGenerator.generateBlockJson("planks1_pear");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Ulthos_Planks);
+        FenceGenerator.generateBlockJson("planks1_ulthos");
+        SlabGenerator.generateBlockJson("planks1_ulthos");
+        StairGenerator.generateBlockJson("planks1_ulthos");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Almond_Planks);
+        FenceGenerator.generateBlockJson("planks2_almond");
+        SlabGenerator.generateBlockJson("planks2_almond");
+        StairGenerator.generateBlockJson("planks2_almond");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Aspen_Planks);
+        FenceGenerator.generateBlockJson("planks2_aspen");
+        SlabGenerator.generateBlockJson("planks2_aspen");
+        StairGenerator.generateBlockJson("planks2_aspen");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Baobab_Planks);
+        FenceGenerator.generateBlockJson("planks2_baobab");
+        SlabGenerator.generateBlockJson("planks2_baobab");
+        StairGenerator.generateBlockJson("planks2_baobab");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Cedar_Planks);
+        FenceGenerator.generateBlockJson("planks2_cedar");
+        SlabGenerator.generateBlockJson("planks2_cedar");
+        StairGenerator.generateBlockJson("planks2_cedar");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Chestnut_Planks);
+        FenceGenerator.generateBlockJson("planks2_chestnut");
+        SlabGenerator.generateBlockJson("planks2_chestnut");
+        StairGenerator.generateBlockJson("planks2_chestnut");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Cypress_Planks);
+        FenceGenerator.generateBlockJson("planks2_cypress");
+        SlabGenerator.generateBlockJson("planks2_cypress");
+        StairGenerator.generateBlockJson("planks2_cypress");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fir_Planks);
+        FenceGenerator.generateBlockJson("planks2_fir");
+        SlabGenerator.generateBlockJson("planks2_fir");
+        StairGenerator.generateBlockJson("planks2_fir");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Fotinia_Planks);
+        FenceGenerator.generateBlockJson("planks2_fotinia");
+        SlabGenerator.generateBlockJson("planks2_fotinia");
+        StairGenerator.generateBlockJson("planks2_fotinia");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Green_Oak_Planks);
+        FenceGenerator.generateBlockJson("planks2_green_oak");
+        SlabGenerator.generateBlockJson("planks2_green_oak");
+        StairGenerator.generateBlockJson("planks2_green_oak");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Lemon_Planks);
+        FenceGenerator.generateBlockJson("planks2_lemon");
+        SlabGenerator.generateBlockJson("planks2_lemon");
+        StairGenerator.generateBlockJson("planks2_lemon");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Lime_Planks);
+        FenceGenerator.generateBlockJson("planks2_lime");
+        SlabGenerator.generateBlockJson("planks2_lime");
+        StairGenerator.generateBlockJson("planks2_lime");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Mahogany_Planks);
+        FenceGenerator.generateBlockJson("planks2_mahogany");
+        SlabGenerator.generateBlockJson("planks2_mahogany");
+        StairGenerator.generateBlockJson("planks2_mahogany");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Olive_Planks);
+        FenceGenerator.generateBlockJson("planks2_olive");
+        SlabGenerator.generateBlockJson("planks2_olive");
+        StairGenerator.generateBlockJson("planks2_olive");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Orange_Planks);
+        FenceGenerator.generateBlockJson("planks2_orange");
+        SlabGenerator.generateBlockJson("planks2_orange");
+        StairGenerator.generateBlockJson("planks2_orange");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pine_Planks);
+        FenceGenerator.generateBlockJson("planks2_pine");
+        SlabGenerator.generateBlockJson("planks2_pine");
+        StairGenerator.generateBlockJson("planks2_pine");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Willow_Planks);
+        FenceGenerator.generateBlockJson("planks2_willow");
+        SlabGenerator.generateBlockJson("planks2_willow");
+        StairGenerator.generateBlockJson("planks2_willow");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Dragon_Planks);
+        FenceGenerator.generateBlockJson("planks3_dragon");
+        SlabGenerator.generateBlockJson("planks3_dragon");
+        StairGenerator.generateBlockJson("planks3_dragon");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Kanuka_Planks);
+        FenceGenerator.generateBlockJson("planks3_kanuka");
+        SlabGenerator.generateBlockJson("planks3_kanuka");
+        StairGenerator.generateBlockJson("planks3_kanuka");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Palm_Planks);
+        FenceGenerator.generateBlockJson("planks3_palm");
+        SlabGenerator.generateBlockJson("planks3_palm");
+        StairGenerator.generateBlockJson("planks3_palm");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Plum_Planks);
+        FenceGenerator.generateBlockJson("planks3_plum");
+        SlabGenerator.generateBlockJson("planks3_plum");
+        StairGenerator.generateBlockJson("planks3_plum");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Pomegranate_Planks);
+        FenceGenerator.generateBlockJson("planks3_pomegranate");
+        SlabGenerator.generateBlockJson("planks3_pomegranate");
+        StairGenerator.generateBlockJson("planks3_pomegranate");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Redwood_Planks);
+        FenceGenerator.generateBlockJson("planks3_redwood");
+        SlabGenerator.generateBlockJson("planks3_redwood");
+        StairGenerator.generateBlockJson("planks3_redwood");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Weirwood_Planks);
+        FenceGenerator.generateBlockJson("planks3_weirwood");
+        SlabGenerator.generateBlockJson("planks3_weirwood");
+        StairGenerator.generateBlockJson("planks3_weirwood");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Rotten_Planks);
+        FenceGenerator.generateBlockJson("planks_rotten_rotten");
+        SlabGenerator.generateBlockJson("planks_rotten_rotten");
+        StairGenerator.generateBlockJson("planks_rotten_rotten");
 
         /*DECORATION */
         blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?
