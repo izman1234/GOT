@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/red_brick_mossy",
+    "bottom": "got:block/red_brick_mossy",
+    "side": "got:block/red_brick_mossy",
+    "top": "got:block/red_brick_mossy"
+  }
+}

@@ -243,6 +243,41 @@ public class GOTFlammableBlockRegistry {
         registry.add(GOTBlocks.Rice, 30, 60);
         registry.add(GOTBlocks.Rope, 5, 20);
         registry.add(GOTBlocks.Rotten_Log, 5, 20);
+        registry.add(GOTBlocks.Catalpa_Sapling, 30, 60);
+        registry.add(GOTBlocks.Ibbinia_Sapling, 30, 60);
+        registry.add(GOTBlocks.Ulthos_Sapling, 30, 60);
+        registry.add(GOTBlocks.Ulthos_Red_Sapling, 30, 60);
+        registry.add(GOTBlocks.Aramant_Sapling, 30, 60);
+        registry.add(GOTBlocks.Banana_Sapling, 30, 60);
+        registry.add(GOTBlocks.Beech_Sapling, 30, 60);
+        registry.add(GOTBlocks.Holly_Sapling, 30, 60);
+        registry.add(GOTBlocks.Date_Palm_Sapling, 30, 60);
+        registry.add(GOTBlocks.Larch_Sapling, 30, 60);
+        registry.add(GOTBlocks.Mangrove_Sapling, 30, 60);
+        registry.add(GOTBlocks.Maple_Sapling, 30, 60);
+        registry.add(GOTBlocks.Baobab_Sapling, 30, 60);
+        registry.add(GOTBlocks.Cedar_Sapling, 30, 60);
+        registry.add(GOTBlocks.Chestnut_Sapling, 30, 60);
+        registry.add(GOTBlocks.Fir_Sapling, 30, 60);
+        registry.add(GOTBlocks.Lemon_Sapling, 30, 60);
+        registry.add(GOTBlocks.Lime_Sapling, 30, 60);
+        registry.add(GOTBlocks.Orange_Sapling, 30, 60);
+        registry.add(GOTBlocks.Pine_Sapling, 30, 60);
+        registry.add(GOTBlocks.Cypress_Sapling, 30, 60);
+        registry.add(GOTBlocks.Mahogany_Sapling, 30, 60);
+        registry.add(GOTBlocks.Olive_Sapling, 30, 60);
+        registry.add(GOTBlocks.Willow_Sapling, 30, 60);
+        registry.add(GOTBlocks.Almond_Sapling, 30, 60);
+        registry.add(GOTBlocks.Aspen_Sapling, 30, 60);
+        registry.add(GOTBlocks.Fotinia_Sapling, 30, 60);
+        registry.add(GOTBlocks.Green_Oak_Sapling, 30, 60);
+        registry.add(GOTBlocks.Palm_Sapling, 30, 60);
+        registry.add(GOTBlocks.Plum_Sapling, 30, 60);
+        registry.add(GOTBlocks.Pomegranate_Sapling, 30, 60);
+        registry.add(GOTBlocks.Redwood_Sapling, 30, 60);
+        registry.add(GOTBlocks.Dragon_Sapling, 30, 60);
+        registry.add(GOTBlocks.Kanuka_Sapling, 30, 60);
+        registry.add(GOTBlocks.Weirwood_Sapling, 30, 60);
 
     }
 }

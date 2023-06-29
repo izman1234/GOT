@@ -135,6 +135,44 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Quicksand);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Remains);
         blockStateModelGenerator.registerLog(GOTBlocks.Rotten_Log).log(GOTBlocks.Rotten_Log);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Catalpa_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Ibbinia_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Ulthos_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Ulthos_Red_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Aramant_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Banana_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Beech_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Holly_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Date_Palm_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Larch_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Mangrove_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Maple_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Baobab_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Cedar_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Chestnut_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fir_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Lemon_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Lime_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Orange_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Pine_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Cypress_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Mahogany_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Olive_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Willow_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Almond_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Aspen_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fotinia_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Green_Oak_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Palm_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Plum_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Pomegranate_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Redwood_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Dragon_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Kanuka_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Weirwood_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Scorched_Stone);
+
+
 
         /* BULDING */
         PaneBlockGenerator.generateBlockJson("asshai_bars");
@@ -551,10 +589,27 @@ public class GOTModelProvider extends FabricModelProvider {
         SlabGenerator.generateBlockJson("rock_chalk");
         StairGenerator.generateBlockJson("rock_chalk");
         WallGenerator.generateBlockJson("rock_chalk");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Labradorite);
+        SlabGenerator.generateBlockJson("rock_labradorite");
+        StairGenerator.generateBlockJson("rock_labradorite");
+        WallGenerator.generateBlockJson("rock_labradorite");
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Rhyolite);
         SlabGenerator.generateBlockJson("rock_rhyolite");
         StairGenerator.generateBlockJson("rock_rhyolite");
         WallGenerator.generateBlockJson("rock_rhyolite");
+        PaneBlockGenerator.generateBlockJson("silver_bars");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Smooth_Stone_Chalk);
+        SlabGenerator.generateBlockJson("smooth_stone_chalk");
+        StairGenerator.generateBlockJson("smooth_stone_chalk");
+        WallGenerator.generateBlockJson("smooth_stone_chalk");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Smooth_Stone_Labradorite);
+        SlabGenerator.generateBlockJson("smooth_stone_labradorite");
+        StairGenerator.generateBlockJson("smooth_stone_labradorite");
+        WallGenerator.generateBlockJson("smooth_stone_labradorite");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Smooth_Stone_Rhyolite);
+        SlabGenerator.generateBlockJson("smooth_stone_rhyolite");
+        StairGenerator.generateBlockJson("smooth_stone_rhyolite");
+        WallGenerator.generateBlockJson("smooth_stone_rhyolite");
 
         /*DECORATION */
         blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?
@@ -592,6 +647,23 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerGlassPane(GOTBlocks.Fine_Glass, GOTBlocks.Fine_Glass_Pane);
         PlateBlockGenerator.generateBlockJson("plate");
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Rope);
+        blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Sothoryos_Torch, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Black_Fine_Glass, GOTBlocks.Black_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Blue_Fine_Glass, GOTBlocks.Blue_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Brown_Fine_Glass, GOTBlocks.Brown_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Cyan_Fine_Glass, GOTBlocks.Cyan_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Gray_Fine_Glass, GOTBlocks.Gray_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Green_Fine_Glass, GOTBlocks.Green_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Light_Blue_Fine_Glass, GOTBlocks.Light_Blue_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Lime_Fine_Glass, GOTBlocks.Lime_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Magenta_Fine_Glass, GOTBlocks.Magenta_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Orange_Fine_Glass, GOTBlocks.Orange_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Pink_Fine_Glass, GOTBlocks.Pink_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Purple_Fine_Glass, GOTBlocks.Purple_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Red_Fine_Glass, GOTBlocks.Red_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Silver_Fine_Glass, GOTBlocks.Silver_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.White_Fine_Glass, GOTBlocks.White_Fine_Glass_Pane);
+        blockStateModelGenerator.registerGlassPane(GOTBlocks.Yellow_Fine_Glass, GOTBlocks.Yellow_Fine_Glass_Pane);
 
 
     }

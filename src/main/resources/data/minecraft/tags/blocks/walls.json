@@ -63,7 +63,11 @@
     "got:clay_tile_dyed_yellow_wall",
     "got:red_brick_cracked_wall",
     "got:red_brick_mossy_wall",
-    "got:rock_chalk",
-    "got:rock_rhyolite"
+    "got:rock_chalk_wall",
+    "got:rock_labradorite_wall",
+    "got:rock_rhyolite_wall",
+    "got:smooth_stone_chalk_wall",
+    "got:smooth_stone_labradorite_wall",
+    "got:smooth_stone_rhyolite_wall"
   ]
 }
