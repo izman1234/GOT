@@ -1,5 +1,6 @@
 package net.isaac.got.common.data;
 
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.isaac.got.GOT;
@@ -23,6 +24,39 @@ public class GOTModelProvider extends FabricModelProvider {
         /* FUNCTIONAL */
         blockStateModelGenerator.registerCooker(GOTBlocks.Alloy_Forge, TexturedModel.ORIENTABLE);
         blockStateModelGenerator.registerCooker(GOTBlocks.Oven, TexturedModel.ORIENTABLE);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Arryn_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Asshai_Table, GOTBlocks.Charred_Planks, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Braavos_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Crownlands_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Dorne_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Dothraki_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Dragonstone_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Ghiscar_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Gift_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Hill_Tribes_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Ibben_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Ironborn_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Jogos_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Lhazar_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Lorath_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Lys_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Mossovy_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Myr_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.North_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Norvos_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Pentos_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Qarth_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Qohor_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Reach_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Riverlands_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Sothoryos_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Stormlands_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Summer_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Tyrosh_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Volantis_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Westerlands_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Wildling_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(GOTBlocks.Yiti_Table, Blocks.OAK_PLANKS, TextureMap::frontSideWithCustomBottom);
 
         /* FOOD */
         CakeBlockGenerator.generateBlockJson("apple_crumble");
@@ -171,6 +205,13 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Kanuka_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Weirwood_Sapling, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Scorched_Stone);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Fernsprout, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Grass_Flower, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Grass_Nettle, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Short_Grass, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Thistle, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Grass_Wheat, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Termite_Mound);
 
 
 
@@ -610,6 +651,9 @@ public class GOTModelProvider extends FabricModelProvider {
         SlabGenerator.generateBlockJson("smooth_stone_rhyolite");
         StairGenerator.generateBlockJson("smooth_stone_rhyolite");
         WallGenerator.generateBlockJson("smooth_stone_rhyolite");
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Thatch_Floor);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Thatch_Reed);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Thatch_Thatch);
 
         /*DECORATION */
         blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?
@@ -664,6 +708,86 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerGlassPane(GOTBlocks.Silver_Fine_Glass, GOTBlocks.Silver_Fine_Glass_Pane);
         blockStateModelGenerator.registerGlassPane(GOTBlocks.White_Fine_Glass, GOTBlocks.White_Fine_Glass_Pane);
         blockStateModelGenerator.registerGlassPane(GOTBlocks.Yellow_Fine_Glass, GOTBlocks.Yellow_Fine_Glass_Pane);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Almond_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Apple_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Aramant_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Aspen_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Banana_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Baobab_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Beech_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Catalpa_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Cedar_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Charred_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Cherry_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Chestnut_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Cypress_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Date_Palm_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Dragon_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Fir_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Fotinia_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Green_Oak_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Holly_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Ibbinia_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Kanuka_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Larch_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Lemon_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Lime_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Mahogany_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Mango_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Mangrove_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Maple_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Olive_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Orange_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Palm_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Pear_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Pine_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Plum_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Pomegranate_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Redwood_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Rotten_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Ulthos_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Weirwood_Trapdoor);
+        blockStateModelGenerator.registerOrientableTrapdoor(GOTBlocks.Willow_Trapdoor);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Almond_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Apple_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Aramant_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Aspen_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Banana_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Baobab_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Beech_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Catalpa_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Cedar_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Charred_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Cherry_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Chestnut_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Cypress_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Date_Palm_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Dragon_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Fir_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Fotinia_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Green_Oak_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Holly_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Ibbinia_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Kanuka_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Larch_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Lemon_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Lime_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Mahogany_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Mango_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Mangrove_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Maple_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Olive_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Orange_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Palm_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Pear_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Pine_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Plum_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Pomegranate_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Redwood_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Rotten_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Ulthos_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Weirwood_Door);
+        blockStateModelGenerator.registerDoor(GOTBlocks.Willow_Door);
 
 
     }

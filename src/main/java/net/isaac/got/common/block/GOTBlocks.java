@@ -622,15 +622,92 @@ public class GOTBlocks {
 
     public static final Block Dead_Marsh_Plant = registerBlock("dead_marsh_plant",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
-    public static final Block Bruschatka = registerBlock("dirt_path_brus",
+    public static final Block Bruschatka = registerBlock("dirt_path_brus", //TODO ADD SLAB/STAIR/ MAYBE WALL VARIANTS
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block Dirt_Path = registerBlock("dirt_path_dirt",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block Jungle_Mud_Path = registerBlock("dirt_path_mud",
             new Block(FabricBlockSettings.copyOf(Blocks.MUD)));
-
-    //TODO ADD DOORS AFTER ADDING WOOD TYPE
-
+    public static final Block Almond_Door = registerBlock("door_almond",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Apple_Door = registerBlock("door_apple",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Aramant_Door = registerBlock("door_aramant",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Aspen_Door = registerBlock("door_aspen",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Banana_Door = registerBlock("door_banana",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Baobab_Door = registerBlock("door_baobab",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Beech_Door = registerBlock("door_beech",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Catalpa_Door = registerBlock("door_catalpa",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Cedar_Door = registerBlock("door_cedar",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Charred_Door = registerBlock("door_charred",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Cherry_Door = registerBlock("door_cherry",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Chestnut_Door = registerBlock("door_chestnut",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Cypress_Door = registerBlock("door_cypress",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Date_Palm_Door = registerBlock("door_date_palm",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Dragon_Door = registerBlock("door_dragon",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Fir_Door = registerBlock("door_fir",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Fotinia_Door = registerBlock("door_fotinia",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Green_Oak_Door = registerBlock("door_green_oak",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Holly_Door = registerBlock("door_holly",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Ibbinia_Door = registerBlock("door_ibbinia",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Kanuka_Door = registerBlock("door_kanuka",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Larch_Door = registerBlock("door_larch",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Lemon_Door = registerBlock("door_lemon",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Lime_Door = registerBlock("door_lime",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Mahogany_Door = registerBlock("door_mahogany",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Mango_Door = registerBlock("door_mango",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Mangrove_Door = registerBlock("door_mangrove",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Maple_Door = registerBlock("door_maple",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Olive_Door = registerBlock("door_olive",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Orange_Door = registerBlock("door_orange",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Palm_Door = registerBlock("door_palm",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Pear_Door = registerBlock("door_pear",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Pine_Door = registerBlock("door_pine",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Plum_Door = registerBlock("door_plum",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Pomegranate_Door = registerBlock("door_pomegranate",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Redwood_Door = registerBlock("door_redwood",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Rotten_Door = registerBlock("door_rotten",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Ulthos_Door = registerBlock("door_ulthos",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Weirwood_Door = registerBlock("door_weirwood",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final Block Willow_Door = registerBlock("door_willow",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
     public static final Block Double_Flower_Black_Iris = registerBlock("double_flower_black_iris",
             new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.PEONY)));
     public static final Block Double_Flower_Pink = registerBlock("double_flower_pink",
@@ -1388,6 +1465,175 @@ public class GOTBlocks {
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).nonOpaque()));
 
     //TODO ADD STRAW BED
+
+    public static final Block Arryn_Table = registerBlock("table_arryn",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Asshai_Table = registerBlock("table_asshai",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Braavos_Table = registerBlock("table_braavos",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Crownlands_Table = registerBlock("table_crownlands",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Dorne_Table = registerBlock("table_dorne",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Dothraki_Table = registerBlock("table_dothraki",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Dragonstone_Table = registerBlock("table_dragonstone",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Ghiscar_Table = registerBlock("table_ghiscar",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Gift_Table = registerBlock("table_gift",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Hill_Tribes_Table = registerBlock("table_hill_tribes",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Ibben_Table = registerBlock("table_ibben",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Ironborn_Table = registerBlock("table_ironborn",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Jogos_Table = registerBlock("table_jogos",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Lhazar_Table = registerBlock("table_lhazar",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Lorath_Table = registerBlock("table_lorath",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Lys_Table = registerBlock("table_lys",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Mossovy_Table = registerBlock("table_mossovy",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Myr_Table = registerBlock("table_myr",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block North_Table = registerBlock("table_north",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Norvos_Table = registerBlock("table_norvos",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Pentos_Table = registerBlock("table_pentos",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Qarth_Table = registerBlock("table_qarth",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Qohor_Table = registerBlock("table_qohor",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Reach_Table = registerBlock("table_reach",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Riverlands_Table = registerBlock("table_riverlands",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Sothoryos_Table = registerBlock("table_sothoryos",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Stormlands_Table = registerBlock("table_stormlands",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Summer_Table = registerBlock("table_summer",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Tyrosh_Table = registerBlock("table_tyrosh",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Volantis_Table = registerBlock("table_volantis",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Westerlands_Table = registerBlock("table_westerlands",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Wildling_Table = registerBlock("table_wildling",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Yiti_Table = registerBlock("table_yi_ti",
+            new GOTCraftingTableBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE)));
+    public static final Block Fernsprout = registerBlock("tall_grass_fernsprout",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block Grass_Flower = registerBlock("tall_grass_flower",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block Grass_Nettle = registerBlock("tall_grass_nettle",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block Short_Grass = registerBlock("tall_grass_short",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block Thistle = registerBlock("tall_grass_thistle",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block Grass_Wheat = registerBlock("tall_grass_wheat",
+            new FernBlock(FabricBlockSettings.copyOf(Blocks.GRASS)));
+    public static final Block Termite_Mound = registerBlock("termite_mound",
+            new Block(FabricBlockSettings.copyOf(Blocks.SAND)));
+    public static final Block Thatch_Floor = registerBlock("thatch_floor",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Thatch_Reed = registerBlock("thatch_reed",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Thatch_Thatch = registerBlock("thatch_thatch",
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+    public static final Block Almond_Trapdoor = registerBlock("trapdoor_almond",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Apple_Trapdoor = registerBlock("trapdoor_apple",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Aramant_Trapdoor = registerBlock("trapdoor_aramant",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Aspen_Trapdoor = registerBlock("trapdoor_aspen",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Banana_Trapdoor = registerBlock("trapdoor_banana",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Baobab_Trapdoor = registerBlock("trapdoor_baobab",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Beech_Trapdoor = registerBlock("trapdoor_beech",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Catalpa_Trapdoor = registerBlock("trapdoor_catalpa",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Cedar_Trapdoor = registerBlock("trapdoor_cedar",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Charred_Trapdoor = registerBlock("trapdoor_charred",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Cherry_Trapdoor = registerBlock("trapdoor_cherry",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Chestnut_Trapdoor = registerBlock("trapdoor_chestnut",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Cypress_Trapdoor = registerBlock("trapdoor_cypress",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Date_Palm_Trapdoor = registerBlock("trapdoor_date_palm",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Dragon_Trapdoor = registerBlock("trapdoor_dragon",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Fir_Trapdoor = registerBlock("trapdoor_fir",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Fotinia_Trapdoor = registerBlock("trapdoor_fotinia",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Green_Oak_Trapdoor = registerBlock("trapdoor_green_oak",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Holly_Trapdoor = registerBlock("trapdoor_holly",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Ibbinia_Trapdoor = registerBlock("trapdoor_ibbinia",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Kanuka_Trapdoor = registerBlock("trapdoor_kanuka",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Larch_Trapdoor = registerBlock("trapdoor_larch",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Lemon_Trapdoor = registerBlock("trapdoor_lemon",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Lime_Trapdoor = registerBlock("trapdoor_lime",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Mahogany_Trapdoor = registerBlock("trapdoor_mahogany",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Mango_Trapdoor = registerBlock("trapdoor_mango",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Mangrove_Trapdoor = registerBlock("trapdoor_mangrove",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Maple_Trapdoor = registerBlock("trapdoor_maple",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Olive_Trapdoor = registerBlock("trapdoor_olive",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Orange_Trapdoor = registerBlock("trapdoor_orange",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Palm_Trapdoor = registerBlock("trapdoor_palm",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Pear_Trapdoor = registerBlock("trapdoor_pear",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Pine_Trapdoor = registerBlock("trapdoor_pine",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Plum_Trapdoor = registerBlock("trapdoor_plum",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Pomegranate_Trapdoor = registerBlock("trapdoor_pomegranate",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Redwood_Trapdoor = registerBlock("trapdoor_redwood",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Rotten_Trapdoor = registerBlock("trapdoor_rotten",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Ulthos_Trapdoor = registerBlock("trapdoor_ulthos",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Weirwood_Trapdoor = registerBlock("trapdoor_weirwood",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final Block Willow_Trapdoor = registerBlock("trapdoor_willow",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+
+    //TODO ADD TREASURE
 
 
 

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "east": "got:block/table_dorne_side",
+    "north": "got:block/table_dorne_front",
+    "particle": "got:block/table_dorne_front",
+    "south": "got:block/table_dorne_side",
+    "up": "got:block/table_dorne_top",
+    "west": "got:block/table_dorne_front"
+  }
+}
