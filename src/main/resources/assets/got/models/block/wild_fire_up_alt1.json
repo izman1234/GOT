@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_alt",
+  "textures": {
+    "fire": "got:block/wild_fire_1"
+  }
+}

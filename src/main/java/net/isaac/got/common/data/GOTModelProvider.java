@@ -1,18 +1,23 @@
 package net.isaac.got.common.data;
 
+import com.google.common.collect.ImmutableMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.weapon.GOTWeapons;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.data.client.*;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class GOTModelProvider extends FabricModelProvider {
     public GOTModelProvider(FabricDataOutput output) {
@@ -73,6 +78,9 @@ public class GOTModelProvider extends FabricModelProvider {
         CakeBlockGenerator.generateBlockJson("pastry");
         blockStateModelGenerator.registerCrop(GOTBlocks.Pipeweed, Properties.AGE_3, 0, 1, 2, 3);
         blockStateModelGenerator.registerCrop(GOTBlocks.Rice, Properties.AGE_7, 0, 1, 2, 3, 4, 5, 6, 7);
+        blockStateModelGenerator.registerCrop(GOTBlocks.Turnip, Properties.AGE_3, 0, 1, 2, 3);
+        blockStateModelGenerator.registerCrop(GOTBlocks.Yam, Properties.AGE_3, 0, 1, 2, 3);
+
 
         /* NATURAL */
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Arid_Grass, BlockStateModelGenerator.TintType.TINTED);
@@ -88,8 +96,11 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Corn_Stalk_Corn, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Dead_Marsh_Plant, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Bruschatka);
+        SlabGenerator.generateBlockJson("dirt_path_brus");
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Dirt_Path);
+        SlabGenerator.generateBlockJson("dirt_path_dirt");
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Jungle_Mud_Path);
+        SlabGenerator.generateBlockJson("dirt_path_mud");
         blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Black_Iris, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Pink, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(GOTBlocks.Double_Flower_Red, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -212,7 +223,52 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Thistle, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerTintableCross(GOTBlocks.Grass_Wheat, BlockStateModelGenerator.TintType.TINTED);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Termite_Mound);
-
+        blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.White_Sand);
+        SlabGenerator.generateBlockJson("white_sand");
+        SandStoneGenerator.generateBlockJson("white_sandstone");
+        SandStoneGenerator.generateSlabJson("white_sandstone");
+        SandStoneGenerator.generateStairsJson("white_sandstone");
+        blockStateModelGenerator.registerWallPlant(GOTBlocks.Willow_Vines);
+        blockStateModelGenerator.registerLog(GOTBlocks.Catalpa_Wood).log(GOTBlocks.Catalpa_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Charred_Wood).log(GOTBlocks.Charred_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Ibbinia_Wood).log(GOTBlocks.Ibbinia_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Ulthos_Wood).log(GOTBlocks.Ulthos_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Aramant_Wood).log(GOTBlocks.Aramant_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Banana_Wood).log(GOTBlocks.Banana_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Beech_Wood).log(GOTBlocks.Beech_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Holly_Wood).log(GOTBlocks.Holly_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Date_Palm_Wood).log(GOTBlocks.Date_Palm_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Larch_Wood).log(GOTBlocks.Larch_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Mangrove_Wood).log(GOTBlocks.Mangrove_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Maple_Wood).log(GOTBlocks.Maple_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Baobab_Wood).log(GOTBlocks.Baobab_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Cedar_Wood).log(GOTBlocks.Cedar_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Chestnut_Wood).log(GOTBlocks.Chestnut_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fir_Wood).log(GOTBlocks.Fir_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Lemon_Wood).log(GOTBlocks.Lemon_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Lime_Wood).log(GOTBlocks.Lime_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Orange_Wood).log(GOTBlocks.Orange_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Pine_Wood).log(GOTBlocks.Pine_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Cypress_Wood).log(GOTBlocks.Cypress_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Mahogany_Wood).log(GOTBlocks.Mahogany_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Olive_Wood).log(GOTBlocks.Olive_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Willow_Wood).log(GOTBlocks.Willow_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Almond_Wood).log(GOTBlocks.Almond_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Aspen_Wood).log(GOTBlocks.Aspen_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fotinia_Wood).log(GOTBlocks.Fotinia_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Green_Oak_Wood).log(GOTBlocks.Green_Oak_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Palm_Wood).log(GOTBlocks.Palm_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Plum_Wood).log(GOTBlocks.Plum_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Pomegranate_Wood).log(GOTBlocks.Pomegranate_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Redwood_Wood).log(GOTBlocks.Redwood_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Dragon_Wood).log(GOTBlocks.Dragon_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Kanuka_Wood).log(GOTBlocks.Kanuka_Wood);
+        blockStateModelGenerator.registerLog(GOTBlocks.Weirwood_Wood).log(GOTBlocks.Weirwood_Wood);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Yiti_Flower_Blue, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Yiti_Flower_Orange, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Yiti_Flower_Pink, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Yiti_Flower_White, BlockStateModelGenerator.TintType.TINTED);
+        blockStateModelGenerator.registerTintableCross(GOTBlocks.Yiti_Flower_Yellow, BlockStateModelGenerator.TintType.TINTED);
 
 
         /* BULDING */
@@ -654,9 +710,57 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Thatch_Floor);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Thatch_Reed);
         blockStateModelGenerator.registerCubeAllModelTexturePool(GOTBlocks.Thatch_Thatch);
+        blockStateModelGenerator.registerLog(GOTBlocks.Catalpa_Wood_Beam).log(GOTBlocks.Catalpa_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Charred_Wood_Beam).log(GOTBlocks.Charred_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Ibbinia_Wood_Beam).log(GOTBlocks.Ibbinia_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Ulthos_Wood_Beam).log(GOTBlocks.Ulthos_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Aramant_Wood_Beam).log(GOTBlocks.Aramant_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Banana_Wood_Beam).log(GOTBlocks.Banana_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Beech_Wood_Beam).log(GOTBlocks.Beech_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Holly_Wood_Beam).log(GOTBlocks.Holly_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Date_Palm_Wood_Beam).log(GOTBlocks.Date_Palm_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Larch_Wood_Beam).log(GOTBlocks.Larch_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Mangrove_Wood_Beam).log(GOTBlocks.Mangrove_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Maple_Wood_Beam).log(GOTBlocks.Maple_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Baobab_Wood_Beam).log(GOTBlocks.Baobab_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Cedar_Wood_Beam).log(GOTBlocks.Cedar_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Chestnut_Wood_Beam).log(GOTBlocks.Chestnut_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fir_Wood_Beam).log(GOTBlocks.Fir_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Lemon_Wood_Beam).log(GOTBlocks.Lemon_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Lime_Wood_Beam).log(GOTBlocks.Lime_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Orange_Wood_Beam).log(GOTBlocks.Orange_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Pine_Wood_Beam).log(GOTBlocks.Pine_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Cypress_Wood_Beam).log(GOTBlocks.Cypress_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Mahogany_Wood_Beam).log(GOTBlocks.Mahogany_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Olive_Wood_Beam).log(GOTBlocks.Olive_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Willow_Wood_Beam).log(GOTBlocks.Willow_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Almond_Wood_Beam).log(GOTBlocks.Almond_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Aspen_Wood_Beam).log(GOTBlocks.Aspen_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Fotinia_Wood_Beam).log(GOTBlocks.Fotinia_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Green_Oak_Wood_Beam).log(GOTBlocks.Green_Oak_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Palm_Wood_Beam).log(GOTBlocks.Palm_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Plum_Wood_Beam).log(GOTBlocks.Plum_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Pomegranate_Wood_Beam).log(GOTBlocks.Pomegranate_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Redwood_Wood_Beam).log(GOTBlocks.Redwood_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Dragon_Wood_Beam).log(GOTBlocks.Dragon_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Kanuka_Wood_Beam).log(GOTBlocks.Kanuka_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Weirwood_Wood_Beam).log(GOTBlocks.Weirwood_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Apple_Wood_Beam).log(GOTBlocks.Apple_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Cherry_Wood_Beam).log(GOTBlocks.Cherry_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Mango_Wood_Beam).log(GOTBlocks.Mango_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Pear_Wood_Beam).log(GOTBlocks.Pear_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Rotten_Wood_Beam).log(GOTBlocks.Rotten_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Ibben_Wood_Beam).log(GOTBlocks.Ibben_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Gold_Ibben_Wood_Beam).log(GOTBlocks.Gold_Ibben_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Birch_Wood_Beam).log(GOTBlocks.Birch_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Jungle_Wood_Beam).log(GOTBlocks.Jungle_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Oak_Wood_Beam).log(GOTBlocks.Oak_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Spruce_Wood_Beam).log(GOTBlocks.Spruce_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Acacia_Wood_Beam).log(GOTBlocks.Acacia_Wood_Beam);
+        blockStateModelGenerator.registerLog(GOTBlocks.Dark_Oak_Wood_Beam).log(GOTBlocks.Dark_Oak_Wood_Beam);
 
         /*DECORATION */
-        blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch); //MAYBE NOT WORKING?
+        blockStateModelGenerator.registerTorch(GOTBlocks.Asshai_Torch, GOTBlocks.Asshai_WallTorch);
         BirdCageGenerator.generateBlockJson("bird_cage_bronze");
         BirdCageGenerator.generateBlockJson("bird_cage_gold");
         BirdCageGenerator.generateBlockJson("bird_cage_iron");
@@ -788,7 +892,11 @@ public class GOTModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(GOTBlocks.Ulthos_Door);
         blockStateModelGenerator.registerDoor(GOTBlocks.Weirwood_Door);
         blockStateModelGenerator.registerDoor(GOTBlocks.Willow_Door);
-
+        PaneBlockGenerator.generateBlockJson("ulthos_bars");
+        blockStateModelGenerator.registerTorch(GOTBlocks.Ulthos_Torch, GOTBlocks.Ulthos_WallTorch);
+        PaneBlockGenerator.generateBlockJson("valyrian_bars");
+        FireGenerator.generateBlockJson("wild_fire");
+        PlateBlockGenerator.generateBlockJson("wood_plate");
 
     }
 

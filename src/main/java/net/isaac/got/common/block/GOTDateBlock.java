@@ -1,11 +1,13 @@
 package net.isaac.got.common.block;
 
+import net.isaac.got.util.GOTBlockTags;
 import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.WorldView;
 
 public class GOTDateBlock extends CocoaBlock {
     private static final VoxelShape SOUTH_SHAPE = createCuboidShape(6, 5, 12, 10, 11, 16);
@@ -32,5 +34,11 @@ public class GOTDateBlock extends CocoaBlock {
             default:
                 return VoxelShapes.fullCube(); // Fallback to full cube shape if no matching direction
         }
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState blockState = world.getBlockState(pos.offset((Direction)state.get(FACING)));
+        return blockState.isIn(GOTBlockTags.Date_Palm_Wood);
     }
 }

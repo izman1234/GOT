@@ -1,19 +1,13 @@
 package net.isaac.got.common.block;
 
+import net.isaac.got.util.GOTBlockTags;
 import net.minecraft.block.*;
-import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.IntProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
 
 public class GOTBananaBlock extends CocoaBlock {
     private static final VoxelShape SOUTH_SHAPE = createCuboidShape(6, 3, 12, 10, 15, 16);
@@ -40,5 +34,11 @@ public class GOTBananaBlock extends CocoaBlock {
             default:
                 return VoxelShapes.fullCube(); // Fallback to full cube shape if no matching direction
         }
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState blockState = world.getBlockState(pos.offset((Direction)state.get(FACING)));
+        return blockState.isIn(GOTBlockTags.Banana_Wood);
     }
 }

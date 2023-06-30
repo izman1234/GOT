@@ -622,12 +622,18 @@ public class GOTBlocks {
 
     public static final Block Dead_Marsh_Plant = registerBlock("dead_marsh_plant",
             new FernBlock(FabricBlockSettings.copyOf(Blocks.DEAD_BUSH)));
-    public static final Block Bruschatka = registerBlock("dirt_path_brus", //TODO ADD SLAB/STAIR/ MAYBE WALL VARIANTS
+    public static final Block Bruschatka = registerBlock("dirt_path_brus",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
+    public static final Block Bruschatka_Slab = registerBlock("dirt_path_brus_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block Dirt_Path = registerBlock("dirt_path_dirt",
             new Block(FabricBlockSettings.copyOf(Blocks.DIRT)));
+    public static final Block Dirt_Path_Slab = registerBlock("dirt_path_dirt_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.DIRT)));
     public static final Block Jungle_Mud_Path = registerBlock("dirt_path_mud",
             new Block(FabricBlockSettings.copyOf(Blocks.MUD)));
+    public static final Block Jungle_Mud_Path_Slab = registerBlock("dirt_path_mud_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.MUD)));
     public static final Block Almond_Door = registerBlock("door_almond",
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR), BlockSetType.OAK));
     public static final Block Apple_Door = registerBlock("door_apple",
@@ -1547,11 +1553,11 @@ public class GOTBlocks {
     public static final Block Termite_Mound = registerBlock("termite_mound",
             new Block(FabricBlockSettings.copyOf(Blocks.SAND)));
     public static final Block Thatch_Floor = registerBlock("thatch_floor",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
     public static final Block Thatch_Reed = registerBlock("thatch_reed",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
     public static final Block Thatch_Thatch = registerBlock("thatch_thatch",
-            new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
     public static final Block Almond_Trapdoor = registerBlock("trapdoor_almond",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
     public static final Block Apple_Trapdoor = registerBlock("trapdoor_apple",
@@ -1635,7 +1641,216 @@ public class GOTBlocks {
 
     //TODO ADD TREASURE
 
+    public static final Block Turnip = registerBlock("turnip",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Ulthos_Bars = registerBlock("ulthos_bars",
+            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
+    public static final Block Ulthos_Torch = registerBlock("ulthos_torch",
+            new TorchBlock(FabricBlockSettings.copyOf(Blocks.TORCH), ParticleTypes.FLAME));
+    public static final Block Ulthos_WallTorch = registerBlock("ulthos_walltorch",
+            new WallTorchBlock(FabricBlockSettings.copyOf(Blocks.WALL_TORCH), ParticleTypes.FLAME));
+    public static final Block Valyrian_Bars = registerBlock("valyrian_bars",
+            new GOTPaneBlock(FabricBlockSettings.copyOf(Blocks.IRON_BARS)));
 
+    //TODO ADD WASTE BLOCK WITH MULTIPLE VARIANTS
+
+    public static final Block White_Sand = registerBlock("white_sand",
+            new Block(FabricBlockSettings.copyOf(Blocks.SAND)));
+    public static final Block White_Sand_Slab = registerBlock("white_sand_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SAND)));
+    public static final Block White_Sandstone = registerBlock("white_sandstone",
+            new Block(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block White_Sandstone_Slab = registerBlock("white_sandstone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+    public static final Block White_Sandstone_Stairs = registerBlock("white_sandstone_stairs",
+            new StairsBlock(White_Sandstone.getDefaultState(), FabricBlockSettings.copyOf(Blocks.SANDSTONE)));
+
+    //TODO ADD WILD FIRE JAR (CUSTOM MODEL)
+
+    public static final Block Wild_Fire = registerBlock("wild_fire",
+            new FireBlock(FabricBlockSettings.copyOf(Blocks.FIRE)));
+    public static final Block Willow_Vines = registerBlock("willow_vines", //TODO TEXTURE ISN'T QUITE RIGHT
+            new VineBlock(FabricBlockSettings.copyOf(Blocks.VINE)));
+    public static final Block Catalpa_Wood = registerBlock("wood1_catalpa",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Charred_Wood = registerBlock("wood1_charred",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Ibbinia_Wood = registerBlock("wood1_ibbinia",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Ulthos_Wood = registerBlock("wood1_ulthos",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Aramant_Wood = registerBlock("wood2_aramant",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Banana_Wood = registerBlock("wood2_banana",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Beech_Wood = registerBlock("wood2_beech",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Holly_Wood = registerBlock("wood2_holly",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Date_Palm_Wood = registerBlock("wood3_date_palm",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Larch_Wood = registerBlock("wood3_larch",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Mangrove_Wood = registerBlock("wood3_mangrove",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Maple_Wood = registerBlock("wood3_maple",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Baobab_Wood = registerBlock("wood4_baobab",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Cedar_Wood = registerBlock("wood4_cedar",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Chestnut_Wood = registerBlock("wood4_chestnut",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fir_Wood = registerBlock("wood4_fir",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Lemon_Wood = registerBlock("wood5_lemon",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Lime_Wood = registerBlock("wood5_lime",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Orange_Wood = registerBlock("wood5_orange",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Pine_Wood = registerBlock("wood5_pine",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Cypress_Wood = registerBlock("wood6_cypress",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Mahogany_Wood = registerBlock("wood6_mahogany",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Olive_Wood = registerBlock("wood6_olive",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Willow_Wood = registerBlock("wood6_willow",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Almond_Wood = registerBlock("wood7_almond",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Aspen_Wood = registerBlock("wood7_aspen",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fotinia_Wood = registerBlock("wood7_fotinia",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Green_Oak_Wood = registerBlock("wood7_green_oak",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Palm_Wood = registerBlock("wood8_palm",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Plum_Wood = registerBlock("wood8_plum",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Pomegranate_Wood = registerBlock("wood8_pomegranate",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Redwood_Wood = registerBlock("wood8_redwood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Dragon_Wood = registerBlock("wood9_dragon",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Kanuka_Wood = registerBlock("wood9_kanuka",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Weirwood_Wood = registerBlock("wood9_weirwood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Catalpa_Wood_Beam = registerBlock("wood_beam1_catalpa",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Charred_Wood_Beam = registerBlock("wood_beam1_charred",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Ibbinia_Wood_Beam = registerBlock("wood_beam1_ibbinia",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Ulthos_Wood_Beam = registerBlock("wood_beam1_ulthos",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Aramant_Wood_Beam = registerBlock("wood_beam2_aramant",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Banana_Wood_Beam = registerBlock("wood_beam2_banana",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Beech_Wood_Beam = registerBlock("wood_beam2_beech",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Holly_Wood_Beam = registerBlock("wood_beam2_holly",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Date_Palm_Wood_Beam = registerBlock("wood_beam3_date_palm",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Larch_Wood_Beam = registerBlock("wood_beam3_larch",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Mangrove_Wood_Beam = registerBlock("wood_beam3_mangrove",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Maple_Wood_Beam = registerBlock("wood_beam3_maple",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Baobab_Wood_Beam = registerBlock("wood_beam4_baobab",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Cedar_Wood_Beam = registerBlock("wood_beam4_cedar",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Chestnut_Wood_Beam = registerBlock("wood_beam4_chestnut",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fir_Wood_Beam = registerBlock("wood_beam4_fir",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Lemon_Wood_Beam = registerBlock("wood_beam5_lemon",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Lime_Wood_Beam = registerBlock("wood_beam5_lime",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Orange_Wood_Beam = registerBlock("wood_beam5_orange",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Pine_Wood_Beam = registerBlock("wood_beam5_pine",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Cypress_Wood_Beam = registerBlock("wood_beam6_cypress",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Mahogany_Wood_Beam = registerBlock("wood_beam6_mahogany",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Olive_Wood_Beam = registerBlock("wood_beam6_olive",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Willow_Wood_Beam = registerBlock("wood_beam6_willow",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Almond_Wood_Beam = registerBlock("wood_beam7_almond",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Aspen_Wood_Beam = registerBlock("wood_beam7_aspen",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Fotinia_Wood_Beam = registerBlock("wood_beam7_fotinia",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Green_Oak_Wood_Beam = registerBlock("wood_beam7_green_oak",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Palm_Wood_Beam = registerBlock("wood_beam8_palm",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Plum_Wood_Beam = registerBlock("wood_beam8_plum",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Pomegranate_Wood_Beam = registerBlock("wood_beam8_pomegranate",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Redwood_Wood_Beam = registerBlock("wood_beam8_redwood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Dragon_Wood_Beam = registerBlock("wood_beam9_dragon",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Kanuka_Wood_Beam = registerBlock("wood_beam9_kanuka",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Weirwood_Wood_Beam = registerBlock("wood_beam9_weirwood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Apple_Wood_Beam = registerBlock("wood_beam_fruit_apple",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Cherry_Wood_Beam = registerBlock("wood_beam_fruit_cherry",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Mango_Wood_Beam = registerBlock("wood_beam_fruit_mango",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Pear_Wood_Beam = registerBlock("wood_beam_fruit_pear",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Rotten_Wood_Beam = registerBlock("wood_beam_rotten_rotten",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Ibben_Wood_Beam = registerBlock("wood_beam_s_ibben",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Gold_Ibben_Wood_Beam = registerBlock("wood_beam_s_ibben_gold",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Birch_Wood_Beam = registerBlock("wood_beam_v1_birch",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Jungle_Wood_Beam = registerBlock("wood_beam_v1_jungle",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Oak_Wood_Beam = registerBlock("wood_beam_v1_oak",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Spruce_Wood_Beam = registerBlock("wood_beam_v1_spruce",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Acacia_Wood_Beam = registerBlock("wood_beam_v2_acacia",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Dark_Oak_Wood_Beam = registerBlock("wood_beam_v2_dark_oak",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
+    public static final Block Wood_Plate = registerBlock("wood_plate",
+            new GOTPlateBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD)));
+    public static final Block Yam = registerBlock("yam",
+            new BeetrootsBlock(FabricBlockSettings.copyOf(Blocks.WHEAT)));
+    public static final Block Yiti_Flower_Blue = registerBlock("yiti_flower_chrys_blue",
+            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Yiti_Flower_Orange = registerBlock("yiti_flower_chrys_orange",
+            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Yiti_Flower_Pink = registerBlock("yiti_flower_chrys_pink",
+            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Yiti_Flower_White = registerBlock("yiti_flower_chrys_white",
+            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
+    public static final Block Yiti_Flower_Yellow = registerBlock("yiti_flower_chrys_yellow",
+            new PlantBlock(FabricBlockSettings.copyOf(Blocks.POPPY)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

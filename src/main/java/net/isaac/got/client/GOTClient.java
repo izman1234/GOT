@@ -303,8 +303,18 @@ public class GOTClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Ulthos_Door, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Weirwood_Door, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Willow_Door, RenderLayer.getCutout());
-
-
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Turnip, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Ulthos_Bars, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Ulthos_Torch, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Valyrian_Bars, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Wild_Fire, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Willow_Vines, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yam, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Blue, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Orange, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Pink, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_White, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Yellow, RenderLayer.getCutout());
 
     }
 }

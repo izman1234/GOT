@@ -142,6 +142,8 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Pastry);
                         entries.add(GOTBlocks.Pipeweed);
                         entries.add(GOTBlocks.Rice);
+                        entries.add(GOTBlocks.Turnip);
+                        entries.add(GOTBlocks.Yam);
                     }).build());
 
     public static ItemGroup GOTNaturalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_natural"),
@@ -277,7 +279,52 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Thistle);
                         entries.add(GOTBlocks.Grass_Wheat);
                         entries.add(GOTBlocks.Termite_Mound);
-                        
+                        entries.add(GOTBlocks.White_Sand);
+                        entries.add(GOTBlocks.White_Sand_Slab);
+                        entries.add(GOTBlocks.White_Sandstone);
+                        entries.add(GOTBlocks.White_Sandstone_Slab);
+                        entries.add(GOTBlocks.White_Sandstone_Stairs);
+                        entries.add(GOTBlocks.Willow_Vines);
+                        entries.add(GOTBlocks.Catalpa_Wood);
+                        entries.add(GOTBlocks.Charred_Wood);
+                        entries.add(GOTBlocks.Ibbinia_Wood);
+                        entries.add(GOTBlocks.Ulthos_Wood);
+                        entries.add(GOTBlocks.Aramant_Wood);
+                        entries.add(GOTBlocks.Banana_Wood);
+                        entries.add(GOTBlocks.Beech_Wood);
+                        entries.add(GOTBlocks.Holly_Wood);
+                        entries.add(GOTBlocks.Date_Palm_Wood);
+                        entries.add(GOTBlocks.Larch_Wood);
+                        entries.add(GOTBlocks.Mangrove_Wood);
+                        entries.add(GOTBlocks.Maple_Wood);
+                        entries.add(GOTBlocks.Baobab_Wood);
+                        entries.add(GOTBlocks.Cedar_Wood);
+                        entries.add(GOTBlocks.Chestnut_Wood);
+                        entries.add(GOTBlocks.Fir_Wood);
+                        entries.add(GOTBlocks.Lemon_Wood);
+                        entries.add(GOTBlocks.Lime_Wood);
+                        entries.add(GOTBlocks.Orange_Wood);
+                        entries.add(GOTBlocks.Pine_Wood);
+                        entries.add(GOTBlocks.Cypress_Wood);
+                        entries.add(GOTBlocks.Mahogany_Wood);
+                        entries.add(GOTBlocks.Olive_Wood);
+                        entries.add(GOTBlocks.Willow_Wood);
+                        entries.add(GOTBlocks.Almond_Wood);
+                        entries.add(GOTBlocks.Aspen_Wood);
+                        entries.add(GOTBlocks.Fotinia_Wood);
+                        entries.add(GOTBlocks.Green_Oak_Wood);
+                        entries.add(GOTBlocks.Palm_Wood);
+                        entries.add(GOTBlocks.Plum_Wood);
+                        entries.add(GOTBlocks.Pomegranate_Wood);
+                        entries.add(GOTBlocks.Redwood_Wood);
+                        entries.add(GOTBlocks.Dragon_Wood);
+                        entries.add(GOTBlocks.Kanuka_Wood);
+                        entries.add(GOTBlocks.Weirwood_Wood);
+                        entries.add(GOTBlocks.Yiti_Flower_Blue);
+                        entries.add(GOTBlocks.Yiti_Flower_Orange);
+                        entries.add(GOTBlocks.Yiti_Flower_Pink);
+                        entries.add(GOTBlocks.Yiti_Flower_White);
+                        entries.add(GOTBlocks.Yiti_Flower_Yellow);
 
                     }).build());
 
@@ -525,8 +572,11 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Clay_Tile_Stairs_Dyed_Yellow);
                         entries.add(GOTBlocks.Clay_Tile_Wall_Dyed_Yellow);
                         entries.add(GOTBlocks.Bruschatka);
+                        entries.add(GOTBlocks.Bruschatka_Slab);
                         entries.add(GOTBlocks.Dirt_Path);
+                        entries.add(GOTBlocks.Dirt_Path_Slab);
                         entries.add(GOTBlocks.Jungle_Mud_Path);
+                        entries.add(GOTBlocks.Jungle_Mud_Path_Slab);
                         entries.add(GOTBlocks.Fruit_Wood_Apple);
                         entries.add(GOTBlocks.Fruit_Wood_Cherry);
                         entries.add(GOTBlocks.Fruit_Wood_Mango);
@@ -729,6 +779,54 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Thatch_Floor);
                         entries.add(GOTBlocks.Thatch_Reed);
                         entries.add(GOTBlocks.Thatch_Thatch);
+                        entries.add(GOTBlocks.Catalpa_Wood_Beam);
+                        entries.add(GOTBlocks.Charred_Wood_Beam);
+                        entries.add(GOTBlocks.Ibbinia_Wood_Beam);
+                        entries.add(GOTBlocks.Ulthos_Wood_Beam);
+                        entries.add(GOTBlocks.Aramant_Wood_Beam);
+                        entries.add(GOTBlocks.Banana_Wood_Beam);
+                        entries.add(GOTBlocks.Beech_Wood_Beam);
+                        entries.add(GOTBlocks.Holly_Wood_Beam);
+                        entries.add(GOTBlocks.Date_Palm_Wood_Beam);
+                        entries.add(GOTBlocks.Larch_Wood_Beam);
+                        entries.add(GOTBlocks.Mangrove_Wood_Beam);
+                        entries.add(GOTBlocks.Maple_Wood_Beam);
+                        entries.add(GOTBlocks.Baobab_Wood_Beam);
+                        entries.add(GOTBlocks.Cedar_Wood_Beam);
+                        entries.add(GOTBlocks.Chestnut_Wood_Beam);
+                        entries.add(GOTBlocks.Fir_Wood_Beam);
+                        entries.add(GOTBlocks.Lemon_Wood_Beam);
+                        entries.add(GOTBlocks.Lime_Wood_Beam);
+                        entries.add(GOTBlocks.Orange_Wood_Beam);
+                        entries.add(GOTBlocks.Pine_Wood_Beam);
+                        entries.add(GOTBlocks.Cypress_Wood_Beam);
+                        entries.add(GOTBlocks.Mahogany_Wood_Beam);
+                        entries.add(GOTBlocks.Olive_Wood_Beam);
+                        entries.add(GOTBlocks.Willow_Wood_Beam);
+                        entries.add(GOTBlocks.Almond_Wood_Beam);
+                        entries.add(GOTBlocks.Aspen_Wood_Beam);
+                        entries.add(GOTBlocks.Fotinia_Wood_Beam);
+                        entries.add(GOTBlocks.Green_Oak_Wood_Beam);
+                        entries.add(GOTBlocks.Palm_Wood_Beam);
+                        entries.add(GOTBlocks.Plum_Wood_Beam);
+                        entries.add(GOTBlocks.Pomegranate_Wood_Beam);
+                        entries.add(GOTBlocks.Redwood_Wood_Beam);
+                        entries.add(GOTBlocks.Dragon_Wood_Beam);
+                        entries.add(GOTBlocks.Kanuka_Wood_Beam);
+                        entries.add(GOTBlocks.Weirwood_Wood_Beam);
+                        entries.add(GOTBlocks.Apple_Wood_Beam);
+                        entries.add(GOTBlocks.Cherry_Wood_Beam);
+                        entries.add(GOTBlocks.Mango_Wood_Beam);
+                        entries.add(GOTBlocks.Pear_Wood_Beam);
+                        entries.add(GOTBlocks.Rotten_Wood_Beam);
+                        entries.add(GOTBlocks.Ibben_Wood_Beam);
+                        entries.add(GOTBlocks.Gold_Ibben_Wood_Beam);
+                        entries.add(GOTBlocks.Birch_Wood_Beam);
+                        entries.add(GOTBlocks.Jungle_Wood_Beam);
+                        entries.add(GOTBlocks.Oak_Wood_Beam);
+                        entries.add(GOTBlocks.Spruce_Wood_Beam);
+                        entries.add(GOTBlocks.Acacia_Wood_Beam);
+                        entries.add(GOTBlocks.Dark_Oak_Wood_Beam);
 
                     }).build());
 
@@ -884,6 +982,11 @@ public class GOTGroups {
                         entries.add(GOTBlocks.Ulthos_Door);
                         entries.add(GOTBlocks.Weirwood_Door);
                         entries.add(GOTBlocks.Willow_Door);
+                        entries.add(GOTBlocks.Ulthos_Bars);
+                        entries.add(GOTBlocks.Ulthos_Torch);
+                        entries.add(GOTBlocks.Valyrian_Bars);
+                        entries.add(GOTBlocks.Wild_Fire);
+                        entries.add(GOTBlocks.Wood_Plate);
 
                     }).build());
 
