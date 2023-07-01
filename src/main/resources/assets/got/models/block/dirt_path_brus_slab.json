@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/dirt_path_brus",
+    "bottom": "got:block/dirt_path_brus",
+    "side": "got:block/dirt_path_brus",
+    "top": "got:block/dirt_path_brus"
+  }
+}

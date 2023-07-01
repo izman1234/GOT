@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks_rotten_rotten_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks_rotten_rotten"
+    },
+    "type=top": {
+      "model": "got:block/planks_rotten_rotten_slab_top"
+    }
+  }
+}

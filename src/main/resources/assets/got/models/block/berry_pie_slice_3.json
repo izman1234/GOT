@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cake_slice3",
+  "textures": {
+    "particle": "got:block/berry_pie_side",
+    "bottom": "got:block/berry_pie_bottom",
+    "inner": "got:block/berry_pie_inner",
+    "side": "got:block/berry_pie_side",
+    "top": "got:block/berry_pie_top"
+  }
+}

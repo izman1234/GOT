@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "got:block/bird_cage_iron_side",
+    "up": "got:block/bird_cage_iron_top",
+    "down": "got:block/bird_cage_iron_base",
+    "north": "got:block/bird_cage_iron_side",
+    "south": "got:block/bird_cage_iron_side",
+    "west": "got:block/bird_cage_iron_side",
+    "east": "got:block/bird_cage_iron_side"
+  }
+}

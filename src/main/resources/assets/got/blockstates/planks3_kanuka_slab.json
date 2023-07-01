@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks3_kanuka_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks3_kanuka"
+    },
+    "type=top": {
+      "model": "got:block/planks3_kanuka_slab_top"
+    }
+  }
+}

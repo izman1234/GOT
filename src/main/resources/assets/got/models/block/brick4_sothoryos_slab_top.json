@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/brick4_sothoryos",
+    "bottom": "got:block/brick4_sothoryos",
+    "side": "got:block/brick4_sothoryos",
+    "top": "got:block/brick4_sothoryos"
+  }
+}

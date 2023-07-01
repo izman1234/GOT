@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick6_labradorite_carved",
+    "bottom": "got:block/brick6_labradorite_carved",
+    "side": "got:block/brick6_labradorite_carved",
+    "top": "got:block/brick6_labradorite_carved"
+  }
+}

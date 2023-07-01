@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/planks2_baobab",
+    "bottom": "got:block/planks2_baobab",
+    "side": "got:block/planks2_baobab",
+    "top": "got:block/planks2_baobab"
+  }
+}

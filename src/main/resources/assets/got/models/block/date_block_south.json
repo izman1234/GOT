@@ -1,0 +1,22 @@
+{
+  "textures": {
+    "particle": "got:block/date_side",
+    "top": "got:block/date_top",
+    "side": "got:block/date_side",
+    "bottom": "got:block/date_bottom"
+  },
+  "elements": [
+    {
+      "from": [6, 5, 12],
+      "to": [10, 11, 16],
+      "faces": {
+        "up": { "texture": "#top" },
+        "down": { "texture": "#bottom" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west": { "texture": "#side" },
+        "east": { "texture": "#side" }
+      }
+    }
+  ]
+}

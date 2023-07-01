@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/planks2_green_oak",
+    "bottom": "got:block/planks2_green_oak",
+    "side": "got:block/planks2_green_oak",
+    "top": "got:block/planks2_green_oak"
+  }
+}

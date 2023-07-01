@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/clay_tile",
+    "bottom": "got:block/clay_tile",
+    "side": "got:block/clay_tile",
+    "top": "got:block/clay_tile"
+  }
+}

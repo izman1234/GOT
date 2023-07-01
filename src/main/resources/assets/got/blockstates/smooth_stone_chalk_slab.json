@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/smooth_stone_chalk_slab"
+    },
+    "type=double": {
+      "model": "got:block/smooth_stone_chalk"
+    },
+    "type=top": {
+      "model": "got:block/smooth_stone_chalk_slab_top"
+    }
+  }
+}

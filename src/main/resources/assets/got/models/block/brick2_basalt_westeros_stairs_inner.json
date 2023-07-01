@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/brick2_basalt_westeros",
+    "side": "got:block/brick2_basalt_westeros",
+    "top": "got:block/brick2_basalt_westeros"
+  }
+}

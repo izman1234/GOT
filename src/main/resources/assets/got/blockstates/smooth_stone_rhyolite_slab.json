@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/smooth_stone_rhyolite_slab"
+    },
+    "type=double": {
+      "model": "got:block/smooth_stone_rhyolite"
+    },
+    "type=top": {
+      "model": "got:block/smooth_stone_rhyolite_slab_top"
+    }
+  }
+}

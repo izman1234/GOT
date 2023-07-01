@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "got:block/hearth_top",
+    "side": "got:block/hearth_side",
+    "front": "got:block/hearth_side",
+    "bottom": "got:block/hearth_bottom"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "got:block/brick6_yiti_gold",
+    "side": "got:block/brick6_yiti_gold",
+    "top": "got:block/brick6_yiti_gold"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/planks3_weirwood",
+    "bottom": "got:block/planks3_weirwood",
+    "side": "got:block/planks3_weirwood",
+    "top": "got:block/planks3_weirwood"
+  }
+}

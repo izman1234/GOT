@@ -2,6 +2,7 @@ package net.isaac.got.common.item.other;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.isaac.got.GOT;
+import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterials;
@@ -17,6 +18,8 @@ public class GOTOther {
             new Item(new FabricItemSettings()));
     public static final Item Valyrian_Ingot = registerItem("valyrian_ingot",
             new Item(new FabricItemSettings()));
+
+    /* FOOD */
 
 
 

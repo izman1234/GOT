@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/brick4_sothoryos_gold",
+    "side": "got:block/brick4_sothoryos_gold",
+    "top": "got:block/brick4_sothoryos_gold"
+  }
+}

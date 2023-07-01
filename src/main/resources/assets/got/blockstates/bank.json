@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "got:block/bank_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "got:block/bank",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "got:block/bank"
+    },
+    "facing=south": {
+      "model": "got:block/bank",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "got:block/bank_vertical"
+    },
+    "facing=west": {
+      "model": "got:block/bank",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick4_sandstone_lapis",
+    "bottom": "got:block/brick4_sandstone_lapis",
+    "side": "got:block/brick4_sandstone_lapis",
+    "top": "got:block/brick4_sandstone_lapis"
+  }
+}
