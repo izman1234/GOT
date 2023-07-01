@@ -3,6 +3,7 @@ package net.isaac.got.common.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.isaac.got.GOT;
+import net.isaac.got.common.world.tree.FirSaplingGenerator;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.piston.PistonBehavior;
@@ -1332,7 +1333,7 @@ public class GOTBlocks {
     public static final Block Chestnut_Sapling = registerBlock("sapling4_chestnut",
             new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fir_Sapling = registerBlock("sapling4_fir",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FirSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Lemon_Sapling = registerBlock("sapling5_lemon",
             new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Lime_Sapling = registerBlock("sapling5_lime",
