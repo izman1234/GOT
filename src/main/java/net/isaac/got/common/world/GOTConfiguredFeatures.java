@@ -3,7 +3,9 @@ package net.isaac.got.common.world;
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.world.tree.decorator.BananaDecorator;
+import net.isaac.got.common.world.tree.decorator.DatePalmDecorator;
 import net.isaac.got.common.world.tree.foliage.*;
+import net.isaac.got.common.world.tree.trunk.DatePalmTrunkPlacer;
 import net.isaac.got.common.world.tree.trunk.UlthosTrunkPlacer;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -15,7 +17,9 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.Collections;
@@ -29,6 +33,7 @@ public class GOTConfiguredFeatures { //for how the tree looks
     public static final RegistryKey<ConfiguredFeature<?, ?>> BANANA_KEY = registerKey("banana_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BEECH_KEY = registerKey("beech_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HOLLY_KEY = registerKey("holly_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_HOLLY_KEY = registerKey("giant_holly_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DATE_PALM_KEY = registerKey("date_palm_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> LARCH_KEY = registerKey("larch_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MANGROVE_KEY = registerKey("mangrove_tree");
@@ -114,6 +119,34 @@ public class GOTConfiguredFeatures { //for how the tree looks
                 new StraightTrunkPlacer(5, 5, 2),
                 BlockStateProvider.of(GOTBlocks.Beech_Leaves),
                 new BeechFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), ConstantIntProvider.create(4)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, HOLLY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Holly_Wood),
+                new StraightTrunkPlacer(10, 4, 3),
+                BlockStateProvider.of(GOTBlocks.Holly_Leaves),
+                new HollyFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), ConstantIntProvider.create(8)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, GIANT_HOLLY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Holly_Wood),
+                new GiantTrunkPlacer(20, 8, 8),
+                BlockStateProvider.of(GOTBlocks.Holly_Leaves),
+                new HollyFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(8)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, DATE_PALM_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Date_Palm_Wood),
+                new DatePalmTrunkPlacer(6, 3, 3),
+                BlockStateProvider.of(GOTBlocks.Date_Palm_Leaves),
+                new DatePalmFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(1), ConstantIntProvider.create(2)),
+                new TwoLayersFeatureSize(1, 0, 2)).decorators(Collections.singletonList(DatePalmDecorator.INSTANCE)).build());
+
+        register(context, LARCH_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Larch_Wood),
+                new StraightTrunkPlacer(10, 6, 3),
+                BlockStateProvider.of(GOTBlocks.Larch_Leaves),
+                new LarchFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(1), ConstantIntProvider.create(6)),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, FIR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
