@@ -1,7 +1,11 @@
 {
   "type": "minecraft:tree",
   "config": {
-    "decorators": [],
+    "decorators": [
+      {
+        "type": "got:banana_decorator"
+      }
+    ],
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
@@ -9,15 +13,15 @@
       }
     },
     "foliage_placer": {
-      "type": "got:fir_foliage_placer",
-      "foliage_height": 6,
+      "type": "got:banana_foliage_placer",
+      "foliage_height": 4,
       "offset": 1,
-      "radius": 3
+      "radius": 2
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "got:leaves4_fir_fancy",
+        "Name": "got:leaves2_banana_fancy",
         "Properties": {
           "distance": "7",
           "persistent": "false",
@@ -35,14 +39,14 @@
     },
     "trunk_placer": {
       "type": "minecraft:straight_trunk_placer",
-      "base_height": 8,
-      "height_rand_a": 6,
-      "height_rand_b": 5
+      "base_height": 4,
+      "height_rand_a": 1,
+      "height_rand_b": 2
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "got:wood4_fir",
+        "Name": "got:wood2_banana",
         "Properties": {
           "axis": "y"
         }
