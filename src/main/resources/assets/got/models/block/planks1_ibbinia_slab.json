@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/planks1_ibbinia",
+    "bottom": "got:block/planks1_ibbinia",
+    "side": "got:block/planks1_ibbinia",
+    "top": "got:block/planks1_ibbinia"
+  }
+}

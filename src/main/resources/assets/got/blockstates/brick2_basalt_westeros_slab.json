@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick2_basalt_westeros_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick2_basalt_westeros"
+    },
+    "type=top": {
+      "model": "got:block/brick2_basalt_westeros_slab_top"
+    }
+  }
+}

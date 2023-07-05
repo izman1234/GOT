@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/clay_tile_dyed_silver_slab"
+    },
+    "type=double": {
+      "model": "got:block/clay_tile_dyed_silver"
+    },
+    "type=top": {
+      "model": "got:block/clay_tile_dyed_silver_slab_top"
+    }
+  }
+}

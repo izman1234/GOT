@@ -1,0 +1,8 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "bottom": "got:block/planks3_dragon",
+    "side": "got:block/planks3_dragon",
+    "top": "got:block/planks3_dragon"
+  }
+}

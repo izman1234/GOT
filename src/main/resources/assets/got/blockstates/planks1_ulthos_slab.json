@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks1_ulthos_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks1_ulthos"
+    },
+    "type=top": {
+      "model": "got:block/planks1_ulthos_slab_top"
+    }
+  }
+}

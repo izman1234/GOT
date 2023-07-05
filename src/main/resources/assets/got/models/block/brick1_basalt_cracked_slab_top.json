@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/brick1_basalt_cracked",
+    "bottom": "got:block/brick1_basalt_cracked",
+    "side": "got:block/brick1_basalt_cracked",
+    "top": "got:block/brick1_basalt_cracked"
+  }
+}

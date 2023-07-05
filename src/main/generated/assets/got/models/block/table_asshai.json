@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "got:block/planks1_charred",
+    "east": "got:block/table_asshai_side",
+    "north": "got:block/table_asshai_front",
+    "particle": "got:block/table_asshai_front",
+    "south": "got:block/table_asshai_side",
+    "up": "got:block/table_asshai_top",
+    "west": "got:block/table_asshai_front"
+  }
+}

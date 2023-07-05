@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "got:block/red_brick_cracked",
+    "side": "got:block/red_brick_cracked",
+    "top": "got:block/red_brick_cracked"
+  }
+}

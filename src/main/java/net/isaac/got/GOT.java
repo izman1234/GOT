@@ -2,6 +2,8 @@ package net.isaac.got;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.common.block.GOTFlammableBlockRegistry;
 import net.isaac.got.common.item.GOTGroups;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.tool.GOTTools;
@@ -20,7 +22,10 @@ public class GOT implements ModInitializer {
         GOTOther.registerModOther();
         GOTTools.registerModTools();
         GOTWeapons.registerModWeapons();
+        GOTBlocks.registerModBlocks();
         GOTGroups.registerModGroups();
+
+        GOTFlammableBlockRegistry.registerFlammableBlocks();
 
         GOTDimensions.register();
     }

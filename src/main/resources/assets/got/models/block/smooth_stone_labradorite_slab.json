@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/smooth_stone_labradorite",
+    "bottom": "got:block/smooth_stone_labradorite",
+    "side": "got:block/smooth_stone_labradorite",
+    "top": "got:block/smooth_stone_labradorite"
+  }
+}

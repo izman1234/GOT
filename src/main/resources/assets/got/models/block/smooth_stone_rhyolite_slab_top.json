@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/smooth_stone_rhyolite",
+    "bottom": "got:block/smooth_stone_rhyolite",
+    "side": "got:block/smooth_stone_rhyolite",
+    "top": "got:block/smooth_stone_rhyolite"
+  }
+}

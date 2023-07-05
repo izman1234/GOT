@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks1_mango_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks1_mango"
+    },
+    "type=top": {
+      "model": "got:block/planks1_mango_slab_top"
+    }
+  }
+}

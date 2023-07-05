@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick4_sothoryos_gold_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick4_sothoryos_gold"
+    },
+    "type=top": {
+      "model": "got:block/brick4_sothoryos_gold_slab_top"
+    }
+  }
+}

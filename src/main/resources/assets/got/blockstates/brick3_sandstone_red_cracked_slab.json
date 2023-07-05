@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick3_sandstone_red_cracked_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick3_sandstone_red_cracked"
+    },
+    "type=top": {
+      "model": "got:block/brick3_sandstone_red_cracked_slab_top"
+    }
+  }
+}

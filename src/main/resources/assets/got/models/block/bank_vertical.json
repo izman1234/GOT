@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/orientable_vertical",
+  "textures": {
+    "front": "got:block/bank_front",
+    "side": "got:block/bank_top"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "got:block/smooth_stone_rhyolite",
+    "side": "got:block/smooth_stone_rhyolite",
+    "top": "got:block/smooth_stone_rhyolite"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "got:block/mud_grass"
+      },
+      {
+        "model": "got:block/mud_grass",
+        "y": 90
+      },
+      {
+        "model": "got:block/mud_grass",
+        "y": 180
+      },
+      {
+        "model": "got:block/mud_grass",
+        "y": 270
+      }
+    ],
+    "snowy=true": [
+      {
+        "model": "got:block/mud_grass"
+      },
+      {
+        "model": "got:block/mud_grass",
+        "y": 90
+      },
+      {
+        "model": "got:block/mud_grass",
+        "y": 180
+      },
+      {
+        "model": "got:block/mud_grass",
+        "y": 270
+      }
+    ]
+  }
+}

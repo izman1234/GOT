@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/rock_labradorite_slab"
+    },
+    "type=double": {
+      "model": "got:block/rock_labradorite"
+    },
+    "type=top": {
+      "model": "got:block/rock_labradorite_slab_top"
+    }
+  }
+}

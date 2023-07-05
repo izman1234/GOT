@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/planks2_fotinia",
+    "bottom": "got:block/planks2_fotinia",
+    "side": "got:block/planks2_fotinia",
+    "top": "got:block/planks2_fotinia"
+  }
+}

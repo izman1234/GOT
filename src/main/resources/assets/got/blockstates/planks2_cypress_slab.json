@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks2_cypress_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks2_cypress"
+    },
+    "type=top": {
+      "model": "got:block/planks2_cypress_slab_top"
+    }
+  }
+}
