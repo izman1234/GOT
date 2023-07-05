@@ -6,6 +6,7 @@ import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBananaBlock;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
+import net.isaac.got.common.item.tool.GOTTools;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -77,7 +78,41 @@ public class GOTGroups {
                         /* INGOTS */
                         entries.add(GOTOther.Alloy_Steel_Ingot);
                         entries.add(GOTOther.Bronze_Ingot);
+                        entries.add(GOTOther.Obsidian_Shard);
+                        entries.add(GOTOther.Silver_Ingot);
+                        entries.add(GOTOther.Tin_Ingot);
                         entries.add(GOTOther.Valyrian_Ingot);
+                        entries.add(GOTOther.Yiti_Steel_Ingot);
+                    }).build());
+
+    public static ItemGroup GOTToolsGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_tools"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Tools"))
+                    .icon(() -> new ItemStack(GOTTools.Alloy_Steel_Pickaxe)).entries((displayContext, entries) -> {
+                        /* Alloy Steel */
+                        entries.add(GOTTools.Alloy_Steel_Pickaxe);
+                        entries.add(GOTTools.Alloy_Steel_Axe);
+                        entries.add(GOTTools.Alloy_Steel_Hoe);
+                        entries.add(GOTTools.Alloy_Steel_Shovel);
+                        /* Bronze */
+                        entries.add(GOTTools.Bronze_Pickaxe);
+                        entries.add(GOTTools.Bronze_Axe);
+                        entries.add(GOTTools.Bronze_Hoe);
+                        entries.add(GOTTools.Bronze_Shovel);
+                        /* Sothoryos Shard */
+                        entries.add(GOTTools.Sothoryos_Pickaxe);
+                        entries.add(GOTTools.Sothoryos_Axe);
+                        entries.add(GOTTools.Sothoryos_Hoe);
+                        entries.add(GOTTools.Sothoryos_Shovel);
+                        /* Valyrian */
+                        entries.add(GOTTools.Valyrian_Mattock);
+                        entries.add(GOTTools.Valyrian_Pickaxe);
+                        entries.add(GOTTools.Valyrian_Axe);
+                        entries.add(GOTTools.Valyrian_Hoe);
+                        entries.add(GOTTools.Valyrian_Shovel);
+                        entries.add(GOTTools.Valyrian_Chisel);
+                        /* Misc */
+                        entries.add(GOTTools.Chisel);
+                        entries.add(GOTTools.Wildling_Axe);
                     }).build());
 
     public static ItemGroup GOTFunctionalGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_functional"),

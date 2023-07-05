@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.common.item.other.GOTOther;
+import net.isaac.got.common.item.tool.GOTTools;
 import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -953,9 +954,35 @@ public class GOTModelProvider extends FabricModelProvider {
         /* INGREDENTS */
         itemModelGenerator.register(GOTOther.Alloy_Steel_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Bronze_Ingot, Models.GENERATED);
+        itemModelGenerator.register(GOTOther.Obsidian_Shard, Models.GENERATED);
+        itemModelGenerator.register(GOTOther.Silver_Ingot, Models.GENERATED);
+        itemModelGenerator.register(GOTOther.Tin_Ingot, Models.GENERATED);
         itemModelGenerator.register(GOTOther.Valyrian_Ingot, Models.GENERATED);
+        itemModelGenerator.register(GOTOther.Yiti_Steel_Ingot, Models.GENERATED);
+
+        /* TOOLS */
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Alloy_Steel_Shovel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Bronze_Shovel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Sothoryos_Shovel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Pickaxe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Axe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Hoe, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Shovel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Chisel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Chisel, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Valyrian_Mattock, Models.HANDHELD);
+        itemModelGenerator.register(GOTTools.Wildling_Axe, Models.HANDHELD);
+
 
         /* FOOD */
-
     }
 }
