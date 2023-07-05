@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBananaBlock;
 import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.common.item.armor.GOTArmor;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.tool.GOTTools;
 import net.isaac.got.common.item.weapon.GOTWeapons;
@@ -71,6 +72,20 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Essos_Spear);
                         entries.add(GOTWeapons.Essos_Sword);
                     }).build());
+
+    public static ItemGroup GOTArmorGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_armor"),
+            FabricItemGroup.builder().displayName(Text.literal("GOT Armor"))
+                    .icon(() -> new ItemStack(GOTArmor.Bronze_Chestplate)).entries((displayContext, entries) -> {
+                        entries.add(GOTArmor.Bronze_Helmet);
+                        entries.add(GOTArmor.Bronze_Chestplate);
+                        entries.add(GOTArmor.Bronze_Leggings);
+                        entries.add(GOTArmor.Bronze_Boots);
+                        entries.add(GOTArmor.Valyrian_Helmet);
+                        entries.add(GOTArmor.Valyrian_Chestplate);
+                        entries.add(GOTArmor.Valyrian_Leggings);
+                        entries.add(GOTArmor.Valyrian_Boots);
+                    }).build());
+
 
     public static ItemGroup GOTIngredientsGroup = Registry.register(Registries.ITEM_GROUP, new Identifier(GOT.MOD_ID, "got_ingredients"),
             FabricItemGroup.builder().displayName(Text.literal("GOT Ingredients"))

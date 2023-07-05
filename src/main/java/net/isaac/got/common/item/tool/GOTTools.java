@@ -53,9 +53,6 @@ public class GOTTools {
             new GOTItemHoe(GOTToolMaterials.VALYRIANSTEEL, 4, -3.2f, new FabricItemSettings()));
     public static final Item Valyrian_Shovel = registerItem("valyrian_shovel",
             new GOTItemShovel(GOTToolMaterials.VALYRIANSTEEL, 4, -3.2f, new FabricItemSettings()));
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(GOT.MOD_ID, name), item);
-    }
 
     /* Misc */
     public static final Item Chisel = registerItem("chisel",
@@ -67,6 +64,9 @@ public class GOTTools {
     public static final Item Wildling_Axe = registerItem("wildling_axe",
             new GOTItemAxe(GOTToolMaterials.VALYRIANSTEEL, 4, -3.2f, new FabricItemSettings()));
 
+    private static Item registerItem(String name, Item item) {
+        return Registry.register(Registries.ITEM, new Identifier(GOT.MOD_ID, name), item);
+    }
     public static void registerModTools() {
         GOT.LOGGER.debug("Registering Mod Tools for " + GOT.MOD_ID);
     }

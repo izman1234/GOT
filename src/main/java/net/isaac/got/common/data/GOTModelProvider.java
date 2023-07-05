@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.common.item.armor.GOTArmor;
 import net.isaac.got.common.item.other.GOTOther;
 import net.isaac.got.common.item.tool.GOTTools;
 import net.isaac.got.common.item.weapon.GOTWeapons;
@@ -950,6 +951,16 @@ public class GOTModelProvider extends FabricModelProvider {
         itemModelGenerator.register(GOTWeapons.Essos_Polearm, Models.HANDHELD);
         itemModelGenerator.register(GOTWeapons.Essos_Spear, Models.HANDHELD);
         itemModelGenerator.register(GOTWeapons.Essos_Sword, Models.HANDHELD);
+
+        /* ARMOR */
+        itemModelGenerator.register(GOTArmor.Bronze_Helmet, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Bronze_Chestplate, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Bronze_Leggings, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Bronze_Boots, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Valyrian_Helmet, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Valyrian_Chestplate, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Valyrian_Leggings, Models.GENERATED);
+        itemModelGenerator.register(GOTArmor.Valyrian_Boots, Models.GENERATED);
 
         /* INGREDENTS */
         itemModelGenerator.register(GOTOther.Alloy_Steel_Ingot, Models.GENERATED);
