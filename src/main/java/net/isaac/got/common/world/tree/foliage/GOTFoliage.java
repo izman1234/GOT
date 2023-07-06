@@ -15,6 +15,10 @@ public class GOTFoliage {
     public static final FoliagePlacerType<HollyFoliagePlacer> HOLLY_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:holly_foliage_placer", HollyFoliagePlacer.CODEC);
     public static final FoliagePlacerType<DatePalmFoliagePlacer> DATE_PALM_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:date_palm_foliage_placer", DatePalmFoliagePlacer.CODEC);
     public static final FoliagePlacerType<LarchFoliagePlacer> LARCH_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:larch_foliage_placer", LarchFoliagePlacer.CODEC);
+
+    //BAOBAB
+
+    public static final FoliagePlacerType<CedarFoliagePlacer> CEDAR_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:cedar_foliage_placer", CedarFoliagePlacer.CODEC);
     public static final FoliagePlacerType<FirFoliagePlacer> FIR_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:fir_foliage_placer", FirFoliagePlacer.CODEC);
 
 

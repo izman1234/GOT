@@ -9,15 +9,15 @@
       }
     },
     "foliage_placer": {
-      "type": "got:catalpa_foliage_placer",
-      "foliage_height": 4,
+      "type": "minecraft:blob_foliage_placer",
+      "height": 3,
       "offset": 0,
       "radius": 2
     },
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "got:leaves1_catalpa_fancy",
+        "Name": "got:leaves5_orange_fancy",
         "Properties": {
           "distance": "7",
           "persistent": "false",
@@ -35,14 +35,14 @@
     },
     "trunk_placer": {
       "type": "minecraft:straight_trunk_placer",
-      "base_height": 7,
-      "height_rand_a": 8,
-      "height_rand_b": 5
+      "base_height": 5,
+      "height_rand_a": 3,
+      "height_rand_b": 3
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "got:wood1_catalpa",
+        "Name": "got:wood5_orange",
         "Properties": {
           "axis": "y"
         }
