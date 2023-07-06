@@ -1451,7 +1451,7 @@ public class GOTBlocks {
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).nonOpaque()));
     public static final Block Purple_Fine_Glass = registerBlock("stained_glass_purple",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
-    public static final Block Purple_Fine_Glass_Pane = registerBlock("stained_glass_purple_pane",
+    public static final Block Purple_Fine_Glass_Pane = registerBlock("stained_glass_pane_purple",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).nonOpaque()));
     public static final Block Red_Fine_Glass = registerBlock("stained_glass_red",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
