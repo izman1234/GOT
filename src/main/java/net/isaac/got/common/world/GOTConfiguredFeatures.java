@@ -7,11 +7,10 @@ import net.isaac.got.common.world.tree.decorator.DatePalmDecorator;
 import net.isaac.got.common.world.tree.foliage.*;
 import net.isaac.got.common.world.tree.trunk.CedarTrunkPlacer;
 import net.isaac.got.common.world.tree.trunk.DatePalmTrunkPlacer;
+import net.isaac.got.common.world.tree.trunk.MahoganyTrunkPlacer;
 import net.isaac.got.common.world.tree.trunk.UlthosTrunkPlacer;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.PropaguleBlock;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -19,21 +18,16 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntryList;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.AcaciaFoliagePlacer;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
 import net.minecraft.world.gen.root.AboveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacement;
 import net.minecraft.world.gen.root.MangroveRootPlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.stateprovider.RandomizedIntBlockStateProvider;
-import net.minecraft.world.gen.treedecorator.AttachedToLeavesTreeDecorator;
 import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
@@ -66,6 +60,7 @@ public class GOTConfiguredFeatures { //for how the tree looks
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_KEY = registerKey("orange_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PINE_KEY = registerKey("pine_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> CYPRESS_KEY = registerKey("cypress_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> GIANT_CYPRESS_KEY = registerKey("giant_cypress_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAHOGANY_KEY = registerKey("mahogany_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> OLIVE_KEY = registerKey("olive_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_KEY = registerKey("willow_tree");
@@ -84,10 +79,6 @@ public class GOTConfiguredFeatures { //for how the tree looks
     public static final RegistryKey<ConfiguredFeature<?, ?>> FRUIT_CHERRY_KEY = registerKey("fruit_cherry_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FRUIT_MANGO_KEY = registerKey("fruit_mango_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FRUIT_PEAR_KEY = registerKey("fruit_pear_tree");
-
-
-
-
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -228,6 +219,34 @@ public class GOTConfiguredFeatures { //for how the tree looks
                 BlockStateProvider.of(GOTBlocks.Orange_Leaves),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, PINE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Pine_Wood),
+                new StraightTrunkPlacer(12, 10, 5),
+                BlockStateProvider.of(GOTBlocks.Pine_Leaves),
+                new PineFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(8)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, CYPRESS_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Cypress_Wood),
+                new StraightTrunkPlacer(10, 3, 3),
+                BlockStateProvider.of(GOTBlocks.Cypress_Leaves),
+                new CypressFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), ConstantIntProvider.create(8)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, GIANT_CYPRESS_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Cypress_Wood),
+                new GiantTrunkPlacer(13, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Cypress_Leaves),
+                new CypressFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(1), ConstantIntProvider.create(10)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, MAHOGANY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Mahogany_Wood),
+                new MahoganyTrunkPlacer(8, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Mahogany_Leaves),
+                new MahoganyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

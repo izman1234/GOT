@@ -1,6 +1,5 @@
 package net.isaac.got.common.world.tree.trunk;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -12,28 +11,26 @@ import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.foliage.FoliagePlacer;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacer;
 import net.minecraft.world.gen.trunk.TrunkPlacerType;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalInt;
 import java.util.function.BiConsumer;
 
-public class CedarTrunkPlacer extends TrunkPlacer {
+public class MahoganyTrunkPlacer extends TrunkPlacer {
     // Use the fillTrunkPlacerFields to create our codec
-    public static final Codec<CedarTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
-            fillTrunkPlacerFields(instance).apply(instance, CedarTrunkPlacer::new));
+    public static final Codec<MahoganyTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+            fillTrunkPlacerFields(instance).apply(instance, MahoganyTrunkPlacer::new));
 
-    public CedarTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
+    public MahoganyTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
         super(baseHeight, firstRandomHeight, secondRandomHeight);
     }
 
     @Override
     protected TrunkPlacerType<?> getType() {
-        return GOTTrunks.CEDAR_TRUNK_PLACER;
+        return GOTTrunks.MAHOGANY_TRUNK_PLACER;
     }
 
     @Override
@@ -53,6 +50,7 @@ public class CedarTrunkPlacer extends TrunkPlacer {
         int numTimes = random.nextBetween(3, 7);
         BlockPos.Mutable mutable = new BlockPos.Mutable();
         OptionalInt optionalInt = OptionalInt.empty();
+        Direction direction2;
 
         for(int o = 0; o < numTimes + 1; o++) {
             direction = Direction.Type.HORIZONTAL.random(random);
@@ -67,11 +65,19 @@ public class CedarTrunkPlacer extends TrunkPlacer {
             for (int m = 0; m < height; ++m) {
                 n = startPos.getY() + mHeight;
                 if (m >= i && j > 0) {
-                    k += direction.getOffsetX();
-                    l += direction.getOffsetZ();
+                    if(random.nextInt(10) <= 3) {
+                        if(random.nextInt(2) == 1) { direction2 = direction.rotateYCounterclockwise(); }
+                        else { direction2 = direction.rotateYClockwise(); }
+                        k += direction.getOffsetX() + direction2.getOffsetX();
+                        l += direction.getOffsetZ() + direction2.getOffsetZ();
+                    }
+                    else {
+                        k += direction.getOffsetX();
+                        l += direction.getOffsetZ();
+                    }
                     --j;
                     keepHeight = random.nextInt(6);
-                    if (keepHeight <= 1) {
+                    if (keepHeight <= 2) {
                         mHeight--;
                     }
                     if (!this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config)) continue;

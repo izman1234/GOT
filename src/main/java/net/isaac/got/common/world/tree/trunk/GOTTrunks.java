@@ -12,6 +12,8 @@ public class GOTTrunks {
     //BAOBAB
 
     public static final TrunkPlacerType<CedarTrunkPlacer> CEDAR_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:cedar_trunk_placer", CedarTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<MahoganyTrunkPlacer> MAHOGANY_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:mahogany_trunk_placer", MahoganyTrunkPlacer.CODEC);
+
 
 
     public static void register() {
