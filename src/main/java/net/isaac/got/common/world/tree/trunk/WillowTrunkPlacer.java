@@ -19,18 +19,18 @@ import java.util.List;
 import java.util.OptionalInt;
 import java.util.function.BiConsumer;
 
-public class MahoganyTrunkPlacer extends TrunkPlacer {
+public class WillowTrunkPlacer extends TrunkPlacer {
     // Use the fillTrunkPlacerFields to create our codec
-    public static final Codec<MahoganyTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
-            fillTrunkPlacerFields(instance).apply(instance, MahoganyTrunkPlacer::new));
+    public static final Codec<WillowTrunkPlacer> CODEC = RecordCodecBuilder.create(instance ->
+            fillTrunkPlacerFields(instance).apply(instance, WillowTrunkPlacer::new));
 
-    public MahoganyTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
+    public WillowTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
         super(baseHeight, firstRandomHeight, secondRandomHeight);
     }
 
     @Override
     protected TrunkPlacerType<?> getType() {
-        return GOTTrunks.MAHOGANY_TRUNK_PLACER;
+        return GOTTrunks.WILLOW_TRUNK_PLACER;
     }
 
     @Override
@@ -41,33 +41,41 @@ public class MahoganyTrunkPlacer extends TrunkPlacer {
 
         for (int i = 0; i < height; ++i) {
             this.getAndSetState(world, replacer, random, startPos.up(i), config);
+            if(i >= 6) {
+                list.add(new FoliagePlacer.TreeNode(startPos.up(i), 0, false));
+            }
         }
-        list.add(new FoliagePlacer.TreeNode(startPos.up(height), 0, false));
 
         int n, k, l, i, j;
         int keepHeight;
         int mHeight;
+        boolean multiDirection = false;
         int numTimes = random.nextBetween(3, 7);
         BlockPos.Mutable mutable = new BlockPos.Mutable();
         OptionalInt optionalInt = OptionalInt.empty();
-        Direction direction2;
+        Direction direction2 = Direction.Type.HORIZONTAL.random(random);
 
         for(int o = 0; o < numTimes + 1; o++) {
             direction = Direction.Type.HORIZONTAL.random(random);
-            i = height - random.nextBetween(2, 5) - random.nextBetween(1, 3);
-            j = 4 - random.nextInt(2);
-            if(i < 5) {
-                i = 5;
+            if(random.nextInt(10) <= 3) {
+                if(random.nextInt(2) == 1) { direction2 = direction.rotateYCounterclockwise(); }
+                else { direction2 = direction.rotateYClockwise(); }
+                multiDirection = true;
             }
+            else {
+                multiDirection = false;
+            }
+
+            i = height - random.nextBetween(1, 3) - random.nextBetween(1, 3);
+            j = random.nextBetween(3, 5);
+            if(i < 5) { i = 5; }
             k = startPos.getX();
             l = startPos.getZ();
             mHeight = 0;
             for (int m = 0; m < height; ++m) {
                 n = startPos.getY() + mHeight;
                 if (m >= i && j > 0) {
-                    if(random.nextInt(10) <= 3) {
-                        if(random.nextInt(2) == 1) { direction2 = direction.rotateYCounterclockwise(); }
-                        else { direction2 = direction.rotateYClockwise(); }
+                    if(multiDirection) {
                         k += direction.getOffsetX() + direction2.getOffsetX();
                         l += direction.getOffsetZ() + direction2.getOffsetZ();
                     }
@@ -82,23 +90,23 @@ public class MahoganyTrunkPlacer extends TrunkPlacer {
                     }
                     if (!this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config)) continue;
                     optionalInt = OptionalInt.of(n + 1);
+                    if (optionalInt.isPresent()) {
+                        list.add(new FoliagePlacer.TreeNode(new BlockPos(k, optionalInt.getAsInt(), l), 1, false));
+                    }
                 }
                 mHeight++;
-            }
-            if (optionalInt.isPresent()) {
-                list.add(new FoliagePlacer.TreeNode(new BlockPos(k, optionalInt.getAsInt(), l), 1, false));
             }
         }
 
         Direction directionList[] = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
-        for(int m = 0; m <= 1; m++) {
+        for(int m = 0; m <= 2; m++) {
             for (Direction dir : directionList) {
                 n = startPos.getY() + m;
                 k = startPos.getX();
                 l = startPos.getZ();
                 k += dir.getOffsetX();
                 l += dir.getOffsetZ();
-                if(m == 1) {
+                if(m == 2) {
                     if(random.nextInt(10) <= 6) {
                         this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config);
                     }

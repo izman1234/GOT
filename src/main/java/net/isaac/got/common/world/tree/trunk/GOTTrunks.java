@@ -13,6 +13,8 @@ public class GOTTrunks {
 
     public static final TrunkPlacerType<CedarTrunkPlacer> CEDAR_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:cedar_trunk_placer", CedarTrunkPlacer.CODEC);
     public static final TrunkPlacerType<MahoganyTrunkPlacer> MAHOGANY_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:mahogany_trunk_placer", MahoganyTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<WillowTrunkPlacer> WILLOW_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:willow_trunk_placer", WillowTrunkPlacer.CODEC);
+
 
 
 

@@ -23,6 +23,10 @@ public class GOTFoliage {
     public static final FoliagePlacerType<PineFoliagePlacer> PINE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:pine_foliage_placer", PineFoliagePlacer.CODEC);
     public static final FoliagePlacerType<CypressFoliagePlacer> CYPRESS_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:cypress_foliage_placer", CypressFoliagePlacer.CODEC);
     public static final FoliagePlacerType<MahoganyFoliagePlacer> MAHOGANY_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:mahogany_foliage_placer", MahoganyFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<OliveFoliagePlacer> OLIVE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:olive_foliage_placer", OliveFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<WillowFoliagePlacer> WILLOW_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:willow_foliage_placer", WillowFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<AlmondFoliagePlacer> ALMOND_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:almond_foliage_placer", AlmondFoliagePlacer.CODEC);
+
 
 
 

@@ -40,6 +40,7 @@ public class MahoganyFoliagePlacer extends FoliagePlacer {
     protected void generate(TestableWorld world, BlockPlacer placer, Random random, TreeFeatureConfig config, int trunkHeight, TreeNode treeNode, int foliageHeight, int radius, int offset) {
         BlockPos.Mutable centerPos = treeNode.getCenter().mutableCopy();
         BlockPos.Mutable mutable = new BlockPos.Mutable();
+        radius = random.nextBetween(0, 2);
         for(int y = offset; y >= offset - foliageHeight; --y){
             for (int j = -radius; j <= radius; ++j) {
                 for (int k = -radius; k <= radius; ++k) {
@@ -59,15 +60,15 @@ public class MahoganyFoliagePlacer extends FoliagePlacer {
         }
 
         Iterator var14 = Direction.Type.HORIZONTAL.iterator();
-        float hangingLeavesChance = 50;
-        float hangingLeavesExtensionChance = 50;
+        int hangingLeavesChance = 4;
+        int hangingLeavesExtensionChance = 9;
         BlockPos blockPos = centerPos.down();
 
         while(var14.hasNext()) {
             Direction direction = (Direction)var14.next();
             Direction direction2 = direction.rotateYClockwise();
-            int j = direction2.getDirection() == Direction.AxisDirection.POSITIVE ? radius + 1: radius;
-            mutable.set(centerPos, 0, foliageHeight - 1, 0).move(direction2, j).move(direction, -radius);
+            int j = direction2.getDirection() == Direction.AxisDirection.POSITIVE ? radius: radius;
+            mutable.set(centerPos, 0, offset - foliageHeight - 1, 0).move(direction2, j).move(direction, -radius);
             int k = -radius;
 
             while(k < radius) {
@@ -77,6 +78,7 @@ public class MahoganyFoliagePlacer extends FoliagePlacer {
                     mutable.move(Direction.DOWN);
                     placeFoliageBlock(world, placer, random, config, hangingLeavesExtensionChance, blockPos, mutable);
                     mutable.move(Direction.UP);
+                    mutable.move(Direction.UP);
                 }
 
                 ++k;
@@ -85,11 +87,11 @@ public class MahoganyFoliagePlacer extends FoliagePlacer {
         }
     }
 
-    private static boolean placeFoliageBlock(TestableWorld world, BlockPlacer placer, Random random, TreeFeatureConfig config, float chance, BlockPos origin, BlockPos.Mutable pos) {
+    private static boolean placeFoliageBlock(TestableWorld world, BlockPlacer placer, Random random, TreeFeatureConfig config, int chance, BlockPos origin, BlockPos.Mutable pos) {
         if (pos.getManhattanDistance(origin) >= 7) {
             return false;
         } else {
-            return random.nextFloat() > chance ? false : placeFoliageBlock(world, placer, random, config, pos);
+            return chance >= random.nextInt(10) ? placeFoliageBlock(world, placer, random, config, pos) : false;
         }
     }
 
