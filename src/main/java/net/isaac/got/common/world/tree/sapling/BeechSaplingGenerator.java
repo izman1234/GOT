@@ -11,6 +11,11 @@ public class BeechSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return GOTConfiguredFeatures.BEECH_KEY;
+        if(random.nextBetween(1, 10) == 1) {
+            return GOTConfiguredFeatures.BIG_BEECH_KEY;
+        }
+        else {
+            return GOTConfiguredFeatures.BEECH_KEY;
+        }
     }
 }

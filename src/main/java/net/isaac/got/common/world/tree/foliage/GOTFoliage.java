@@ -8,7 +8,6 @@ public class GOTFoliage {
     public static final FoliagePlacerType<CatalpaFoliagePlacer> CATALPA_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:catalpa_foliage_placer", CatalpaFoliagePlacer.CODEC);
     public static final FoliagePlacerType<IbbiniaFoliagePlacer> IBBINIA_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:ibbinia_foliage_placer", IbbiniaFoliagePlacer.CODEC);
     public static final FoliagePlacerType<UlthosFoliagePlacer> ULTHOS_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:ulthos_foliage_placer", UlthosFoliagePlacer.CODEC);
-    public static final FoliagePlacerType<RedUlthosFoliagePlacer> RED_ULTHOS_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:red_ulthos_foliage_placer", RedUlthosFoliagePlacer.CODEC);
     public static final FoliagePlacerType<AramantFoliagePlacer> ARAMANT_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:aramant_foliage_placer", AramantFoliagePlacer.CODEC);
     public static final FoliagePlacerType<BananaFoliagePlacer> BANANA_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:banana_foliage_placer", BananaFoliagePlacer.CODEC);
     public static final FoliagePlacerType<BeechFoliagePlacer> BEECH_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:beech_foliage_placer", BeechFoliagePlacer.CODEC);
@@ -26,6 +25,8 @@ public class GOTFoliage {
     public static final FoliagePlacerType<OliveFoliagePlacer> OLIVE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:olive_foliage_placer", OliveFoliagePlacer.CODEC);
     public static final FoliagePlacerType<WillowFoliagePlacer> WILLOW_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:willow_foliage_placer", WillowFoliagePlacer.CODEC);
     public static final FoliagePlacerType<AlmondFoliagePlacer> ALMOND_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:almond_foliage_placer", AlmondFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<AspenFoliagePlacer> ASPEN_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:aspen_foliage_placer", AspenFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<RedwoodFoliagePlacer> REDWOOD_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:redwood_foliage_placer", RedwoodFoliagePlacer.CODEC);
 
 
 

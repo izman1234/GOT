@@ -925,6 +925,8 @@
   "block.got.yiti_flower_chrys_orange": "Yiti Orange Chrysanthemum",
   "block.got.yiti_flower_chrys_pink": "Yiti Pink Chrysanthemum",
   "block.got.yiti_flower_chrys_white": "Yiti White Chrysanthemum",
-  "block.got.yiti_flower_chrys_yellow": "Yiti Yellow Chrysanthemum"
+  "block.got.yiti_flower_chrys_yellow": "Yiti Yellow Chrysanthemum",
+
+  "generator.got.got_world": "GOT World"
 
 }
