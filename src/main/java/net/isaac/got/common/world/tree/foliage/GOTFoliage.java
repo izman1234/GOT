@@ -14,9 +14,7 @@ public class GOTFoliage {
     public static final FoliagePlacerType<HollyFoliagePlacer> HOLLY_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:holly_foliage_placer", HollyFoliagePlacer.CODEC);
     public static final FoliagePlacerType<DatePalmFoliagePlacer> DATE_PALM_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:date_palm_foliage_placer", DatePalmFoliagePlacer.CODEC);
     public static final FoliagePlacerType<LarchFoliagePlacer> LARCH_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:larch_foliage_placer", LarchFoliagePlacer.CODEC);
-
-    //BAOBAB
-
+    public static final FoliagePlacerType<BaobabFoliagePlacer> BAOBAB_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:baobab_foliage_placer", BaobabFoliagePlacer.CODEC);
     public static final FoliagePlacerType<CedarFoliagePlacer> CEDAR_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:cedar_foliage_placer", CedarFoliagePlacer.CODEC);
     public static final FoliagePlacerType<FirFoliagePlacer> FIR_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:fir_foliage_placer", FirFoliagePlacer.CODEC);
     public static final FoliagePlacerType<PineFoliagePlacer> PINE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:pine_foliage_placer", PineFoliagePlacer.CODEC);
@@ -27,6 +25,10 @@ public class GOTFoliage {
     public static final FoliagePlacerType<AlmondFoliagePlacer> ALMOND_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:almond_foliage_placer", AlmondFoliagePlacer.CODEC);
     public static final FoliagePlacerType<AspenFoliagePlacer> ASPEN_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:aspen_foliage_placer", AspenFoliagePlacer.CODEC);
     public static final FoliagePlacerType<RedwoodFoliagePlacer> REDWOOD_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:redwood_foliage_placer", RedwoodFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<KanukaFoliagePlacer> KANUKA_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:kanuka_foliage_placer", KanukaFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<GiantPartyFoliagePlacer> GIANT_PARTY_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:giant_party_foliage_placer", GiantPartyFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<MassiveFoliagePlacer> MASSIVE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:massive_foliage_placer", MassiveFoliagePlacer.CODEC);
+
 
 
 

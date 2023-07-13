@@ -7,6 +7,7 @@ import net.isaac.got.common.world.tree.decorator.DatePalmDecorator;
 import net.isaac.got.common.world.tree.foliage.*;
 import net.isaac.got.common.world.tree.trunk.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
@@ -79,6 +80,31 @@ public class GOTConfiguredFeatures { //for how the feature looks
     public static final RegistryKey<ConfiguredFeature<?, ?>> FRUIT_CHERRY_KEY = registerKey("fruit_cherry_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FRUIT_MANGO_KEY = registerKey("fruit_mango_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FRUIT_PEAR_KEY = registerKey("fruit_pear_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> OAK_PARTY_KEY = registerKey("oak_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BIRCH_PARTY_KEY = registerKey("birch_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> DARK_OAK_PARTY_KEY = registerKey("dark_oak_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CATALPA_PARTY_KEY = registerKey("catalpa_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BEECH_PARTY_KEY = registerKey("beech_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_PARTY_KEY = registerKey("maple_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CHESTNUT_PARTY_KEY = registerKey("chestnut_party_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BIG_MAPLE_KEY = registerKey("big_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BIG_CHESTNUT_KEY = registerKey("big_chestnut_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> OAK_GIANT_KEY = registerKey("oak_giant_tree");
+    /*
+    OAK_DEAD: GOTWorldGenDeadTrees
+    BIRCH_DEAD: GOTWorldGenDeadTrees
+    SPRUCE_DEAD: GOTWorldGenDeadTrees
+    ACACIA_DEAD: GOTWorldGenDeadTrees
+    BEECH_DEAD: GOTWorldGenDeadTrees
+    ULTHOS_OAK_DEAD: GOTWorldGenDeadTrees or setDead
+
+    OAK_DESERT: GOTWorldGenDesertTrees
+
+    CATALPA_BOUGHS GOTWorldGenCatalpa
+
+    CHARRED: GOTWorldGenCharredTrees
+    */
+
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -185,7 +211,12 @@ public class GOTConfiguredFeatures { //for how the feature looks
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
-        //TODO: BAOBAB
+        register(context, BAOBAB_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Baobab_Wood),
+                new BaobabTrunkPlacer(16, 3, 3),
+                BlockStateProvider.of(GOTBlocks.Baobab_Leaves),
+                new BaobabFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), ConstantIntProvider.create(3)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
 
         register(context, CEDAR_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(GOTBlocks.Cedar_Wood),
@@ -356,9 +387,19 @@ public class GOTConfiguredFeatures { //for how the feature looks
                 new UlthosFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(2), ConstantIntProvider.create(3)),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        //TODO KANUKA
+        register(context, KANUKA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Kanuka_Wood),
+                new KanukaTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Kanuka_Leaves),
+                new KanukaFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
 
-        //TODO WEIRWOOD
+        register(context, WEIRWOOD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Weirwood_Wood),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Weirwood_Leaves),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
 
         register(context, FRUIT_APPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(GOTBlocks.Fruit_Wood_Apple),
@@ -386,6 +427,76 @@ public class GOTConfiguredFeatures { //for how the feature looks
                 new StraightTrunkPlacer(5, 3, 3),
                 BlockStateProvider.of(GOTBlocks.Fruit_Leaves_Pear),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, OAK_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.OAK_LOG),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(Blocks.OAK_LEAVES),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, BIRCH_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.BIRCH_LOG),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(Blocks.BIRCH_LEAVES),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, DARK_OAK_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.DARK_OAK_LOG),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(Blocks.DARK_OAK_LEAVES),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, CATALPA_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Catalpa_Wood),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Catalpa_Leaves),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, BEECH_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Beech_Wood),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Beech_Leaves),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, MAPLE_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Maple_Wood),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Maple_Leaves),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, CHESTNUT_PARTY_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Chestnut_Wood),
+                new GiantPartyTrunkPlacer(6, 4, 4),
+                BlockStateProvider.of(GOTBlocks.Chestnut_Leaves),
+                new GiantPartyFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, BIG_MAPLE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Maple_Wood),
+                new LargeOakTrunkPlacer(3, 11, 0),
+                BlockStateProvider.of(GOTBlocks.Maple_Leaves),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, BIG_CHESTNUT_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Chestnut_Wood),
+                new LargeOakTrunkPlacer(3, 11, 0),
+                BlockStateProvider.of(GOTBlocks.Chestnut_Leaves),
+                new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, OAK_GIANT_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.OAK_LOG),
+                new MassiveTrunkPlacer(3, 11, 0),
+                BlockStateProvider.of(Blocks.OAK_LEAVES),
+                new MassiveFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), ConstantIntProvider.create(4)),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
     }
 

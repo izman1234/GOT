@@ -11,6 +11,11 @@ public class ChestnutSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return GOTConfiguredFeatures.CHESTNUT_KEY;
+        if(random.nextBetween(1, 10) == 1) {
+            return GOTConfiguredFeatures.BIG_CHESTNUT_KEY;
+        }
+        else {
+            return GOTConfiguredFeatures.CHESTNUT_KEY;
+        }
     }
 }

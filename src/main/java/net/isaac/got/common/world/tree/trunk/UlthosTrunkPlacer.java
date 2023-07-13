@@ -97,28 +97,52 @@ public class UlthosTrunkPlacer extends TrunkPlacer {
             }
         }
 
-        int k = startPos.getX();
-        int l = startPos.getZ();
-        int ran = random.nextInt(4);
-        Direction dir = directionList[ran];
-        for(int b = 0; b < 3; b++) {
-            for (int m = 0; m < 2; ++m) {
-                n = startPos.getY() + m;
-                k += dir.getOffsetX();
-                l += dir.getOffsetZ();
-                if (!this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config)) continue;
-                optionalInt = OptionalInt.of(n + 1);
-                dir  = directionList[4];
+        if(random.nextInt(2) == 1) {
+            Direction directionList2[] = {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
+            for(int m = 0; m <= 1; m++) {
+                for (Direction dir : directionList2) {
+                    n = startPos.getY() + m;
+                    int k = startPos.getX();
+                    int l = startPos.getZ();
+                    k += dir.getOffsetX();
+                    l += dir.getOffsetZ();
+                    if(m == 1) {
+                        if(random.nextInt(10) <= 6) {
+                            this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config);
+                        }
 
+                    }
+                    else {
+                        this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config);
+                    }
+                }
             }
-            if(b == 1) {
-                generateEndPiece(world, replacer, random, config, directionList[ran], mutable, startPos, list, k, l);
-                generateEndPiece(world, replacer, random, config, directionList[ran].rotateYCounterclockwise(), mutable, startPos, list, k, l);
-            }
-            if(ran == 3) { ran = 0; }
-            else { ran += 1;}
-            dir = directionList[ran];
         }
+        else {
+            int k = startPos.getX();
+            int l = startPos.getZ();
+            int ran = random.nextInt(4);
+            Direction dir = directionList[ran];
+            for(int b = 0; b < 3; b++) {
+                for (int m = 0; m < 2; ++m) {
+                    n = startPos.getY() + m;
+                    k += dir.getOffsetX();
+                    l += dir.getOffsetZ();
+                    if (!this.getAndSetState(world, replacer, random, mutable.set(k, n, l), config)) continue;
+                    optionalInt = OptionalInt.of(n + 1);
+                    dir  = directionList[4];
+
+                }
+                if(b == 1) {
+                    generateEndPiece(world, replacer, random, config, directionList[ran], mutable, startPos, list, k, l);
+                    generateEndPiece(world, replacer, random, config, directionList[ran].rotateYCounterclockwise(), mutable, startPos, list, k, l);
+                }
+                if(ran == 3) { ran = 0; }
+                else { ran += 1;}
+                dir = directionList[ran];
+            }
+        }
+
         return list;
     }
 
