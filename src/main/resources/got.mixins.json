@@ -3,7 +3,10 @@
 	"package": "net.isaac.got.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"FoliagePlacerTypeInvoker",
+		"TrunkPlacerTypeInvoker",
+		"TreeDecoratorTypeInvoker"
 	],
 	"injectors": {
 		"defaultRequire": 1

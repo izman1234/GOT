@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "textures": {
-    "edge": "got:block/stained_glass_purple_pane_top",
+    "edge": "got:block/stained_glass_pane_purple_top",
     "pane": "got:block/stained_glass_purple"
   }
 }

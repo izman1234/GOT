@@ -1,4 +1,4 @@
-package net.isaac.got.common.item;
+package net.isaac.got.common;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -1026,7 +1026,7 @@ public class GOTGroups {
                     }).build());
 
     public static void registerModGroups() {
-        GOT.LOGGER.debug("Registering Mod Groups for " + GOT.MOD_ID);
+        GOT.LOGGER.debug("Registering ModGroups for " + GOT.MOD_ID);
     }
 
 

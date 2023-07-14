@@ -3,8 +3,8 @@ package net.isaac.got.common.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.isaac.got.GOT;
+import net.isaac.got.common.world.tree.sapling.*;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -746,13 +746,13 @@ public class GOTBlocks {
     public static final Block Fruit_Leaves_Pear = registerBlock("fruit_leaves_pear_fancy",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
     public static final Block Fruit_Sapling_Apple = registerBlock("fruit_sapling_apple",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FruitAppleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fruit_Sapling_Cherry = registerBlock("fruit_sapling_cherry",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FruitCherrySaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fruit_Sapling_Mango = registerBlock("fruit_sapling_mango",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FruitMangoSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fruit_Sapling_Pear = registerBlock("fruit_sapling_pear",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FruitPearSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fruit_Wood_Apple = registerBlock("fruit_wood_apple",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block Fruit_Wood_Cherry = registerBlock("fruit_wood_cherry",
@@ -1302,75 +1302,75 @@ public class GOTBlocks {
     public static final Block Rotten_Log = registerBlock("rotten_log_rotten",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)));
     public static final Block Catalpa_Sapling = registerBlock("sapling1_catalpa",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new CatalpaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Ibbinia_Sapling = registerBlock("sapling1_ibbinia",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new IbbiniaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Ulthos_Sapling = registerBlock("sapling1_ulthos",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new UlthosSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Ulthos_Red_Sapling = registerBlock("sapling1_ulthos_red",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new RedUlthosSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Aramant_Sapling = registerBlock("sapling2_aramant",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new AramantSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Banana_Sapling = registerBlock("sapling2_banana",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new BananaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Beech_Sapling = registerBlock("sapling2_beech",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new BeechSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Holly_Sapling = registerBlock("sapling2_holly",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new HollySaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Date_Palm_Sapling = registerBlock("sapling3_date_palm",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new DatePalmSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Larch_Sapling = registerBlock("sapling3_larch",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new LarchSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Mangrove_Sapling = registerBlock("sapling3_mangrove",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new MangroveSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Maple_Sapling = registerBlock("sapling3_maple",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new MapleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Baobab_Sapling = registerBlock("sapling4_baobab",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new BaobabSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Cedar_Sapling = registerBlock("sapling4_cedar",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new CedarSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Chestnut_Sapling = registerBlock("sapling4_chestnut",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new ChestnutSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fir_Sapling = registerBlock("sapling4_fir",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FirSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Lemon_Sapling = registerBlock("sapling5_lemon",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new LemonSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Lime_Sapling = registerBlock("sapling5_lime",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new LimeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Orange_Sapling = registerBlock("sapling5_orange",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new OrangeSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Pine_Sapling = registerBlock("sapling5_pine",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new PineSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Cypress_Sapling = registerBlock("sapling6_cypress",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new CypressSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Mahogany_Sapling = registerBlock("sapling6_mahogany",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new MahoganySaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Olive_Sapling = registerBlock("sapling6_olive",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new OliveSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Willow_Sapling = registerBlock("sapling6_willow",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new WillowSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Almond_Sapling = registerBlock("sapling7_almond",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new AlmondSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Aspen_Sapling = registerBlock("sapling7_aspen",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new AspenSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Fotinia_Sapling = registerBlock("sapling7_fotinia",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new FotiniaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Green_Oak_Sapling = registerBlock("sapling7_green_oak",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new GreenOakSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Palm_Sapling = registerBlock("sapling8_palm",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new PalmSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Plum_Sapling = registerBlock("sapling8_plum",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new PlumSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Pomegranate_Sapling = registerBlock("sapling8_pomegranate",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new PomegranateSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Redwood_Sapling = registerBlock("sapling8_redwood",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new RedwoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Dragon_Sapling = registerBlock("sapling9_dragon",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new DragonSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Kanuka_Sapling = registerBlock("sapling9_kanuka",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new KanukaSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
     public static final Block Weirwood_Sapling = registerBlock("sapling9_weirwood",
-            new SaplingBlock(null, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+            new SaplingBlock(new WeirwoodSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
 
     //TODO ADD SARBACANE TRAP
 
@@ -1451,7 +1451,7 @@ public class GOTBlocks {
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).nonOpaque()));
     public static final Block Purple_Fine_Glass = registerBlock("stained_glass_purple",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
-    public static final Block Purple_Fine_Glass_Pane = registerBlock("stained_glass_purple_pane",
+    public static final Block Purple_Fine_Glass_Pane = registerBlock("stained_glass_pane_purple",
             new PaneBlock(FabricBlockSettings.copyOf(Blocks.GLASS_PANE).nonOpaque()));
     public static final Block Red_Fine_Glass = registerBlock("stained_glass_red",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
