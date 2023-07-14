@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick6_yiti_granite_carved",
+    "bottom": "got:block/brick6_yiti_granite_carved",
+    "side": "got:block/brick6_yiti_granite_carved",
+    "top": "got:block/brick6_yiti_granite_carved"
+  }
+}

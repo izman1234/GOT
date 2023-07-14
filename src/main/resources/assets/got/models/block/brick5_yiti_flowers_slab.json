@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick5_yiti_flowers",
+    "bottom": "got:block/brick5_yiti_flowers",
+    "side": "got:block/brick5_yiti_flowers",
+    "top": "got:block/brick5_yiti_flowers"
+  }
+}

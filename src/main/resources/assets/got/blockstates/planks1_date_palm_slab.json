@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks1_date_palm_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks1_date_palm"
+    },
+    "type=top": {
+      "model": "got:block/planks1_date_palm_slab_top"
+    }
+  }
+}

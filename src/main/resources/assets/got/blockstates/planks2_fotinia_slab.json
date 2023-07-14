@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks2_fotinia_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks2_fotinia"
+    },
+    "type=top": {
+      "model": "got:block/planks2_fotinia_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "got:block/clay_tile_dyed_silver",
+    "side": "got:block/clay_tile_dyed_silver",
+    "top": "got:block/clay_tile_dyed_silver"
+  }
+}

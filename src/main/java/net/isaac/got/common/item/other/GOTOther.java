@@ -2,6 +2,7 @@ package net.isaac.got.common.item.other;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.isaac.got.GOT;
+import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterials;
@@ -15,9 +16,17 @@ public class GOTOther {
             new Item(new FabricItemSettings()));
     public static final Item Bronze_Ingot = registerItem("bronze_ingot",
             new Item(new FabricItemSettings()));
+    public static final Item Silver_Ingot = registerItem("silver_ingot",
+            new Item(new FabricItemSettings()));
+    public static final Item Tin_Ingot = registerItem("tin_ingot",
+            new Item(new FabricItemSettings()));
+    public static final Item Obsidian_Shard = registerItem("obsidian_shard",
+            new Item(new FabricItemSettings()));
     public static final Item Valyrian_Ingot = registerItem("valyrian_ingot",
             new Item(new FabricItemSettings()));
-
+    public static final Item Yiti_Steel_Ingot = registerItem("yiti_steel_ingot",
+            new Item(new FabricItemSettings()));
+    /* FOOD */
 
 
 

@@ -1,0 +1,6 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "got:block/clay_tile_dyed_magenta"
+  }
+}

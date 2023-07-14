@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "got:block/brick6_labradorite_mossy",
+    "bottom": "got:block/brick6_labradorite_mossy",
+    "side": "got:block/brick6_labradorite_mossy",
+    "top": "got:block/brick6_labradorite_mossy"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick5_yiti_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick5_yiti"
+    },
+    "type=top": {
+      "model": "got:block/brick5_yiti_slab_top"
+    }
+  }
+}

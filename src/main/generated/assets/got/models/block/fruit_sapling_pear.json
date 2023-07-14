@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "got:block/fruit_sapling_pear"
+  }
+}

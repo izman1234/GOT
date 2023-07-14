@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick6_yiti_granite_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick6_yiti_granite"
+    },
+    "type=top": {
+      "model": "got:block/brick6_yiti_granite_slab_top"
+    }
+  }
+}

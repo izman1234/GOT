@@ -1,0 +1,22 @@
+{
+  "textures": {
+    "particle": "got:block/banana_side",
+    "top": "got:block/banana_top",
+    "side": "got:block/banana_side",
+    "bottom": "got:block/banana_bottom"
+  },
+  "elements": [
+    {
+      "from": [0, 3, 6],
+      "to": [4, 15, 10],
+      "faces": {
+        "up": { "texture": "#top" },
+        "down": { "texture": "#bottom" },
+        "north": { "texture": "#side" },
+        "south": { "texture": "#side" },
+        "west": { "texture": "#side" },
+        "east": { "texture": "#side" }
+      }
+    }
+  ]
+}

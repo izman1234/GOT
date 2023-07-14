@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "got:block/banana_block_north" },
+    "facing=south": { "model": "got:block/banana_block_south" },
+    "facing=west": { "model": "got:block/banana_block_west" },
+    "facing=east": { "model": "got:block/banana_block_east" }
+  }
+}

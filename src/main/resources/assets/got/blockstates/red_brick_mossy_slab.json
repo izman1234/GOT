@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/red_brick_mossy_slab"
+    },
+    "type=double": {
+      "model": "got:block/red_brick_mossy"
+    },
+    "type=top": {
+      "model": "got:block/red_brick_mossy_slab_top"
+    }
+  }
+}

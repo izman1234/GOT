@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick1_basalt_cracked_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick1_basalt_cracked"
+    },
+    "type=top": {
+      "model": "got:block/brick1_basalt_cracked_slab_top"
+    }
+  }
+}

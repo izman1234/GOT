@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks1_ibbinia_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks1_ibbinia"
+    },
+    "type=top": {
+      "model": "got:block/planks1_ibbinia_slab_top"
+    }
+  }
+}

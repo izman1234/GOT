@@ -11,6 +11,7 @@ import java.util.function.Supplier;
 public enum GOTToolMaterials implements ToolMaterial {
     ALLOYSTEEL(MiningLevels.IRON, 500, 6.0f, 2.0f, 10, () -> Ingredient.ofItems(GOTOther.Alloy_Steel_Ingot)),
     BRONZE(MiningLevels.IRON, 500, 6.0f, 2.0f, 10, () -> Ingredient.ofItems(GOTOther.Bronze_Ingot)),
+    OBSIDIANSHARD(MiningLevels.NETHERITE, 500, 6.0f, 2.0f, 10, () -> Ingredient.ofItems(GOTOther.Obsidian_Shard)),
     VALYRIANSTEEL(MiningLevels.DIAMOND, 1561, 8.0f, 3.0f, 10, () -> Ingredient.ofItems(GOTOther.Valyrian_Ingot));
 
     private final int miningLevel;

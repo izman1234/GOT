@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/dirt_path_dirt",
+    "bottom": "got:block/dirt_path_dirt",
+    "side": "got:block/dirt_path_dirt",
+    "top": "got:block/dirt_path_dirt"
+  }
+}

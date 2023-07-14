@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/brick1_andesite_mossy_slab"
+    },
+    "type=double": {
+      "model": "got:block/brick1_andesite_mossy"
+    },
+    "type=top": {
+      "model": "got:block/brick1_andesite_mossy_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "got:block/clay_tile_dyed_purple",
+    "side": "got:block/clay_tile_dyed_purple",
+    "top": "got:block/clay_tile_dyed_purple"
+  }
+}

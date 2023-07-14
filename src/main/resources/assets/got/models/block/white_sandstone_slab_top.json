@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "got:block/white_sandstone",
+    "bottom": "got:block/white_sandstone_bottom",
+    "side": "got:block/white_sandstone",
+    "top": "got:block/white_sandstone_top"
+  }
+}

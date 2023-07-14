@@ -1,0 +1,6 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "got:block/brick4_sothoryos_gold"
+  }
+}

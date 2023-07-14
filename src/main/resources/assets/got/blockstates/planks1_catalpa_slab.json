@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "got:block/planks1_catalpa_slab"
+    },
+    "type=double": {
+      "model": "got:block/planks1_catalpa"
+    },
+    "type=top": {
+      "model": "got:block/planks1_catalpa_slab_top"
+    }
+  }
+}

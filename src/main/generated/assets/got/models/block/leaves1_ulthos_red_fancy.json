@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "got:block/leaves1_ulthos_red_fancy"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "edge": "got:block/stained_glass_pane_lime_top",
+    "pane": "got:block/stained_glass_lime"
+  }
+}
