@@ -2,11 +2,8 @@ package net.isaac.got.common.data;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.isaac.got.common.data.GOTLootTableGenerator;
-import net.isaac.got.common.data.GOTModelProvider;
-import net.isaac.got.common.data.GOTRecipeGenerator;
-import net.isaac.got.common.world.GOTConfiguredFeatures;
-import net.isaac.got.common.world.GOTPlacedFeatures;
+import net.isaac.got.common.world.features.configuredfeatures.GOTConfiguredFeatures;
+import net.isaac.got.common.world.features.placedfeatures.GOTPlacedFeatures;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 

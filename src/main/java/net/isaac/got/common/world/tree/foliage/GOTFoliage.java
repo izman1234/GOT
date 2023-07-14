@@ -28,6 +28,8 @@ public class GOTFoliage {
     public static final FoliagePlacerType<KanukaFoliagePlacer> KANUKA_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:kanuka_foliage_placer", KanukaFoliagePlacer.CODEC);
     public static final FoliagePlacerType<GiantPartyFoliagePlacer> GIANT_PARTY_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:giant_party_foliage_placer", GiantPartyFoliagePlacer.CODEC);
     public static final FoliagePlacerType<MassiveFoliagePlacer> MASSIVE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:massive_foliage_placer", MassiveFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<DesertTreeFoliagePlacer> DESERT_TREE_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:desert_tree_foliage_placer", DesertTreeFoliagePlacer.CODEC);
+    public static final FoliagePlacerType<CatalpaBoughsFoliagePlacer> CATALPA_BOUGHS_FOLIAGE_PLACER = FoliagePlacerTypeInvoker.callRegister("got:catalpa_boughs_foliage_placer", CatalpaBoughsFoliagePlacer.CODEC);
 
 
 

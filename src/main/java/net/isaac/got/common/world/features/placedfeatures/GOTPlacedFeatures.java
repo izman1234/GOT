@@ -1,7 +1,9 @@
-package net.isaac.got.common.world;
+package net.isaac.got.common.world.features.placedfeatures;
 
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.common.world.features.configuredfeatures.GOTConfiguredFeatures;
+import net.isaac.got.common.world.features.configuredfeatures.TreeConfigFeatures;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -18,7 +20,7 @@ public class GOTPlacedFeatures { //for world gen
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        register(context, FIR_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(GOTConfiguredFeatures.FIR_KEY),
+        register(context, FIR_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(TreeConfigFeatures.FIR_KEY),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2), GOTBlocks.Fir_Sapling));
     }
 

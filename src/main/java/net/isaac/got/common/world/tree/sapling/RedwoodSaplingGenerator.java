@@ -1,8 +1,8 @@
 package net.isaac.got.common.world.tree.sapling;
 
-import net.isaac.got.common.world.GOTConfiguredFeatures;
+import net.isaac.got.common.world.features.configuredfeatures.GOTConfiguredFeatures;
+import net.isaac.got.common.world.features.configuredfeatures.TreeConfigFeatures;
 import net.minecraft.block.sapling.LargeTreeSaplingGenerator;
-import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -12,11 +12,11 @@ public class RedwoodSaplingGenerator extends LargeTreeSaplingGenerator {
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return GOTConfiguredFeatures.REDWOOD_KEY;
+        return TreeConfigFeatures.REDWOOD_KEY;
     }
 
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getLargeTreeFeature(Random random) {
-        return GOTConfiguredFeatures.GIANT_REDWOOD_KEY;
+        return TreeConfigFeatures.GIANT_REDWOOD_KEY;
     }
 }

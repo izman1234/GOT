@@ -1,4 +1,4 @@
-package net.isaac.got.common.world;
+package net.isaac.got.common.world.features.configuredfeatures;
 
 import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
@@ -7,7 +7,6 @@ import net.isaac.got.common.world.tree.decorator.DatePalmDecorator;
 import net.isaac.got.common.world.tree.foliage.*;
 import net.isaac.got.common.world.tree.trunk.*;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
@@ -18,7 +17,10 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.ConfiguredFeature;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.FeatureConfig;
+import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.LargeOakFoliagePlacer;
@@ -34,7 +36,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class GOTConfiguredFeatures { //for how the feature looks
+public class TreeConfigFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CATALPA_KEY = registerKey("catalpa_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> IBBINIA_KEY = registerKey("ibbinia_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> ULTHOS_KEY = registerKey("ulthos_tree");
@@ -90,27 +92,18 @@ public class GOTConfiguredFeatures { //for how the feature looks
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIG_MAPLE_KEY = registerKey("big_maple_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BIG_CHESTNUT_KEY = registerKey("big_chestnut_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> OAK_GIANT_KEY = registerKey("oak_giant_tree");
-    /*
-    OAK_DEAD: GOTWorldGenDeadTrees
-    BIRCH_DEAD: GOTWorldGenDeadTrees
-    SPRUCE_DEAD: GOTWorldGenDeadTrees
-    ACACIA_DEAD: GOTWorldGenDeadTrees
-    BEECH_DEAD: GOTWorldGenDeadTrees
-    ULTHOS_OAK_DEAD: GOTWorldGenDeadTrees or setDead
+    public static final RegistryKey<ConfiguredFeature<?, ?>> OAK_DEAD_KEY = registerKey("oak_dead_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BIRCH_DEAD_KEY = registerKey("birch_dead_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> SPRUCE_DEAD_KEY = registerKey("spruce_dead_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ACACIA_DEAD_KEY = registerKey("acacia_dead_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BEECH_DEAD_KEY = registerKey("beech_dead_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ULTHOS_DEAD_KEY = registerKey("ulthos_dead_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> OAK_DESERT_KEY = registerKey("oak_desert_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CATALPA_BOUGHS_KEY = registerKey("catalpa_boughs_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CHARRED_KEY = registerKey("charred_tree");
 
-    OAK_DESERT: GOTWorldGenDesertTrees
-
-    CATALPA_BOUGHS GOTWorldGenCatalpa
-
-    CHARRED: GOTWorldGenCharredTrees
-    */
-
-
-
-    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+    public static void registerTree(Registerable<ConfiguredFeature<?, ?>> context) {
         RegistryEntryLookup<Block> registryEntryLookup = context.getRegistryLookup(RegistryKeys.BLOCK);
-
-        //TREES
 
         register(context, CATALPA_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(GOTBlocks.Catalpa_Wood),
@@ -250,7 +243,7 @@ public class GOTConfiguredFeatures { //for how the feature looks
                 BlockStateProvider.of(GOTBlocks.Lime_Wood),
                 new StraightTrunkPlacer(5, 3, 3),
                 BlockStateProvider.of(GOTBlocks.Lime_Leaves),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3), //2 0 3
                 new TwoLayersFeatureSize(1, 0, 1)).build());
 
         register(context, ORANGE_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
@@ -497,6 +490,69 @@ public class GOTConfiguredFeatures { //for how the feature looks
                 new MassiveTrunkPlacer(3, 11, 0),
                 BlockStateProvider.of(Blocks.OAK_LEAVES),
                 new MassiveFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), ConstantIntProvider.create(4)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, OAK_DEAD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.OAK_LOG),
+                new DeadTreeTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(Blocks.OAK_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, BIRCH_DEAD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.BIRCH_LOG),
+                new DeadTreeTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(Blocks.BIRCH_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, SPRUCE_DEAD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.SPRUCE_LOG),
+                new DeadTreeTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(Blocks.SPRUCE_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, ACACIA_DEAD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.ACACIA_LOG),
+                new DeadTreeTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(Blocks.ACACIA_LEAVES),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, BEECH_DEAD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Beech_Wood),
+                new DeadTreeTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(GOTBlocks.Beech_Leaves),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, ULTHOS_DEAD_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Ulthos_Wood),
+                new UlthosTrunkPlacer(6, 5, 3),
+                BlockStateProvider.of(GOTBlocks.Ulthos_Leaves),
+                new BlobFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 0),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
+        register(context, OAK_DESERT_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(Blocks.OAK_LOG),
+                new DesertTreeTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(Blocks.OAK_LEAVES),
+                new DesertTreeFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, CATALPA_BOUGHS_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Catalpa_Wood),
+                new CatalpaBoughsTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(GOTBlocks.Catalpa_Leaves),
+                new CatalpaBoughsFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), ConstantIntProvider.create(1)),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
+
+        register(context, CHARRED_KEY, Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(GOTBlocks.Charred_Wood),
+                new CharredTrunkPlacer(5, 3, 3),
+                BlockStateProvider.of(GOTBlocks.Catalpa_Leaves),
+                new BlobFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), 1),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
     }
 

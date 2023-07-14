@@ -1,6 +1,7 @@
 package net.isaac.got.common.world.tree.sapling;
 
-import net.isaac.got.common.world.GOTConfiguredFeatures;
+import net.isaac.got.common.world.features.configuredfeatures.GOTConfiguredFeatures;
+import net.isaac.got.common.world.features.configuredfeatures.TreeConfigFeatures;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.math.random.Random;
@@ -11,6 +12,6 @@ public class DragonSaplingGenerator extends SaplingGenerator {
     @Nullable
     @Override
     protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-        return GOTConfiguredFeatures.DRAGON_KEY;
+        return TreeConfigFeatures.DRAGON_KEY;
     }
 }

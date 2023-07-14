@@ -16,6 +16,11 @@ public class GOTTrunks {
     public static final TrunkPlacerType<KanukaTrunkPlacer> KANUKA_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:kanuka_trunk_placer", KanukaTrunkPlacer.CODEC);
     public static final TrunkPlacerType<GiantPartyTrunkPlacer> GIANT_PARTY_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:giant_party_trunk_placer", GiantPartyTrunkPlacer.CODEC);
     public static final TrunkPlacerType<MassiveTrunkPlacer> MASSIVE_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:massive_trunk_placer", MassiveTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<DeadTreeTrunkPlacer> DEAD_TREE_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:dead_tree_trunk_placer", DeadTreeTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<DesertTreeTrunkPlacer> DESERT_TREE_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:desert_tree_trunk_placer", DesertTreeTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<CatalpaBoughsTrunkPlacer> CATALPA_BOUGHS_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:catalpa_boughs_trunk_placer", CatalpaBoughsTrunkPlacer.CODEC);
+    public static final TrunkPlacerType<CharredTrunkPlacer> CHARRED_TRUNK_PLACER = TrunkPlacerTypeInvoker.callRegister("got:charred_trunk_placer", CharredTrunkPlacer.CODEC);
+
 
 
     public static void register() {

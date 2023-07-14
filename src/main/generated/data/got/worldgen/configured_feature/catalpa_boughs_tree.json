@@ -9,7 +9,7 @@
       }
     },
     "foliage_placer": {
-      "type": "got:giant_party_foliage_placer",
+      "type": "got:catalpa_boughs_foliage_placer",
       "foliage_height": 1,
       "offset": 0,
       "radius": 1
@@ -17,7 +17,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "got:leaves9_weirwood_fancy",
+        "Name": "got:leaves1_catalpa_fancy",
         "Properties": {
           "distance": "7",
           "persistent": "false",
@@ -31,18 +31,18 @@
       "type": "minecraft:two_layers_feature_size",
       "limit": 1,
       "lower_size": 0,
-      "upper_size": 2
+      "upper_size": 1
     },
     "trunk_placer": {
-      "type": "got:giant_party_trunk_placer",
-      "base_height": 6,
-      "height_rand_a": 4,
-      "height_rand_b": 4
+      "type": "got:catalpa_boughs_trunk_placer",
+      "base_height": 5,
+      "height_rand_a": 3,
+      "height_rand_b": 3
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "got:wood9_weirwood",
+        "Name": "got:wood1_catalpa",
         "Properties": {
           "axis": "y"
         }
