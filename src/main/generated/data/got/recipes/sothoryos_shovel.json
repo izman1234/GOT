@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "/": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "got:obsidian_shard"
+    }
+  },
+  "pattern": [
+    "X",
+    "/",
+    "/"
+  ],
+  "result": {
+    "item": "got:sothoryos_shovel"
+  },
+  "show_notification": true
+}
