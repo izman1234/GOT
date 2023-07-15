@@ -12,6 +12,7 @@ import net.isaac.got.common.world.dimension.GOTDimensions;
 import net.isaac.got.common.world.tree.decorator.GOTDecorator;
 import net.isaac.got.common.world.tree.foliage.GOTFoliage;
 import net.isaac.got.common.world.tree.trunk.GOTTrunks;
+import net.isaac.got.util.GOTModelPredicateProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

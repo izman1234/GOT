@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "got:item/essos_bow"
+    "layer0": "got:item/tyene_dagger"
   }
 }

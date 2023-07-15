@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.util.GOTModelPredicateProvider;
 import net.minecraft.client.render.RenderLayer;
 
 public class GOTClient implements ClientModInitializer {
@@ -315,6 +316,8 @@ public class GOTClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Pink, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_White, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Yellow, RenderLayer.getCutout());
+
+        GOTModelPredicateProvider.registerModelModels();
 
     }
 }

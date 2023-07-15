@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "got:item/large-2x/nomad_bow_pulling_2"
+    }
+}

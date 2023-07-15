@@ -16,6 +16,8 @@ public class GOTOther {
             new Item(new FabricItemSettings()));
     public static final Item Bronze_Ingot = registerItem("bronze_ingot",
             new Item(new FabricItemSettings()));
+    public static final Item Ice_Shard = registerItem("ice_shard",
+            new Item(new FabricItemSettings()));
     public static final Item Silver_Ingot = registerItem("silver_ingot",
             new Item(new FabricItemSettings()));
     public static final Item Tin_Ingot = registerItem("tin_ingot",
