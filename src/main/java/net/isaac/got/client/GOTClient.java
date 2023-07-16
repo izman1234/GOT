@@ -2,14 +2,33 @@ package net.isaac.got.client;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.isaac.got.GOT;
 import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.common.item.weapon.GOTItemSpear;
+import net.isaac.got.common.item.weapon.GOTWeapons;
 import net.isaac.got.util.GOTModelPredicateProvider;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
+import net.minecraft.client.render.entity.model.EntityModelLayers;
+import net.minecraft.client.util.ModelIdentifier;
+import net.minecraft.registry.Registries;
+import net.minecraft.resource.ResourceType;
+import net.minecraft.util.Identifier;
+
+import java.rmi.registry.Registry;
 
 public class GOTClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
+        //EntityRendererRegistry.register(GOT.GOT_ENTITY_SPEAR_TYPE, GOTSpearRenderer::new);
+
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Arid_Grass, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Asshai_Bars, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Asshai_Flower, RenderLayer.getCutout());

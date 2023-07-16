@@ -1,14 +1,27 @@
 package net.isaac.got.common.item.weapon;
 
+import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.isaac.got.GOT;
 import net.isaac.got.common.item.GOTToolMaterials;
+import net.isaac.got.common.item.weapon.GOTEntities.GOTEntitySpear;
+import net.isaac.got.common.item.weapon.GOTEntities.GOTEntityTypes;
+import net.minecraft.block.DispenserBlock;
+import net.minecraft.block.dispenser.ProjectileDispenserBehavior;
+import net.minecraft.entity.projectile.ProjectileEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.math.Position;
+import net.minecraft.world.World;
+
+import java.util.Objects;
+import java.util.Set;
 
 public class GOTWeapons {
+    public static final Set<GOTItemSpear> ALL_SPEARS = new ReferenceOpenHashSet<>();
+
     /* LEGENDARY WEAPONS */
     public static final Item Areo_Hotah_Axe = registerItem("areo_hotah_axe",
             new GOTItemSword(ToolMaterials.DIAMOND, 6, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
@@ -75,7 +88,7 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Oathkeeper = registerItem("oathkeeper",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Obara_Spear = registerItem("obara_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Obara_Spear = registerItem("obara_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Orphan_Maker = registerItem("orphan_maker",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Pruner = registerItem("pruner",
@@ -92,7 +105,7 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Strickland_Sword = registerItem("strickland_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Sunspear = registerItem("sunspear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Sunspear = registerItem("sunspear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Tidewings = registerItem("tidewings",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Tormund_Sword = registerItem("tormund_sword",
@@ -134,7 +147,7 @@ public class GOTWeapons {
             new GOTItemDagger(ToolMaterials.IRON, 3, -2.0f, GOTItemSword.HitEffect.POISON, new FabricItemSettings()));
     public static final Item Asshai_Hammer = registerItem("asshai_hammer",
             new GOTItemSword(ToolMaterials.IRON, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Asshai_Spear = registerItem("asshai_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    public static final Item Asshai_Spear = registerSpear("asshai_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.ASSHAI_SPEAR), true);
     public static final Item Asshai_Staff = registerItem("asshai_staff",
             new GOTItemSword(ToolMaterials.IRON, 4, -2.1f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Asshai_Sword = registerItem("asshai_sword",
@@ -147,7 +160,7 @@ public class GOTWeapons {
             new GOTItemDagger(GOTToolMaterials.BRONZE, 3, -2.0f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Bronze_Dagger_Poisoned = registerItem("bronze_dagger_poisoned",
             new GOTItemDagger(GOTToolMaterials.BRONZE, 3, -2.0f, GOTItemSword.HitEffect.POISON, new FabricItemSettings()));
-    public static final Item Bronze_Spear = registerItem("bronze_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Bronze_Spear = registerSpear("bronze_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Bronze_Sword = registerItem("bronze_sword",
             new GOTItemSword(GOTToolMaterials.BRONZE, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Bronze_Throwing_Axe = registerItem("bronze_throwing_axe", new GOTItemThrowingAxe(new FabricItemSettings().maxDamage(250))); //FIX DMG
@@ -162,7 +175,7 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Essos_Polearm = registerItem("essos_polearm",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Essos_Spear = registerItem("essos_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Essos_Spear = registerSpear("essos_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Essos_Sword = registerItem("essos_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Ibben_Sword = registerItem("ibben_sword",
@@ -171,7 +184,7 @@ public class GOTWeapons {
             new GOTItemSword(GOTToolMaterials.ICESHARD, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Ice_Heavy_Sword = registerItem("ice_heavy_sword",
             new GOTItemSword(GOTToolMaterials.ICESHARD, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Ice_Spear = registerItem("ice_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Ice_Spear = registerSpear("ice_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Ice_Sword = registerItem("ice_sword",
             new GOTItemSword(GOTToolMaterials.ICESHARD, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Iron_Dagger = registerItem("iron_dagger",
@@ -180,7 +193,7 @@ public class GOTWeapons {
             new GOTItemDagger(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.POISON, new FabricItemSettings()));
     public static final Item Iron_Pike = registerItem("iron_pike",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Iron_Spear = registerItem("iron_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Iron_Spear = registerSpear("iron_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Iron_Throwing_Axe = registerItem("iron_throwing_axe", new GOTItemThrowingAxe(new FabricItemSettings().maxDamage(250)));
     public static final Item Katana = registerItem("katana",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
@@ -192,7 +205,7 @@ public class GOTWeapons {
             new GOTItemDagger(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Lhazar_Dagger_Poisoned = registerItem("lhazar_dagger_poisoned",
             new GOTItemDagger(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.POISON, new FabricItemSettings()));
-    public static final Item Lhazar_Spear = registerItem("lhazar_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Lhazar_Spear = registerSpear("lhazar_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Lhazar_Sword = registerItem("lhazar_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Mace = registerItem("mace",
@@ -202,7 +215,7 @@ public class GOTWeapons {
     public static final Item Nomad_Battleaxe = registerItem("nomad_battleaxe",
             new GOTItemSword(ToolMaterials.IRON, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Nomad_Bow = registerItem("nomad_bow", new GOTItemBow(new FabricItemSettings().maxDamage(200)));
-    public static final Item Nomad_Spear = registerItem("nomad_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Nomad_Spear = registerSpear("nomad_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Nomad_Sword = registerItem("nomad_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
 
@@ -223,17 +236,17 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Sothoryos_Pike = registerItem("sothoryos_pike",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Sothoryos_Spear = registerItem("sothoryos_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Sothoryos_Spear = registerItem("sothoryos_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Sothoryos_Sword = registerItem("sothoryos_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Stone_Spear = registerItem("stone_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Stone_Spear = registerSpear("stone_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Summer_Dagger = registerItem("summer_dagger",
             new GOTItemDagger(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Summer_Dagger_Poisoned = registerItem("summer_dagger_poisoned",
             new GOTItemDagger(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.POISON, new FabricItemSettings()));
     public static final Item Summer_Pike = registerItem("summer_pike",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Summer_Spear = registerItem("summer_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Summer_Spear = registerSpear("summer_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Summer_Sword = registerItem("summer_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Valyrian_Battleaxe = registerItem("valyrian_battleaxe",
@@ -249,7 +262,7 @@ public class GOTWeapons {
             new GOTItemSword(GOTToolMaterials.VALYRIANSTEEL, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Valyrian_Hammer = registerItem("valyrian_hammer",
             new GOTItemSword(GOTToolMaterials.VALYRIANSTEEL, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Valyrian_Spear = registerItem("valyrian_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Valyrian_Spear = registerItem("valyrian_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Valyrian_Sword = registerItem("valyrian_sword",
             new GOTItemSword(GOTToolMaterials.VALYRIANSTEEL, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Westeros_Bow = registerItem("westeros_bow", new GOTItemBow(new FabricItemSettings().maxDamage(200)));
@@ -267,7 +280,7 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Westeros_Pike = registerItem("westeros_pike",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Westeros_Spear = registerItem("westeros_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Westeros_Spear = registerSpear("westeros_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Westeros_Sword = registerItem("westeros_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Wildling_Battleaxe = registerItem("wildling_battleaxe",
@@ -280,7 +293,7 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 5, -3.2f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Wildling_Polearm = registerItem("wildling_polearm",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Wildling_Spear = registerItem("wildling_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Wildling_Spear = registerItem("wildling_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Wildling_Sword = registerItem("wildling_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Yiti_Battleaxe = registerItem("yiti_battleaxe",
@@ -294,13 +307,30 @@ public class GOTWeapons {
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
     public static final Item Yiti_Polearm = registerItem("yiti_polearm",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
-    public static final Item Yiti_Spear = registerItem("yiti_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250)));
+    //public static final Item Yiti_Spear = registerSpear("yiti_spear", new GOTItemSpear(new FabricItemSettings().maxDamage(250), GOTEntityTypes.SPEAR));
     public static final Item Yiti_Sword = registerItem("yiti_sword",
             new GOTItemSword(ToolMaterials.IRON, 3, -2.4f, GOTItemSword.HitEffect.NONE, new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(GOT.MOD_ID, name), item);
+    }
+
+    public static GOTItemSpear registerSpear(String name, GOTItemSpear item, boolean registerDispenserBehavior) {
+        Registry.register(Registries.ITEM, new Identifier(GOT.MOD_ID, name), item);
+        ALL_SPEARS.add(item);
+        if (registerDispenserBehavior) {
+            DispenserBlock.registerBehavior(item, new ProjectileDispenserBehavior() {
+                @Override
+                protected ProjectileEntity createProjectile(World world, Position position, ItemStack stack) {
+                    GOTEntitySpear tridentEntity = Objects.requireNonNull(item.getEntityType().create(world));
+                    tridentEntity.setPos(position.getX(), position.getY(), position.getZ());
+                    stack.decrement(1);
+                    return tridentEntity;
+                }
+            });
+        }
+        return item;
     }
 
     public static void registerModWeapons() {
