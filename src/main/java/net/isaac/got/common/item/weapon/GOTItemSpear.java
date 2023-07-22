@@ -1,6 +1,7 @@
 package net.isaac.got.common.item.weapon;
 
 import net.isaac.got.common.item.weapon.GOTEntities.GOTEntitySpear;
+import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -14,6 +15,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
+import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;

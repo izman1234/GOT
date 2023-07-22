@@ -57,7 +57,7 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Night_King_Sword);
                         entries.add(GOTWeapons.Nightfall);
                         entries.add(GOTWeapons.Oathkeeper);
-                        //entries.add(GOTWeapons.Obara_Spear);
+                        entries.add(GOTWeapons.Obara_Spear);
                         entries.add(GOTWeapons.Orphan_Maker);
                         entries.add(GOTWeapons.Pruner);
                         entries.add(GOTWeapons.Reminder);
@@ -66,7 +66,7 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Robert_Hammer);
                         entries.add(GOTWeapons.Sandor_Clegane_Sword);
                         entries.add(GOTWeapons.Strickland_Sword);
-                        //entries.add(GOTWeapons.Sunspear);
+                        entries.add(GOTWeapons.Sunspear);
                         entries.add(GOTWeapons.Tidewings);
                         entries.add(GOTWeapons.Truth);
                         entries.add(GOTWeapons.Trystane_Sword);
@@ -76,8 +76,6 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Victarion_Axe);
                         entries.add(GOTWeapons.Vigilance);
                         entries.add(GOTWeapons.Widow_Wail);
-
-
 
                         /* WEAPONS */
                         entries.add(GOTWeapons.Alloy_Steel_Dagger);
@@ -97,7 +95,7 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Bronze_Battleaxe);
                         entries.add(GOTWeapons.Bronze_Dagger);
                         entries.add(GOTWeapons.Bronze_Dagger_Poisoned);
-                        //entries.add(GOTWeapons.Bronze_Spear);
+                        entries.add(GOTWeapons.Bronze_Spear);
                         entries.add(GOTWeapons.Bronze_Sword);
                         entries.add(GOTWeapons.Bronze_Throwing_Axe);
                         entries.add(GOTWeapons.Essos_Bow);
@@ -106,30 +104,30 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Essos_Hammer);
                         entries.add(GOTWeapons.Essos_Pike);
                         entries.add(GOTWeapons.Essos_Polearm);
-                        //entries.add(GOTWeapons.Essos_Spear);
+                        entries.add(GOTWeapons.Essos_Spear);
                         entries.add(GOTWeapons.Essos_Sword);
                         entries.add(GOTWeapons.Ibben_Sword);
                         entries.add(GOTWeapons.Ice_Battleaxe);
                         entries.add(GOTWeapons.Ice_Heavy_Sword);
-                        //entries.add(GOTWeapons.Ice_Spear);
+                        entries.add(GOTWeapons.Ice_Spear);
                         entries.add(GOTWeapons.Ice_Sword);
                         entries.add(GOTWeapons.Iron_Dagger);
                         entries.add(GOTWeapons.Iron_Dagger_Poisoned);
                         entries.add(GOTWeapons.Iron_Pike);
-                        //entries.add(GOTWeapons.Iron_Spear);
+                        entries.add(GOTWeapons.Iron_Spear);
                         entries.add(GOTWeapons.Iron_Throwing_Axe);
                         entries.add(GOTWeapons.Katana);
                         entries.add(GOTWeapons.Lhazar_Battleaxe);
                         entries.add(GOTWeapons.Lhazar_Club);
                         entries.add(GOTWeapons.Lhazar_Dagger);
                         entries.add(GOTWeapons.Lhazar_Dagger_Poisoned);
-                        //entries.add(GOTWeapons.Lhazar_Spear);
+                        entries.add(GOTWeapons.Lhazar_Spear);
                         entries.add(GOTWeapons.Lhazar_Sword);
                         entries.add(GOTWeapons.Mace);
                         entries.add(GOTWeapons.Mossovy_Sword);
                         entries.add(GOTWeapons.Nomad_Battleaxe);
                         entries.add(GOTWeapons.Nomad_Bow);
-                        //entries.add(GOTWeapons.Nomad_Spear);
+                        entries.add(GOTWeapons.Nomad_Spear);
                         entries.add(GOTWeapons.Nomad_Sword);
                         entries.add(GOTWeapons.Skull_Staff);
                         entries.add(GOTWeapons.Sothoryos_Battleaxe);
@@ -137,20 +135,20 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Sothoryos_Dagger_Poisoned);
                         entries.add(GOTWeapons.Sothoryos_Hammer);
                         entries.add(GOTWeapons.Sothoryos_Pike);
-                        //entries.add(GOTWeapons.Sothoryos_Spear);
+                        entries.add(GOTWeapons.Sothoryos_Spear);
                         entries.add(GOTWeapons.Sothoryos_Sword);
-                        //entries.add(GOTWeapons.Stone_Spear);
+                        entries.add(GOTWeapons.Stone_Spear);
                         entries.add(GOTWeapons.Summer_Dagger);
                         entries.add(GOTWeapons.Summer_Dagger_Poisoned);
                         entries.add(GOTWeapons.Summer_Pike);
-                        //entries.add(GOTWeapons.Summer_Spear);
+                        entries.add(GOTWeapons.Summer_Spear);
                         entries.add(GOTWeapons.Summer_Sword);
                         entries.add(GOTWeapons.Valyrian_Battleaxe);
                         entries.add(GOTWeapons.Valyrian_Dagger);
                         entries.add(GOTWeapons.Valyrian_Dagger_Poisoned);
                         entries.add(GOTWeapons.Valyrian_Halberd);
                         entries.add(GOTWeapons.Valyrian_Hammer);
-                        //entries.add(GOTWeapons.Valyrian_Spear);
+                        entries.add(GOTWeapons.Valyrian_Spear);
                         entries.add(GOTWeapons.Valyrian_Sword);
                         entries.add(GOTWeapons.Westeros_Bow);
                         entries.add(GOTWeapons.Westeros_Dagger);
@@ -160,14 +158,14 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Westeros_Lance);
                         entries.add(GOTWeapons.Westeros_Longsword);
                         entries.add(GOTWeapons.Westeros_Pike);
-                        //entries.add(GOTWeapons.Westeros_Spear);
+                        entries.add(GOTWeapons.Westeros_Spear);
                         entries.add(GOTWeapons.Westeros_Sword);
                         entries.add(GOTWeapons.Wildling_Battleaxe);
                         entries.add(GOTWeapons.Wildling_Dagger);
                         entries.add(GOTWeapons.Wildling_Dagger_Poisoned);
                         entries.add(GOTWeapons.Wildling_Hammer);
                         entries.add(GOTWeapons.Wildling_Polearm);
-                        //entries.add(GOTWeapons.Wildling_Spear);
+                        entries.add(GOTWeapons.Wildling_Spear);
                         entries.add(GOTWeapons.Wildling_Sword);
                         entries.add(GOTWeapons.Yiti_Battleaxe);
                         entries.add(GOTWeapons.Yiti_Bow);
@@ -175,7 +173,7 @@ public class GOTGroups {
                         entries.add(GOTWeapons.Yiti_Dagger_Poisoned);
                         entries.add(GOTWeapons.Yiti_Pike);
                         entries.add(GOTWeapons.Yiti_Polearm);
-                        //entries.add(GOTWeapons.Yiti_Spear);
+                        entries.add(GOTWeapons.Yiti_Spear);
                         entries.add(GOTWeapons.Yiti_Sword);
 
 
