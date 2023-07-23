@@ -3,12 +3,16 @@ package net.isaac.got.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.isaac.got.common.block.GOTBlocks;
+import net.isaac.got.event.KeyInputHandler;
+import net.isaac.got.networking.GOTMessages;
 import net.minecraft.client.render.RenderLayer;
 
 public class GOTClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Arid_Grass, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Asshai_Bars, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Asshai_Flower, RenderLayer.getCutout());
@@ -315,6 +319,10 @@ public class GOTClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Pink, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_White, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Yellow, RenderLayer.getCutout());
+
+        KeyInputHandler.register();
+        HudRenderCallback.EVENT.register(new AlignmentHudOverlay());
+        GOTMessages.registerS2CPackets();
 
     }
 }

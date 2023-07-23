@@ -6,7 +6,8 @@
 		"ExampleMixin",
 		"FoliagePlacerTypeInvoker",
 		"TrunkPlacerTypeInvoker",
-		"TreeDecoratorTypeInvoker"
+		"TreeDecoratorTypeInvoker",
+		"GOTEntityDataSaverMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
