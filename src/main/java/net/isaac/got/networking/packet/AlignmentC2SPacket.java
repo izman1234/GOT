@@ -106,9 +106,11 @@ public class AlignmentC2SPacket {
 
     }
 
+    public static int amount; //amount for the increase function to increase/decrease by
+
     public static void increase(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                 PacketByteBuf buf, PacketSender responseSender) {
-        AlignmentData.increaseAlignment(((IEntityDataSaver) player), 1);
+        AlignmentData.increaseAlignment(((IEntityDataSaver) player), amount);
 
         AlignmentData.syncCurrentAlignments(((IEntityDataSaver) player).getAlignmentData().getIntArray("current_alignments"), player);
     }
