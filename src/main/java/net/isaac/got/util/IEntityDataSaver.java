@@ -1,11 +1,10 @@
 package net.isaac.got.util;
 
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtIntArray;
 
 public interface IEntityDataSaver {
-    NbtCompound getAlignmentWesterosData();
-    NbtCompound getAlignmentWEssosData();
-    NbtCompound getAlignmentEEssosData();
-    NbtCompound getAlignmentSouthData();
-    NbtCompound getCurrentArea();
+    NbtCompound getAlignmentData();
+
+
 }

@@ -2,6 +2,7 @@ package net.isaac.got.util;
 
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.isaac.got.mixin.GOTEntityDataSaverMixin;
 import net.isaac.got.networking.GOTMessages;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -9,6 +10,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 
 
 public class AlignmentData {
+
     public static int MaxFactionAmountW = 14;
     public static int MaxFactionAmountWE = 13;
     public static int MaxFactionAmountEE = 5;
@@ -19,23 +21,20 @@ public class AlignmentData {
         NbtCompound nbt;
         int currentFact;
         int max;
+        nbt = player.getAlignmentData();
         if(currentArea == 0) {
-            nbt = player.getAlignmentWesterosData();
             currentFact = nbt.getInt("alignment_westeros");
             max = MaxFactionAmountW;
         }
         else if(currentArea == 1) {
-            nbt = player.getAlignmentWEssosData();
             currentFact = nbt.getInt("alignment_w_essos");
             max = MaxFactionAmountWE;
         }
         else if(currentArea == 2) {
-            nbt = player.getAlignmentEEssosData();
             currentFact = nbt.getInt("alignment_e_essos");
             max = MaxFactionAmountEE;
         }
         else {
-            nbt = player.getAlignmentSouthData();
             currentFact = nbt.getInt("alignment_south");
             max = MaxFactionAmountS;
         }
@@ -73,7 +72,7 @@ public class AlignmentData {
     }
 
     public static int switchArea(IEntityDataSaver player, int direction) {
-        NbtCompound nbt = player.getCurrentArea();
+        NbtCompound nbt = player.getAlignmentData();
         int currentArea = nbt.getInt("alignment_current_area");
 
         if(currentArea + direction >= MaxAreaAmount) {
@@ -90,6 +89,37 @@ public class AlignmentData {
         syncAlignmentArea(currentArea, (ServerPlayerEntity) player);
         return currentArea;
 
+    }
+
+    public static int[] increaseAlignment (IEntityDataSaver player, int amount) {
+        NbtCompound nbt = player.getAlignmentData();
+        int currentArea = nbt.getInt("alignment_current_area");
+        int[] array = nbt.getIntArray("current_alignments").clone();
+        switch(currentArea) {
+            case 0: //Westeros
+                int westerosIndex = nbt.getInt("alignment_westeros");
+                array[westerosIndex] += amount;
+                nbt.putIntArray("current_alignments", array);
+                break;
+            case 1: //WEssos
+                int wessosIndex = nbt.getInt("alignment_w_essos");
+                array[MaxFactionAmountW + wessosIndex] += amount;
+                nbt.putIntArray("current_alignments", array);
+                break;
+            case 2: //EEssos
+                int eessosIndex = nbt.getInt("alignment_e_essos");
+                array[MaxFactionAmountW + MaxFactionAmountWE + eessosIndex] += amount;
+                nbt.putIntArray("current_alignments", array);
+                break;
+            case 3: //South
+                int southIndex = nbt.getInt("alignment_south");
+                array[MaxFactionAmountW + MaxFactionAmountWE + MaxFactionAmountEE + southIndex] += amount;
+                nbt.putIntArray("current_alignments", array);
+                break;
+        }
+
+        syncCurrentAlignments(array, (ServerPlayerEntity) player);
+        return array;
     }
 
     public static void syncAlignmentW(int alignmentIndex, ServerPlayerEntity player) {
@@ -121,5 +151,13 @@ public class AlignmentData {
         buffer.writeInt(alignmentIndex);
         ServerPlayNetworking.send(player, GOTMessages.ALIGNMENT_SYNC_AREA_ID, buffer);
     }
+
+    public static void syncCurrentAlignments(int[] currentAlignments, ServerPlayerEntity player) {
+        PacketByteBuf buffer = PacketByteBufs.create();
+        int[] array = currentAlignments.clone();
+        buffer.writeIntArray(array);
+        ServerPlayNetworking.send(player, GOTMessages.CURRENT_ALIGNMENTS_SYNC_ID, buffer);
+    }
+
 
 }

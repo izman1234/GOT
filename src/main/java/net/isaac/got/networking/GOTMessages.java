@@ -17,12 +17,15 @@ public class GOTMessages {
     public static final Identifier ALIGNMENT_SYNC_EE_ID = new Identifier(GOT.MOD_ID, "alignment_sync_ee");
     public static final Identifier ALIGNMENT_SYNC_S_ID = new Identifier(GOT.MOD_ID, "alignment_sync_s");
     public static final Identifier ALIGNMENT_SYNC_AREA_ID = new Identifier(GOT.MOD_ID, "alignment_sync_area");
+    public static final Identifier CURRENT_ALIGNMENTS_SYNC_ID = new Identifier(GOT.MOD_ID, "current_alignments_sync");
+    public static final Identifier CURRENT_ALIGNMENTS = new Identifier(GOT.MOD_ID, "current_alignments_increase");
 
     public static void registerC2SPackets() {
         ServerPlayNetworking.registerGlobalReceiver(ALIGNMENT_RIGHT_ID, AlignmentC2SPacket::right);
         ServerPlayNetworking.registerGlobalReceiver(ALIGNMENT_LEFT_ID, AlignmentC2SPacket::left);
         ServerPlayNetworking.registerGlobalReceiver(ALIGNMENT_UP_ID, AlignmentC2SPacket::up);
         ServerPlayNetworking.registerGlobalReceiver(ALIGNMENT_DOWN_ID, AlignmentC2SPacket::down);
+        ServerPlayNetworking.registerGlobalReceiver(CURRENT_ALIGNMENTS, AlignmentC2SPacket::increase);
     }
 
     public static void registerS2CPackets() {
@@ -31,5 +34,6 @@ public class GOTMessages {
         ClientPlayNetworking.registerGlobalReceiver(ALIGNMENT_SYNC_EE_ID, CurrentAlignmentSelectionSyncDataS2CPacket::e_essos);
         ClientPlayNetworking.registerGlobalReceiver(ALIGNMENT_SYNC_S_ID, CurrentAlignmentSelectionSyncDataS2CPacket::south);
         ClientPlayNetworking.registerGlobalReceiver(ALIGNMENT_SYNC_AREA_ID, CurrentAlignmentSelectionSyncDataS2CPacket::area);
+       ClientPlayNetworking.registerGlobalReceiver(CURRENT_ALIGNMENTS_SYNC_ID, CurrentAlignmentSelectionSyncDataS2CPacket::current_alignments);
     }
 }

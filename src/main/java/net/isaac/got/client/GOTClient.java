@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.isaac.got.common.block.GOTBlocks;
 import net.isaac.got.event.KeyInputHandler;
+import net.isaac.got.event.KillEntityHandler;
 import net.isaac.got.networking.GOTMessages;
 import net.minecraft.client.render.RenderLayer;
 
@@ -321,8 +322,9 @@ public class GOTClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(GOTBlocks.Yiti_Flower_Yellow, RenderLayer.getCutout());
 
         KeyInputHandler.register();
-        HudRenderCallback.EVENT.register(new AlignmentHudOverlay());
         GOTMessages.registerS2CPackets();
+
+        HudRenderCallback.EVENT.register(new AlignmentHudOverlay());
 
     }
 }

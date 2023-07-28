@@ -52,7 +52,6 @@ public class KeyInputHandler {
             else if(GOTMenuButton.wasPressed()) {
                 //OPEN/CLOSE Menu
                 client.setScreen(new GOTMenu());
-                //client.player.sendMessage(Text.literal("Good job. You pressed a non-working button :)"));
             }
         });
     }
