@@ -13,66 +13,69 @@ import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.client.gui.widget.TexturedButtonWidget;
 
 @Environment(EnvType.CLIENT)
 public class GOTMenu extends Screen {
+    private static final Identifier GOT_MENU_GUI = new Identifier(GOT.MOD_ID, "textures/gui/menu_icons.png");
     public GOTMenu() {
         super(Text.literal("GOT Menu"));
     }
-    private static final Text ADVANCEMENTS_TEXT = Text.translatable("gui.advancements");
-    private static final Identifier WINDOW_TEXTURE = new Identifier("textures/gui/advancements/window.png");
+    //private static final Text ADVANCEMENTS_TEXT = Text.translatable("gui.advancements");
+    //private static final Identifier WINDOW_TEXTURE = new Identifier("textures/gui/advancements/window.png");
 
-    public ButtonWidget achievements;
-    public ButtonWidget map;
-    public ButtonWidget factions;
-    public ButtonWidget localization;
-    public ButtonWidget fellowships;
-    public ButtonWidget titles;
-    public ButtonWidget attributes;
-    public ButtonWidget options;
+    public TexturedButtonWidget achievements;
+    public TexturedButtonWidget map;
+    public TexturedButtonWidget factions;
+    public TexturedButtonWidget localization;
+    public TexturedButtonWidget fellowships;
+    public TexturedButtonWidget titles;
+    public TexturedButtonWidget attributes;
+    public TexturedButtonWidget options;
 
     @Override
     public void init() {
-        achievements = ButtonWidget.builder(Text.literal("Achievements"), button -> {
-                    System.out.println("Achievements");
-                })
-                .dimensions(width / 2 - 205, 20, 200, 20)
-                .build();
-        map = ButtonWidget.builder(Text.literal("Map"), button -> {
-                    System.out.println("Map");
-                })
-                .dimensions(width / 2 + 5, 20, 200, 20)
-                .build();
-        factions = ButtonWidget.builder(Text.literal("Factions"), button -> {
-                    System.out.println("Factions");
-                })
-                .dimensions(width / 2 - 205, 50, 200, 20)
-                .build();
-        localization = ButtonWidget.builder(Text.literal("Localization"), button -> {
-                    System.out.println("Localization");
-                })
-                .dimensions(width / 2 + 5, 50, 200, 20)
-                .build();
-        fellowships = ButtonWidget.builder(Text.literal("Fellowships"), button -> {
-                    System.out.println("Fellowships");
-                })
-                .dimensions(width / 2 - 205, 80, 200, 20)
-                .build();
-        titles = ButtonWidget.builder(Text.literal("Titles"), button -> {
-                    System.out.println("Titles");
-                })
-                .dimensions(width / 2 + 5, 80, 200, 20)
-                .build();
-        attributes = ButtonWidget.builder(Text.literal("Attributes"), button -> {
-                    System.out.println("Attributes");
-                })
-                .dimensions(width / 2 - 205, 110, 200, 20)
-                .build();
-        options = ButtonWidget.builder(Text.literal("Options"), button -> {
-                    System.out.println("Options");
-                })
-                .dimensions(width / 2 + 5, 110, 200, 20)
-                .build();
+        int x = 0;
+        int y = 0;
+        if(client != null) {
+            int width = client.getWindow().getScaledWidth();
+            int height = client.getWindow().getScaledHeight();
+
+            x = width / 2;
+            y = height / 2;
+        }
+        achievements = new TexturedButtonWidget(x - 79, y - 37, 32, 32, 0, 64, 32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Achievements");
+        });
+        map = new TexturedButtonWidget(x - 37, y - 37, 32, 32, 0, 96, 32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Map");
+        });
+        factions = new TexturedButtonWidget(x + 5, y - 37, 32, 32, 0, 128, 32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Factions");
+        });
+        localization = new TexturedButtonWidget(x + 47, y - 37, 32, 32, 0, 0, 32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Localization");
+        });
+        fellowships = new TexturedButtonWidget(x - 79, y + 5, 32, 32, 0, 192, 32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Fellowships");
+        });
+        titles = new TexturedButtonWidget(x - 37, y + 5, 32, 32, 0, 224, -32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Titles");
+        });
+        attributes = new TexturedButtonWidget(x + 5, y + 5, 32, 32, 0, 160, 32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Attributes");
+        });
+        options = new TexturedButtonWidget(x + 47, y + 5, 32, 32, 0, 32, -32,
+                GOT_MENU_GUI, button -> {
+            System.out.println("Options");
+        });
 
         addDrawableChild(achievements);
         addDrawableChild(map);
