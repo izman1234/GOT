@@ -44,15 +44,15 @@ public class GOTMenu extends Screen {
             x = width / 2;
             y = height / 2;
         }
-        achievements = new TexturedButtonWidget(x - 79, y - 37, 32, 32, 0, 64, 32,
+        achievements = new TexturedButtonWidget(x - 79, y - 37, 32, 32, 64, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Achievements");
         });
-        map = new TexturedButtonWidget(x - 37, y - 37, 32, 32, 0, 96, 32,
+        map = new TexturedButtonWidget(x - 37, y - 37, 32, 32, 96, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Map");
         });
-        factions = new TexturedButtonWidget(x + 5, y - 37, 32, 32, 0, 128, 32,
+        factions = new TexturedButtonWidget(x + 5, y - 37, 32, 32, 128, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Factions");
         });
@@ -60,19 +60,19 @@ public class GOTMenu extends Screen {
                 GOT_MENU_GUI, button -> {
             System.out.println("Localization");
         });
-        fellowships = new TexturedButtonWidget(x - 79, y + 5, 32, 32, 0, 192, 32,
+        fellowships = new TexturedButtonWidget(x - 79, y + 5, 32, 32, 192, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Fellowships");
         });
-        titles = new TexturedButtonWidget(x - 37, y + 5, 32, 32, 0, 224, -32,
+        titles = new TexturedButtonWidget(x - 37, y + 5, 32, 32, 224, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Titles");
         });
-        attributes = new TexturedButtonWidget(x + 5, y + 5, 32, 32, 0, 160, 32,
+        attributes = new TexturedButtonWidget(x + 5, y + 5, 32, 32, 160, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Attributes");
         });
-        options = new TexturedButtonWidget(x + 47, y + 5, 32, 32, 0, 32, -32,
+        options = new TexturedButtonWidget(x + 47, y + 5, 32, 32, 32, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Options");
         });
