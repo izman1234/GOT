@@ -10,6 +10,29 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 
 public class AlignmentC2SPacket {
+    public static int setAmount; //FIX LATER
+
+    public static void set(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
+                    PacketByteBuf buf, PacketSender responseSender) {
+        int currentArea = ((IEntityDataSaver) player).getAlignmentData().getInt("alignment_current_area");
+
+        AlignmentData.setFaction(((IEntityDataSaver) player), setAmount, currentArea);
+        switch(currentArea) {
+            case 0:
+                AlignmentData.syncAlignmentW(((IEntityDataSaver) player).getAlignmentData().getInt("alignment_westeros"), player);
+                break;
+            case 1:
+                AlignmentData.syncAlignmentWE(((IEntityDataSaver) player).getAlignmentData().getInt("alignment_w_essos"), player);
+                break;
+            case 2:
+                AlignmentData.syncAlignmentEE(((IEntityDataSaver) player).getAlignmentData().getInt("alignment_e_essos"), player);
+                break;
+            case 3:
+                AlignmentData.syncAlignmentS(((IEntityDataSaver) player).getAlignmentData().getInt("alignment_south"), player);
+                break;
+        }
+    }
+
     public static void right(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                PacketByteBuf buf, PacketSender responseSender) {
         //ONLY ON SEVER SIDE
@@ -106,7 +129,7 @@ public class AlignmentC2SPacket {
 
     }
 
-    public static int amount; //amount for the increase function to increase/decrease by
+    public static int amount; //FIX LATER
 
     public static void increase(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                 PacketByteBuf buf, PacketSender responseSender) {

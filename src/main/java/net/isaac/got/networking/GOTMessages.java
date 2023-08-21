@@ -12,6 +12,7 @@ public class GOTMessages {
     public static final Identifier ALIGNMENT_LEFT_ID = new Identifier(GOT.MOD_ID, "alignment_left");
     public static final Identifier ALIGNMENT_UP_ID = new Identifier(GOT.MOD_ID, "alignment_up");
     public static final Identifier ALIGNMENT_DOWN_ID = new Identifier(GOT.MOD_ID, "alignment_down");
+    public static final Identifier SET_FACTION_ID = new Identifier(GOT.MOD_ID, "set_faction");
     public static final Identifier ALIGNMENT_SYNC_W_ID = new Identifier(GOT.MOD_ID, "alignment_sync_w");
     public static final Identifier ALIGNMENT_SYNC_WE_ID = new Identifier(GOT.MOD_ID, "alignment_sync_we");
     public static final Identifier ALIGNMENT_SYNC_EE_ID = new Identifier(GOT.MOD_ID, "alignment_sync_ee");
@@ -26,6 +27,7 @@ public class GOTMessages {
         ServerPlayNetworking.registerGlobalReceiver(ALIGNMENT_UP_ID, AlignmentC2SPacket::up);
         ServerPlayNetworking.registerGlobalReceiver(ALIGNMENT_DOWN_ID, AlignmentC2SPacket::down);
         ServerPlayNetworking.registerGlobalReceiver(CURRENT_ALIGNMENTS, AlignmentC2SPacket::increase);
+        ServerPlayNetworking.registerGlobalReceiver(SET_FACTION_ID, AlignmentC2SPacket::set);
     }
 
     public static void registerS2CPackets() {

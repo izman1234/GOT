@@ -4,6 +4,16 @@ import java.awt.*;
 
 public class GOTFactions {
 
+    public static String[][] WesterosFriends = {{""}, {""}, {"", ""}, {"", "", ""}, {""}, {"", "", ""}, {"", ""}, {"", ""}, {"", ""}, {""}, {"", ""}, {""}, {""}, {""}};
+    public static String[][] WEssosFriends = {{"", "", ""}, {""}, {""}, {"", "", ""}, {"", "", ""}, {""}, {""}, {"", "", ""}, {""}, {"", "", ""}, {"", "", ""}, {""}, {""}};
+    public static String[][] EEssosFriends = {{"", ""}, {""}, {""}, {"", ""}, {"", "", ""}};
+    public static String[][] SouthFriends = { {""}, {"", "", ""}, {""}};
+
+    public static String[][] WesterosEnemies;
+    public static String[][] WEssosEnemies;
+    public static String[][] EEssosEnemies;
+    public static String[][] SouthEnemies;
+
     public static String[] WesterosfactionName = {"White Walkers", "Wildlings", "Night's Watch", "North", "Iron Islands",
             "Westerlands", "Riverlands", "Hill-Tribes", "Arryn Vale", "Dragonstone", "Crownlands", "Stormlands", "Reach", "Dorne"};
     public static float[] WesterosfactionRed = {141.0F, 116.0F, 42.0F, 212.0F, 75.0F, 124.0F, 20.0F, 87.0F, 45.0F, 106.0F, 219.0F, 1.0F, 97.0F, 245.0F};
@@ -26,53 +36,73 @@ public class GOTFactions {
     public static float[] SouthfactionGreen = {106.0F, 26.0F, 58.0F};
     public static float[] SouthfactionBlue = {24.0F, 23.0F, 44.0F};
 
-    /*
-    WHITE_WALKER(0x8ddaf8, DimensionRegion.WESTEROS, new GOTMapRegion(550, 550, 500)),
-    WILDLING(0x749987, DimensionRegion.WESTEROS, new GOTMapRegion(615, 520, 200)),
-    NIGHT_WATCH(0x2A2A2A, DimensionRegion.WESTEROS, new GOTMapRegion(750, 670, 150)),
-    NORTH(0xD4CFB7, DimensionRegion.WESTEROS, new GOTMapRegion(670, 930, 400)),
-    IRONBORN(0x4b483a, DimensionRegion.WESTEROS, new GOTMapRegion(349, 1323, 129)),
-    WESTERLANDS(0x7c0a02, DimensionRegion.WESTEROS, new GOTMapRegion(485, 1540, 200)),
-    RIVERLANDS(0x146f69, DimensionRegion.WESTEROS, new GOTMapRegion(675, 1437, 215)),
-    HILL_TRIBES(0x573C2F, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)),
-    ARRYN(0x2D3257, DimensionRegion.WESTEROS, new GOTMapRegion(842, 1329, 176)),
-    DRAGONSTONE(0x6A6A6A, DimensionRegion.WESTEROS, new GOTMapRegion(923, 1549, 40)),
-    CROWNLANDS(0xDBAB25, DimensionRegion.WESTEROS, new GOTMapRegion(876, 1566, 168)),
-    STORMLANDS(0x014634, DimensionRegion.WESTEROS, new GOTMapRegion(820, 1865, 218)),
-    REACH(0x617646, DimensionRegion.WESTEROS, new GOTMapRegion(500, 1820, 293)),
-    DORNE(0xF57820, DimensionRegion.WESTEROS, new GOTMapRegion(717, 2011, 300)),
+    public static void initFriends() {
+        WesterosFriends[0][0] = "• No one";
+        WesterosFriends[1][0] = "• Ibben";
+        WesterosFriends[2][0] = "• North";
+        WesterosFriends[2][1] = "• Dragonstone";
+        WesterosFriends[3][0] = "• Night's Watch";
+        WesterosFriends[3][1] = "• Riverlands";
+        WesterosFriends[3][2] = "• Arryn Vale";
+        WesterosFriends[4][0] = "• Westerlands";
+        WesterosFriends[5][0] = "• Crownlands";
+        WesterosFriends[5][1] = "• Iron Islands";
+        WesterosFriends[5][2] = "• Hill-Tribes";
+        WesterosFriends[6][0] = "• North";
+        WesterosFriends[6][1] = "• Arryn Vale";
+        WesterosFriends[7][0] = "• Westerlands";
+        WesterosFriends[7][1] = "• Crownlands";
+        WesterosFriends[8][0] = "• North";
+        WesterosFriends[8][1] = "• Riverlands";
+        WesterosFriends[9][0] = "• Night's Watch";
+        WesterosFriends[10][0] = "• Westerlands";
+        WesterosFriends[10][1] = "• Hill-Tribes";
+        WesterosFriends[11][0] = "• Reach";
+        WesterosFriends[12][0] = "• Stormlands";
+        WesterosFriends[13][0] = "• Summer Islands";
 
-    BRAAVOS(0x4A0C0C, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1221, 1351, 137)),
-    VOLANTIS(0x4C3A5F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1553, 1928, 210)),
-    PENTOS(0x13425F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1234, 1566, 172)),
-    NORVOS(0x2D4D2F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1437, 1468, 201)),
-    LORATH(0xE5E5E5, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1379, 1354, 119)),
-    MYR(0x3F3F3F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1325, 1797, 223)),
-    LYS(0x3D3023, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1204, 2053, 65)),
-    QOHOR(0x053246, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1590, 1594, 214)),
-    TYROSH(0x2E2E2E, DimensionRegion.WEST_ESSOS, new GOTMapRegion(1110, 1876, 52)),
-    GHISCAR(0xAB7731, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2115, 2180, 347)),
-    QARTH(0x701010, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2750, 2277, 221)),
-    LHAZAR(0x9E4B1E, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2510, 1910, 175)),
-    DOTHRAKI(0x77551F, DimensionRegion.WEST_ESSOS, new GOTMapRegion(2270, 1670, 600)),
+        WEssosFriends[0][0] = "• Norvos";
+        WEssosFriends[0][1] = "• Lorath";
+        WEssosFriends[0][2] = "• Qohor";
+        WEssosFriends[1][0] = "• Ghiscar";
+        WEssosFriends[2][0] = "• Myr";
+        WEssosFriends[3][0] = "• Braavos";
+        WEssosFriends[3][1] = "• Lorath";
+        WEssosFriends[3][2] = "• Qohor";
+        WEssosFriends[4][0] = "• Braavos";
+        WEssosFriends[4][1] = "• Norvos";
+        WEssosFriends[4][2] = "• Qohor";
+        WEssosFriends[5][0] = "• Pentos";
+        WEssosFriends[6][0] = "• Summer Islands";
+        WEssosFriends[7][0] = "• Braavos";
+        WEssosFriends[7][1] = "• Norvos";
+        WEssosFriends[7][2] = "• Lorath";
+        WEssosFriends[8][0] = "• Summer Islands";
+        WEssosFriends[9][0] = "• Volantis";
+        WEssosFriends[9][1] = "• Qarth";
+        WEssosFriends[9][2] = "• Lhazar";
+        WEssosFriends[10][0] = "• Ghiscar";
+        WEssosFriends[10][1] = "• Yi Ti";
+        WEssosFriends[10][2] = "• Asshai";
+        WEssosFriends[11][0] = "• Ghiscar";
+        WEssosFriends[12][0] = "• Jogos Nhai";
 
-    IBBEN(0x4E3A26, DimensionRegion.EAST_ESSOS, new GOTMapRegion(2761, 1052, 252)),
-    JOGOS(0x985916, DimensionRegion.EAST_ESSOS, new GOTMapRegion(3369, 1651, 460)),
-    MOSSOVY(0x4B5C42, DimensionRegion.EAST_ESSOS, new GOTMapRegion(4056, 1480, 400)),
-    YI_TI(0xC29033, DimensionRegion.EAST_ESSOS, new GOTMapRegion(3350, 2200, 350)),
-    ASSHAI(0x3C353F, DimensionRegion.EAST_ESSOS, new GOTMapRegion(4098, 2331, 644)),
+        EEssosFriends[0][0] = "• Wildlings";
+        WEssosFriends[0][1] = "• Mossovy";
+        EEssosFriends[1][0] = "• Dothraki";
+        EEssosFriends[2][0] = "• Ibben";
+        EEssosFriends[3][0] = "• Qarth";
+        EEssosFriends[3][1] = "• Asshai";
+        EEssosFriends[4][0] = "• Qarth";
+        EEssosFriends[4][1] = "• Yi Ti";
+        EEssosFriends[4][2] = "• Ulthos";
 
-    SOTHORYOS(0x5E6A18, DimensionRegion.OTHER, new GOTMapRegion(2375, 3540, 1084)),
-    SUMMER_ISLANDS(0x911A17, DimensionRegion.OTHER, new GOTMapRegion(1228, 2716, 310)),
-    ULTHOS(0x343A2C, DimensionRegion.OTHER, new GOTMapRegion(4100, 3517, 1109)),
-    */
+        SouthFriends[0][0] = "• No one";
+        SouthFriends[1][0] = "• Dorne";
+        SouthFriends[1][1] = "• Lys";
+        SouthFriends[1][2] = "• Tyrosh";
+        SouthFriends[2][0] = "• Ulthos";
 
-    public Color factionColor;
-    public boolean allowPlayer;
-    public boolean approvesWarCrimes;
-    public boolean hasFixedAlignment;
-    public int fixedAlignment;
-
-    /* ADD CONSTRUCTORS */
+    }
 
 }

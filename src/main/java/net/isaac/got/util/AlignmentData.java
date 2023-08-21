@@ -71,6 +71,38 @@ public class AlignmentData {
 
     }
 
+    public static int setFaction(IEntityDataSaver player, int faction, int currentArea) {
+        NbtCompound nbt;
+        nbt = player.getAlignmentData();
+
+        if(currentArea == 0) {
+            if(faction < AlignmentData.MaxFactionAmountW) {
+                nbt.putInt("alignment_westeros", faction);
+                syncAlignmentW(faction, (ServerPlayerEntity) player);
+            }
+        }
+        else if(currentArea == 1) {
+            if(faction < AlignmentData.MaxFactionAmountWE) {
+                nbt.putInt("alignment_w_essos", faction);
+                syncAlignmentWE(faction, (ServerPlayerEntity) player);
+            }
+        }
+        else if(currentArea == 2) {
+            if(faction < AlignmentData.MaxFactionAmountEE) {
+                nbt.putInt("alignment_e_essos", faction);
+                syncAlignmentEE(faction, (ServerPlayerEntity) player);
+            }
+        }
+        else {
+            if(faction < AlignmentData.MaxFactionAmountS) {
+                nbt.putInt("alignment_south", faction);
+                syncAlignmentS(faction, (ServerPlayerEntity) player);
+            }
+        }
+
+        return faction;
+    }
+
     public static int switchArea(IEntityDataSaver player, int direction) {
         NbtCompound nbt = player.getAlignmentData();
         int currentArea = nbt.getInt("alignment_current_area");

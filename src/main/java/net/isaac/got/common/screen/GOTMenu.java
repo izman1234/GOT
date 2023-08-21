@@ -55,6 +55,7 @@ public class GOTMenu extends Screen {
         factions = new TexturedButtonWidget(x + 5, y - 37, 32, 32, 128, 0, 32,
                 GOT_MENU_GUI, button -> {
             System.out.println("Factions");
+            client.setScreen(new Factions(this));
         });
         localization = new TexturedButtonWidget(x + 47, y - 37, 32, 32, 0, 0, 32,
                 GOT_MENU_GUI, button -> {
@@ -86,38 +87,6 @@ public class GOTMenu extends Screen {
         addDrawableChild(attributes);
         addDrawableChild(options);
     }
-
-    /*@Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (this.client.options.advancementsKey.matchesKey(keyCode, scanCode)) {
-            this.client.setScreen(null);
-            this.client.mouse.lockCursor();
-            return true;
-        }
-        return super.keyPressed(keyCode, scanCode, modifiers);
-    }
-
-    @Override
-    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        int i = (this.width - 252) / 2;
-        int j = (this.height - 140) / 2;
-        this.renderBackground(context);
-        this.drawWindow(context, i, j);
-    }
-
-    public void drawWindow(DrawContext context, int x, int y) {
-        RenderSystem.enableBlend();
-        context.drawTexture(WINDOW_TEXTURE, x, y, 0, 0, 252, 140);
-        /*if (this.tabs.size() > 1) {
-            for (AdvancementTab advancementTab : this.tabs.values()) {
-                advancementTab.drawBackground(context, x, y, advancementTab == this.selectedTab);
-            }
-            for (AdvancementTab advancementTab : this.tabs.values()) {
-                advancementTab.drawIcon(context, x, y);
-            }
-        }*/
-        //context.drawText(this.textRenderer, ADVANCEMENTS_TEXT, x + 8, y + 6, 0x404040, false);
-    //}
 
 
 }
