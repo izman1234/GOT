@@ -21,6 +21,7 @@ import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.TexturedButtonWidget;
 import net.minecraft.client.render.GameRenderer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -394,7 +395,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (17.0F * ((float)i - 1.0F));
                     xright = xleft + 17.0F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
-                        AlignmentC2SPacket.setAmount = i - 1;
+                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
 
                     }
@@ -405,7 +407,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (18.3F * ((float)i - 1.0F));
                     xright = xleft + 18.3F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
-                        AlignmentC2SPacket.setAmount = i - 1;
+                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
                     }
                 }
@@ -415,7 +418,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (47.6F * ((float)i - 1.0F));
                     xright = xleft + 47.6F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
-                        AlignmentC2SPacket.setAmount = i - 1;
+                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
                     }
                 }
@@ -425,7 +429,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (79.33F * ((float)i - 1.0F));
                     xright = xleft + 79.33F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
-                        AlignmentC2SPacket.setAmount = i - 1;
+                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
                     }
                 }

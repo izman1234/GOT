@@ -16,6 +16,29 @@ public abstract class GOTEntityDataSaverMixin implements IEntityDataSaver {
     private NbtCompound AlignmentDataNBT;
     private int[] currentAlign = new int[36];
 
+    private int increaseAmount;
+    private int setAmount;
+
+    @Override
+    public void setAlignmentIncrease(int amount) {
+        increaseAmount = amount;
+    }
+
+    @Override
+    public int getAlignmentIncrease() {
+        return increaseAmount;
+    }
+
+    @Override
+    public void setAmount(int amount) {
+        setAmount = amount;
+    }
+
+    @Override
+    public int getAmount() {
+        return setAmount;
+    }
+
     @Override
     public NbtCompound getAlignmentData() {
         if(this.AlignmentDataNBT == null) {

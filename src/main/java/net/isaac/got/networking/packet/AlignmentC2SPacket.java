@@ -3,6 +3,7 @@ package net.isaac.got.networking.packet;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.isaac.got.util.AlignmentData;
 import net.isaac.got.util.IEntityDataSaver;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
@@ -10,11 +11,12 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 
 public class AlignmentC2SPacket {
-    public static int setAmount; //FIX LATER
+    //public static int setAmount; //FIX LATER
 
     public static void set(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                     PacketByteBuf buf, PacketSender responseSender) {
         int currentArea = ((IEntityDataSaver) player).getAlignmentData().getInt("alignment_current_area");
+        int setAmount = ((IEntityDataSaver) MinecraftClient.getInstance().player).getAmount();
 
         AlignmentData.setFaction(((IEntityDataSaver) player), setAmount, currentArea);
         switch(currentArea) {
@@ -129,10 +131,9 @@ public class AlignmentC2SPacket {
 
     }
 
-    public static int amount; //FIX LATER
-
     public static void increase(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                 PacketByteBuf buf, PacketSender responseSender) {
+        int amount = ((IEntityDataSaver) player).getAlignmentIncrease();
         AlignmentData.increaseAlignment(((IEntityDataSaver) player), amount);
 
         AlignmentData.syncCurrentAlignments(((IEntityDataSaver) player).getAlignmentData().getIntArray("current_alignments"), player);
