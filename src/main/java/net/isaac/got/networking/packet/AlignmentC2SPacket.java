@@ -13,6 +13,7 @@ import net.minecraft.text.Text;
 public class AlignmentC2SPacket {
     //public static int setAmount; //FIX LATER
 
+
     public static void set(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                     PacketByteBuf buf, PacketSender responseSender) {
         int currentArea = ((IEntityDataSaver) player).getAlignmentData().getInt("alignment_current_area");
@@ -131,11 +132,11 @@ public class AlignmentC2SPacket {
 
     }
 
-    public static void increase(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
+    /*public static void increase(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                                 PacketByteBuf buf, PacketSender responseSender) {
         int amount = ((IEntityDataSaver) player).getAlignmentIncrease();
         AlignmentData.increaseAlignment(((IEntityDataSaver) player), amount);
 
         AlignmentData.syncCurrentAlignments(((IEntityDataSaver) player).getAlignmentData().getIntArray("current_alignments"), player);
-    }
+    }*/
 }

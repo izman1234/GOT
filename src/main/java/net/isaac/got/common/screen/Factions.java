@@ -395,6 +395,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (17.0F * ((float)i - 1.0F));
                     xright = xleft + 17.0F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
+                        //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 0);
+
                         ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
@@ -407,6 +409,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (18.3F * ((float)i - 1.0F));
                     xright = xleft + 18.3F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
+                        //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 1);
+
                         ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
@@ -418,6 +422,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (47.6F * ((float)i - 1.0F));
                     xright = xleft + 47.6F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
+                        //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 2);
+
                         ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
@@ -429,6 +435,8 @@ public class Factions extends Screen {
                     xleft = (float)x - 119.0F + (79.33F * ((float)i - 1.0F));
                     xright = xleft + 79.33F;
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
+                        //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 3);
+
                         ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
                         ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());

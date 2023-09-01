@@ -15,28 +15,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class GOTEntityDataSaverMixin implements IEntityDataSaver {
     private NbtCompound AlignmentDataNBT;
     private int[] currentAlign = new int[36];
-
-    private int increaseAmount;
     private int setAmount;
 
     @Override
-    public void setAlignmentIncrease(int amount) {
-        increaseAmount = amount;
-    }
-
-    @Override
-    public int getAlignmentIncrease() {
-        return increaseAmount;
-    }
-
-    @Override
     public void setAmount(int amount) {
-        setAmount = amount;
+        this.setAmount = amount;
     }
 
     @Override
     public int getAmount() {
-        return setAmount;
+        return this.setAmount;
     }
 
     @Override
