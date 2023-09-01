@@ -19,12 +19,12 @@ public abstract class GOTEntityDataSaverMixin implements IEntityDataSaver {
 
     @Override
     public void setAmount(int amount) {
-        this.setAmount = amount;
+        setAmount = amount;
     }
 
     @Override
     public int getAmount() {
-        return this.setAmount;
+        return setAmount;
     }
 
     @Override

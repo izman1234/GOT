@@ -21,13 +21,14 @@ import net.minecraft.client.gui.screen.advancement.AdvancementTab;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.TexturedButtonWidget;
 import net.minecraft.client.render.GameRenderer;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
 
-@Environment(EnvType.CLIENT)
+//@Environment(EnvType.CLIENT)
 public class Factions extends Screen {
     private final Screen parent;
     private int currentAlignment;
@@ -397,9 +398,11 @@ public class Factions extends Screen {
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
                         //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 0);
 
-                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
-                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
+                        PacketByteBuf buffer = PacketByteBufs.create();
+                        buffer.writeInt(i - 1);
+                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, buffer);
 
                     }
                 }
@@ -411,9 +414,11 @@ public class Factions extends Screen {
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
                         //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 1);
 
-                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
-                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
+                        PacketByteBuf buffer = PacketByteBufs.create();
+                        buffer.writeInt(i - 1);
+                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, buffer);
                     }
                 }
                 break;
@@ -424,9 +429,11 @@ public class Factions extends Screen {
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
                         //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 2);
 
-                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
-                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
+                        PacketByteBuf buffer = PacketByteBufs.create();
+                        buffer.writeInt(i - 1);
+                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, buffer);
                     }
                 }
                 break;
@@ -437,9 +444,11 @@ public class Factions extends Screen {
                     if((scrollX >= (int)xleft) && (scrollX <= (int)xright)) {
                         //AlignmentData.setFaction(((IEntityDataSaver) MinecraftClient.getInstance().player), i - 1, 3);
 
-                        ((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
+                        //((IEntityDataSaver) MinecraftClient.getInstance().player).setAmount(i - 1);
                         //AlignmentC2SPacket.setAmount = i - 1;
-                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, PacketByteBufs.create());
+                        PacketByteBuf buffer = PacketByteBufs.create();
+                        buffer.writeInt(i - 1);
+                        ClientPlayNetworking.send(GOTMessages.SET_FACTION_ID, buffer);
                     }
                 }
                 break;

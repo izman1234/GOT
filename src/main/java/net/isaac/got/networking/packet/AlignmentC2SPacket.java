@@ -17,7 +17,7 @@ public class AlignmentC2SPacket {
     public static void set(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler,
                     PacketByteBuf buf, PacketSender responseSender) {
         int currentArea = ((IEntityDataSaver) player).getAlignmentData().getInt("alignment_current_area");
-        int setAmount = ((IEntityDataSaver) MinecraftClient.getInstance().player).getAmount();
+        int setAmount = buf.readInt();
 
         AlignmentData.setFaction(((IEntityDataSaver) player), setAmount, currentArea);
         switch(currentArea) {
